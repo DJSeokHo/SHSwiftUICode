@@ -13,6 +13,13 @@
 		C30B8DB525721466007CF79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30B8DB425721466007CF79D /* Assets.xcassets */; };
 		C30B8DB825721466007CF79D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30B8DB725721466007CF79D /* Preview Assets.xcassets */; };
 		C30B8DBB25721466007CF79D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30B8DB925721466007CF79D /* LaunchScreen.storyboard */; };
+		C30B8DC5257214CB007CF79D /* BasicText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DC4257214CB007CF79D /* BasicText.swift */; };
+		C30B8DC825721535007CF79D /* BasicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DC725721535007CF79D /* BasicTextField.swift */; };
+		C30B8DCB2572155D007CF79D /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DCA2572155D007CF79D /* BasicButton.swift */; };
+		C30B8DCE25727127007CF79D /* BasicSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DCD25727127007CF79D /* BasicSpacer.swift */; };
+		C30B8DD125727270007CF79D /* BasicDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DD025727270007CF79D /* BasicDivider.swift */; };
+		C30B8DD425727412007CF79D /* BasicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DD325727412007CF79D /* BasicImage.swift */; };
+		C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DD625727BEA007CF79D /* BasicPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		C30B8DB725721466007CF79D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C30B8DBA25721466007CF79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C30B8DBC25721466007CF79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C30B8DC4257214CB007CF79D /* BasicText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicText.swift; sourceTree = "<group>"; };
+		C30B8DC725721535007CF79D /* BasicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextField.swift; sourceTree = "<group>"; };
+		C30B8DCA2572155D007CF79D /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
+		C30B8DCD25727127007CF79D /* BasicSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSpacer.swift; sourceTree = "<group>"; };
+		C30B8DD025727270007CF79D /* BasicDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDivider.swift; sourceTree = "<group>"; };
+		C30B8DD325727412007CF79D /* BasicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImage.swift; sourceTree = "<group>"; };
+		C30B8DD625727BEA007CF79D /* BasicPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 		C30B8DAD25721464007CF79D /* SHSwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				C30B8DC3257214B0007CF79D /* Basic */,
 				C30B8DAE25721464007CF79D /* AppDelegate.swift */,
 				C30B8DB025721464007CF79D /* SceneDelegate.swift */,
 				C30B8DB225721464007CF79D /* ContentView.swift */,
@@ -73,6 +88,20 @@
 				C30B8DB725721466007CF79D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C30B8DC3257214B0007CF79D /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				C30B8DC4257214CB007CF79D /* BasicText.swift */,
+				C30B8DC725721535007CF79D /* BasicTextField.swift */,
+				C30B8DCA2572155D007CF79D /* BasicButton.swift */,
+				C30B8DCD25727127007CF79D /* BasicSpacer.swift */,
+				C30B8DD025727270007CF79D /* BasicDivider.swift */,
+				C30B8DD325727412007CF79D /* BasicImage.swift */,
+				C30B8DD625727BEA007CF79D /* BasicPicker.swift */,
+			);
+			path = Basic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30B8DCB2572155D007CF79D /* BasicButton.swift in Sources */,
+				C30B8DCE25727127007CF79D /* BasicSpacer.swift in Sources */,
 				C30B8DAF25721464007CF79D /* AppDelegate.swift in Sources */,
+				C30B8DC5257214CB007CF79D /* BasicText.swift in Sources */,
+				C30B8DD425727412007CF79D /* BasicImage.swift in Sources */,
 				C30B8DB125721464007CF79D /* SceneDelegate.swift in Sources */,
+				C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */,
 				C30B8DB325721464007CF79D /* ContentView.swift in Sources */,
+				C30B8DD125727270007CF79D /* BasicDivider.swift in Sources */,
+				C30B8DC825721535007CF79D /* BasicTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

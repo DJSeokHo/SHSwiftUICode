@@ -130,6 +130,36 @@ struct BasicText: View {
         + Text("tutorials ").foregroundColor(.orange).strikethrough()
         + Text("for ").foregroundColor(.red).italic()
         + Text("SwiftUI").foregroundColor(.purple).underline()
+        
+        
+        VStack{
+            Text("SwifUI Gradient")
+            .font(.system(size: 36))
+            .padding()
+            .foregroundColor(.white)
+            .background(AngularGradient(gradient: Gradient(colors: [.orange, .red, .purple]), center: UnitPoint(x: 0.5, y: 0.5), angle: Angle.init(degrees: -45)))
+
+            Text("SwifUI Gradient")
+            .font(.system(size: 36))
+            .padding()
+            .foregroundColor(.white)
+            .background(AngularGradient(gradient: Gradient(colors: [.orange, .red, .purple]), center: UnitPoint(x: 0.5, y: 0.5), startAngle: Angle.init(degrees: 0), endAngle: Angle.init(degrees: 0)))
+
+            Text("SwifUI Gradient")
+                .font(.system(size: 36))
+                .padding()
+                .foregroundColor(.white)
+                .background(LinearGradient(gradient: Gradient(colors: [.orange, .red, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            
+            Text("SwifUI Gradient")
+                .font(.system(size: 36))
+                .padding()
+                .foregroundColor(.white)
+                .background(RadialGradient(gradient: Gradient(colors: [.orange, .red, .purple]), center: .init(x: 0.5, y: 0.5), startRadius: CGFloat(10), endRadius: CGFloat(120)))
+
+        }
+        
+        
     }
 }
 

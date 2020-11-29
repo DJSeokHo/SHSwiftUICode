@@ -25,7 +25,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = BasicButton()
 //        let contentView = BasicSpacer()
 //        let contentView = BasicDivider()
-        let contentView = BasicImage()
+//        let contentView = BasicImage()
+//        let contentView = BasicPicker()
+//        let contentView = BasicSlider()
+//        let contentView = BasicStepper()
+//        let contentView = BasicSegment()
+//        let contentView = BasicToggle()
+//        let contentView = BasicBottomTab()
+        let contentView = BasicShape()
         
         
 

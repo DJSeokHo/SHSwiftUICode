@@ -20,6 +20,12 @@
 		C30B8DD125727270007CF79D /* BasicDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DD025727270007CF79D /* BasicDivider.swift */; };
 		C30B8DD425727412007CF79D /* BasicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DD325727412007CF79D /* BasicImage.swift */; };
 		C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B8DD625727BEA007CF79D /* BasicPicker.swift */; };
+		C32F058B2573484000E1A65A /* BasicSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F058A2573484000E1A65A /* BasicSlider.swift */; };
+		C32F058E25734BF400E1A65A /* BasicStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F058D25734BF400E1A65A /* BasicStepper.swift */; };
+		C32F059125734E6900E1A65A /* BasicSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F059025734E6900E1A65A /* BasicSegment.swift */; };
+		C32F059425734FF000E1A65A /* BasicToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F059325734FF000E1A65A /* BasicToggle.swift */; };
+		C32F05972573540B00E1A65A /* BasicBottomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F05962573540B00E1A65A /* BasicBottomTab.swift */; };
+		C32F059F2573586200E1A65A /* BasicShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F059E2573586200E1A65A /* BasicShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		C30B8DD025727270007CF79D /* BasicDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDivider.swift; sourceTree = "<group>"; };
 		C30B8DD325727412007CF79D /* BasicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImage.swift; sourceTree = "<group>"; };
 		C30B8DD625727BEA007CF79D /* BasicPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPicker.swift; sourceTree = "<group>"; };
+		C32F058A2573484000E1A65A /* BasicSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSlider.swift; sourceTree = "<group>"; };
+		C32F058D25734BF400E1A65A /* BasicStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepper.swift; sourceTree = "<group>"; };
+		C32F059025734E6900E1A65A /* BasicSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSegment.swift; sourceTree = "<group>"; };
+		C32F059325734FF000E1A65A /* BasicToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicToggle.swift; sourceTree = "<group>"; };
+		C32F05962573540B00E1A65A /* BasicBottomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicBottomTab.swift; sourceTree = "<group>"; };
+		C32F059E2573586200E1A65A /* BasicShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 		C30B8DAD25721464007CF79D /* SHSwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				C32F05A12573596200E1A65A /* Animation */,
 				C30B8DC3257214B0007CF79D /* Basic */,
 				C30B8DAE25721464007CF79D /* AppDelegate.swift */,
 				C30B8DB025721464007CF79D /* SceneDelegate.swift */,
@@ -100,8 +113,21 @@
 				C30B8DD025727270007CF79D /* BasicDivider.swift */,
 				C30B8DD325727412007CF79D /* BasicImage.swift */,
 				C30B8DD625727BEA007CF79D /* BasicPicker.swift */,
+				C32F058A2573484000E1A65A /* BasicSlider.swift */,
+				C32F058D25734BF400E1A65A /* BasicStepper.swift */,
+				C32F059025734E6900E1A65A /* BasicSegment.swift */,
+				C32F059325734FF000E1A65A /* BasicToggle.swift */,
+				C32F05962573540B00E1A65A /* BasicBottomTab.swift */,
+				C32F059E2573586200E1A65A /* BasicShape.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		C32F05A12573596200E1A65A /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,13 +202,19 @@
 			files = (
 				C30B8DCB2572155D007CF79D /* BasicButton.swift in Sources */,
 				C30B8DCE25727127007CF79D /* BasicSpacer.swift in Sources */,
+				C32F059425734FF000E1A65A /* BasicToggle.swift in Sources */,
 				C30B8DAF25721464007CF79D /* AppDelegate.swift in Sources */,
+				C32F059125734E6900E1A65A /* BasicSegment.swift in Sources */,
+				C32F058B2573484000E1A65A /* BasicSlider.swift in Sources */,
 				C30B8DC5257214CB007CF79D /* BasicText.swift in Sources */,
 				C30B8DD425727412007CF79D /* BasicImage.swift in Sources */,
 				C30B8DB125721464007CF79D /* SceneDelegate.swift in Sources */,
 				C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */,
 				C30B8DB325721464007CF79D /* ContentView.swift in Sources */,
 				C30B8DD125727270007CF79D /* BasicDivider.swift in Sources */,
+				C32F05972573540B00E1A65A /* BasicBottomTab.swift in Sources */,
+				C32F058E25734BF400E1A65A /* BasicStepper.swift in Sources */,
+				C32F059F2573586200E1A65A /* BasicShape.swift in Sources */,
 				C30B8DC825721535007CF79D /* BasicTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

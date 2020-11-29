@@ -32,7 +32,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = BasicSegment()
 //        let contentView = BasicToggle()
 //        let contentView = BasicBottomTab()
-        let contentView = BasicShape()
+//        let contentView = BasicWebView()
+//        let contentView = BasicMapView()
+//        let contentView = BasicShape()
+        
+//        let contentView = AnimationScale()
+//        let contentView = AnimationOpacityLinear()
+//        let contentView = AnimationOffsetEaseOut()
+//        let contentView = AnimationRotationEffectSpring()
+//        let contentView = AnimationCombinedAnimation()
+//        let contentView = AnimationSpeadAndDelay()
+//        let contentView = AnimationRepeating()
+//        let contentView = AnimationToggleVisibility()
+//        let contentView = AnimationAsymmetricTransition()
+        
+//        let contentView = GestureTap()
+//        let contentView = LongPressGestureAndDragGesture()
+        
+//        let contentView = LayoutBasic()
+//        let contentView = LayoutList()
+//        let contentView = LayoutScroll()
+        let contentView = LayoutForm()
         
         
 

@@ -45,6 +45,19 @@
 		C32F05DA2573880600E1A65A /* LayoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F05D92573880600E1A65A /* LayoutList.swift */; };
 		C32F05DE2573ADD700E1A65A /* LayoutScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F05DD2573ADD700E1A65A /* LayoutScroll.swift */; };
 		C32F05E12573B4D900E1A65A /* LayoutForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F05E02573B4D900E1A65A /* LayoutForm.swift */; };
+		C3C3A4C2257486490041F5D4 /* LayoutNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4C1257486490041F5D4 /* LayoutNavigationLink.swift */; };
+		C3C3A4C62574879D0041F5D4 /* LayoutNavigationLinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4C52574879D0041F5D4 /* LayoutNavigationLinkDetail.swift */; };
+		C3C3A4CC257488A00041F5D4 /* LayoutNavigationLinkM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4CB257488A00041F5D4 /* LayoutNavigationLinkM.swift */; };
+		C3C3A4CF2574890D0041F5D4 /* LayoutNavigationLinkMDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4CE2574890D0041F5D4 /* LayoutNavigationLinkMDetail.swift */; };
+		C3C3A4D225748E7B0041F5D4 /* LayoutNavigationLinkMDetailOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4D125748E7B0041F5D4 /* LayoutNavigationLinkMDetailOne.swift */; };
+		C3C3A4D525748E850041F5D4 /* LayoutNavigationLinkMDetailTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4D425748E850041F5D4 /* LayoutNavigationLinkMDetailTwo.swift */; };
+		C3C3A4DA2574A63C0041F5D4 /* PropertyStateDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4D92574A63C0041F5D4 /* PropertyStateDemo.swift */; };
+		C3C3A4DE2574A86E0041F5D4 /* PropertyBindingDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4DD2574A86E0041F5D4 /* PropertyBindingDemo.swift */; };
+		C3C3A4E32574B3E80041F5D4 /* PropertyObservedObjectDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4E22574B3E80041F5D4 /* PropertyObservedObjectDemo.swift */; };
+		C3C3A4E72574B5710041F5D4 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4E62574B5710041F5D4 /* StopWatch.swift */; };
+		C3C3A4ED2574BE150041F5D4 /* PropertyEnvironmentObjectDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4EC2574BE150041F5D4 /* PropertyEnvironmentObjectDemo.swift */; };
+		C3C3A4F02574C10B0041F5D4 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4EF2574C10B0041F5D4 /* UserSettings.swift */; };
+		C3C3A4F42574C2DE0041F5D4 /* PropertyEnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4F32574C2DE0041F5D4 /* PropertyEnvironmentDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +101,19 @@
 		C32F05D92573880600E1A65A /* LayoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutList.swift; sourceTree = "<group>"; };
 		C32F05DD2573ADD700E1A65A /* LayoutScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutScroll.swift; sourceTree = "<group>"; };
 		C32F05E02573B4D900E1A65A /* LayoutForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutForm.swift; sourceTree = "<group>"; };
+		C3C3A4C1257486490041F5D4 /* LayoutNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLink.swift; sourceTree = "<group>"; };
+		C3C3A4C52574879D0041F5D4 /* LayoutNavigationLinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLinkDetail.swift; sourceTree = "<group>"; };
+		C3C3A4CB257488A00041F5D4 /* LayoutNavigationLinkM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLinkM.swift; sourceTree = "<group>"; };
+		C3C3A4CE2574890D0041F5D4 /* LayoutNavigationLinkMDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLinkMDetail.swift; sourceTree = "<group>"; };
+		C3C3A4D125748E7B0041F5D4 /* LayoutNavigationLinkMDetailOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLinkMDetailOne.swift; sourceTree = "<group>"; };
+		C3C3A4D425748E850041F5D4 /* LayoutNavigationLinkMDetailTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLinkMDetailTwo.swift; sourceTree = "<group>"; };
+		C3C3A4D92574A63C0041F5D4 /* PropertyStateDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStateDemo.swift; sourceTree = "<group>"; };
+		C3C3A4DD2574A86E0041F5D4 /* PropertyBindingDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyBindingDemo.swift; sourceTree = "<group>"; };
+		C3C3A4E22574B3E80041F5D4 /* PropertyObservedObjectDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyObservedObjectDemo.swift; sourceTree = "<group>"; };
+		C3C3A4E62574B5710041F5D4 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
+		C3C3A4EC2574BE150041F5D4 /* PropertyEnvironmentObjectDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEnvironmentObjectDemo.swift; sourceTree = "<group>"; };
+		C3C3A4EF2574C10B0041F5D4 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		C3C3A4F32574C2DE0041F5D4 /* PropertyEnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEnvironmentDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +146,7 @@
 		C30B8DAD25721464007CF79D /* SHSwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				C3C3A4D72574A6010041F5D4 /* Property */,
 				C32F05D52573840D00E1A65A /* Layout */,
 				C32F05CD25736D2000E1A65A /* Gesture */,
 				C32F05A12573596200E1A65A /* Animation */,
@@ -211,12 +238,88 @@
 		C32F05D52573840D00E1A65A /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				C3C3A4CA2574887B0041F5D4 /* NavigationLink */,
+				C3C3A4C4257487810041F5D4 /* NavigationLinkAndAutoGoBack */,
 				C32F05D62573844900E1A65A /* LayoutBasic.swift */,
 				C32F05D92573880600E1A65A /* LayoutList.swift */,
 				C32F05DD2573ADD700E1A65A /* LayoutScroll.swift */,
 				C32F05E02573B4D900E1A65A /* LayoutForm.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		C3C3A4C4257487810041F5D4 /* NavigationLinkAndAutoGoBack */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4C1257486490041F5D4 /* LayoutNavigationLink.swift */,
+				C3C3A4C52574879D0041F5D4 /* LayoutNavigationLinkDetail.swift */,
+			);
+			path = NavigationLinkAndAutoGoBack;
+			sourceTree = "<group>";
+		};
+		C3C3A4CA2574887B0041F5D4 /* NavigationLink */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4CB257488A00041F5D4 /* LayoutNavigationLinkM.swift */,
+				C3C3A4CE2574890D0041F5D4 /* LayoutNavigationLinkMDetail.swift */,
+				C3C3A4D125748E7B0041F5D4 /* LayoutNavigationLinkMDetailOne.swift */,
+				C3C3A4D425748E850041F5D4 /* LayoutNavigationLinkMDetailTwo.swift */,
+			);
+			path = NavigationLink;
+			sourceTree = "<group>";
+		};
+		C3C3A4D72574A6010041F5D4 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4F22574C2C20041F5D4 /* PropertyEnvironment */,
+				C3C3A4EB2574BE010041F5D4 /* PropertyEnvironmentObject */,
+				C3C3A4E02574B3CC0041F5D4 /* PropertyObservedObject */,
+				C3C3A4DC2574A85B0041F5D4 /* PropertyBinding */,
+				C3C3A4D82574A6200041F5D4 /* PropertyState */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
+		C3C3A4D82574A6200041F5D4 /* PropertyState */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4D92574A63C0041F5D4 /* PropertyStateDemo.swift */,
+			);
+			path = PropertyState;
+			sourceTree = "<group>";
+		};
+		C3C3A4DC2574A85B0041F5D4 /* PropertyBinding */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4DD2574A86E0041F5D4 /* PropertyBindingDemo.swift */,
+			);
+			path = PropertyBinding;
+			sourceTree = "<group>";
+		};
+		C3C3A4E02574B3CC0041F5D4 /* PropertyObservedObject */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4E22574B3E80041F5D4 /* PropertyObservedObjectDemo.swift */,
+				C3C3A4E62574B5710041F5D4 /* StopWatch.swift */,
+			);
+			path = PropertyObservedObject;
+			sourceTree = "<group>";
+		};
+		C3C3A4EB2574BE010041F5D4 /* PropertyEnvironmentObject */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4EC2574BE150041F5D4 /* PropertyEnvironmentObjectDemo.swift */,
+				C3C3A4EF2574C10B0041F5D4 /* UserSettings.swift */,
+			);
+			path = PropertyEnvironmentObject;
+			sourceTree = "<group>";
+		};
+		C3C3A4F22574C2C20041F5D4 /* PropertyEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				C3C3A4F32574C2DE0041F5D4 /* PropertyEnvironmentDemo.swift */,
+			);
+			path = PropertyEnvironment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,11 +393,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32F05A325735BAA00E1A65A /* CustomWebView.swift in Sources */,
+				C3C3A4DA2574A63C0041F5D4 /* PropertyStateDemo.swift in Sources */,
 				C32F05E12573B4D900E1A65A /* LayoutForm.swift in Sources */,
 				C32F05AC25735F8800E1A65A /* CustomMapView.swift in Sources */,
+				C3C3A4D525748E850041F5D4 /* LayoutNavigationLinkMDetailTwo.swift in Sources */,
+				C3C3A4E72574B5710041F5D4 /* StopWatch.swift in Sources */,
 				C30B8DCB2572155D007CF79D /* BasicButton.swift in Sources */,
 				C30B8DCE25727127007CF79D /* BasicSpacer.swift in Sources */,
+				C3C3A4D225748E7B0041F5D4 /* LayoutNavigationLinkMDetailOne.swift in Sources */,
 				C32F05C52573680200E1A65A /* AnimationRepeating.swift in Sources */,
+				C3C3A4DE2574A86E0041F5D4 /* PropertyBindingDemo.swift in Sources */,
 				C32F059425734FF000E1A65A /* BasicToggle.swift in Sources */,
 				C32F05BF2573666300E1A65A /* AnimationCombinedAnimation.swift in Sources */,
 				C32F05C22573675F00E1A65A /* AnimationSpeadAndDelay.swift in Sources */,
@@ -302,28 +410,36 @@
 				C30B8DAF25721464007CF79D /* AppDelegate.swift in Sources */,
 				C32F05CB25736CE000E1A65A /* AnimationAsymmetricTransition.swift in Sources */,
 				C32F059125734E6900E1A65A /* BasicSegment.swift in Sources */,
+				C3C3A4F02574C10B0041F5D4 /* UserSettings.swift in Sources */,
 				C32F05D72573844900E1A65A /* LayoutBasic.swift in Sources */,
 				C32F05B22573601D00E1A65A /* AnimationScale.swift in Sources */,
 				C32F05C82573685900E1A65A /* AnimationToggleVisibility.swift in Sources */,
+				C3C3A4E32574B3E80041F5D4 /* PropertyObservedObjectDemo.swift in Sources */,
+				C3C3A4F42574C2DE0041F5D4 /* PropertyEnvironmentDemo.swift in Sources */,
 				C32F05B5257364F500E1A65A /* AnimationOpacityLinear.swift in Sources */,
 				C32F05DE2573ADD700E1A65A /* LayoutScroll.swift in Sources */,
 				C32F058B2573484000E1A65A /* BasicSlider.swift in Sources */,
 				C30B8DC5257214CB007CF79D /* BasicText.swift in Sources */,
 				C32F05D025736E0600E1A65A /* GestureTap.swift in Sources */,
+				C3C3A4CF2574890D0041F5D4 /* LayoutNavigationLinkMDetail.swift in Sources */,
+				C3C3A4ED2574BE150041F5D4 /* PropertyEnvironmentObjectDemo.swift in Sources */,
 				C30B8DD425727412007CF79D /* BasicImage.swift in Sources */,
 				C30B8DB125721464007CF79D /* SceneDelegate.swift in Sources */,
 				C32F05BC2573662600E1A65A /* AnimationRotationEffectSpring.swift in Sources */,
 				C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */,
 				C30B8DB325721464007CF79D /* ContentView.swift in Sources */,
 				C32F05B8257365AA00E1A65A /* AnimationOffsetEaseOut.swift in Sources */,
+				C3C3A4CC257488A00041F5D4 /* LayoutNavigationLinkM.swift in Sources */,
 				C30B8DD125727270007CF79D /* BasicDivider.swift in Sources */,
 				C32F05972573540B00E1A65A /* BasicBottomTab.swift in Sources */,
+				C3C3A4C2257486490041F5D4 /* LayoutNavigationLink.swift in Sources */,
 				C32F05DA2573880600E1A65A /* LayoutList.swift in Sources */,
 				C32F05D3257383CB00E1A65A /* LongPressGestureAndDragGesture.swift in Sources */,
 				C32F05AF25735F9100E1A65A /* BasicMapView.swift in Sources */,
 				C32F058E25734BF400E1A65A /* BasicStepper.swift in Sources */,
 				C32F059F2573586200E1A65A /* BasicShape.swift in Sources */,
 				C30B8DC825721535007CF79D /* BasicTextField.swift in Sources */,
+				C3C3A4C62574879D0041F5D4 /* LayoutNavigationLinkDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

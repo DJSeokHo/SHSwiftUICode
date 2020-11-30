@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    var settings = UserSettings()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -52,8 +53,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = LayoutBasic()
 //        let contentView = LayoutList()
 //        let contentView = LayoutScroll()
-        let contentView = LayoutForm()
+//        let contentView = LayoutForm()
+//        let contentView = LayoutNavigationLink()
+//        let contentView = LayoutNavigationLinkM()
         
+//        let contentView = PropertyStateDemo()
+//        let contentView = PropertyBindingDemo()
+//        let contentView = PropertyObservedObjectDemo()
+        let contentView = PropertyEnvironmentObjectDemo().environmentObject(settings)
         
 
         // Use a UIHostingController as window root view controller.

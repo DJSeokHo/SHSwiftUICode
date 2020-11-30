@@ -18,8 +18,14 @@ struct PropertyStateDemo: View {
         VStack {
             
             Button(
-                action: { self.showFavorited.toggle() },
-                label: { Text("Change filter") }
+                action: {
+                    self.showFavorited.toggle()
+                    
+                },
+                label: {
+                    Text("Change filter")
+                    
+                }
             )
             
             List {

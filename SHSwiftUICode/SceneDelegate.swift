@@ -60,7 +60,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = PropertyStateDemo()
 //        let contentView = PropertyBindingDemo()
 //        let contentView = PropertyObservedObjectDemo()
-        let contentView = PropertyEnvironmentObjectDemo().environmentObject(settings)
+//        let contentView = PropertyEnvironmentObjectDemo().environmentObject(settings)
+//        let contentView = PropertyEnvironmentDemo()
+        
+//        let model1 = InfoModel(description: "A lady with a horse", pictureName: "Picture1")
+//        let model2 = InfoModel(description: "An African animal with a very long neck", pictureName: "Picture2")
+//        let contentView = LayoutPageNavigation(messages: [model1, model2])
+        
+//        let contentView = ObjectBinding()
+//        let contentView = LayoutShowModal()
+//        let contentView = LayoutShowModal()
+//        let contentView = LayoutShowAlert()
+        let contentView = LayoutActionSheet()
         
 
         // Use a UIHostingController as window root view controller.

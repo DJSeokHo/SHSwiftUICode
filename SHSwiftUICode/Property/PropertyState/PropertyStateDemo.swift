@@ -13,7 +13,8 @@ struct PropertyStateDemo: View {
     
     @State private var showFavorited: Bool = true
     
-    @State private var type = "1"
+    @State private var content = "Hello"
+    @State private var textFieldInput = ""
     
     var body: some View {
         
@@ -22,11 +23,9 @@ struct PropertyStateDemo: View {
             Button(
                 action: {
                     self.showFavorited.toggle()
-                    
                 },
                 label: {
                     Text("Change filter")
-                    
                 }
             )
             
@@ -44,40 +43,26 @@ struct PropertyStateDemo: View {
                             })
                     }
                 }
-                
-            }
+            }.frame(width: .infinity, height: 200, alignment: .center)
+            
+            
+            Text(self.content)
+            TextField("input", text: self.$textFieldInput)
+                .font(.title)
+                .foregroundColor(.black)
+                .frame(width: .infinity, height: .infinity, alignment: .center)
+                .padding(10).background(Color.orange)
             
             Button(
                 action: {
-                    if self.type == "1" {
-                        self.type = "2"
-                    }
-                    else {
-                        self.type = "1"
-                    }
+                    self.content = self.textFieldInput
                 },
                 label: {
-                    Text("Change filter")
+                    Text("Change")
                 }
             )
             
-            List {
-
-                ForEach(0..<stringList.count) {
-                    index in
-                    if self.type == "1" {
-                        Text(stringList[index])
-                            .onAppear(perform: {
-                                print("onAppear")
-                            })
-                            .onDisappear(perform: {
-                                print("onDisappear")
-                            })
-                    }
-                }
-                
-            }
-            
+            Spacer()
         }
     }
 }

@@ -6,10 +6,7 @@
 //
 
 import SwiftUI
-/*
-    把属性的值类型改成引用类型
-    这样在子view中就可以保持属性的一致
- */
+
 struct PropertyBindingDemo: View {
     
     @State
@@ -45,7 +42,11 @@ struct PropertyBindingDemo: View {
     }
 }
 
-
+/*
+    Binding
+    把属性的值类型改成引用类型
+    这样在子view中就可以保持属性的一致
+ */
 struct PropertyBindingSubView: View {
     
     @Binding

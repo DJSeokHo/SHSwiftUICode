@@ -50,7 +50,13 @@ struct PropertyBindingDemo: View {
 struct PropertyBindingSubView: View {
     
     @Binding
-    var showFavorited: Bool
+    private var showFavorited: Bool
+    
+    // 如果 showFavorited 不是 private 这个可以省略
+    init(showFavorited: Binding<Bool>) {
+        self._showFavorited = showFavorited
+    }
+    // 如果 showFavorited 不是 private 这个可以省略
     
     var body: some View {
         ZStack {
@@ -62,7 +68,6 @@ struct PropertyBindingSubView: View {
         .padding()
         .background(Color.orange)
         .frame(width: .infinity, height: .infinity)
-
     }
 }
 

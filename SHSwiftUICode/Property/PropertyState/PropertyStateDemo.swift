@@ -13,6 +13,8 @@ struct PropertyStateDemo: View {
     
     @State private var showFavorited: Bool = true
     
+    @State private var type = "1"
+    
     var body: some View {
         
         VStack {
@@ -33,6 +35,37 @@ struct PropertyStateDemo: View {
                 ForEach(0..<stringList.count) {
                     index in
                     if (self.showFavorited) {
+                        Text(stringList[index])
+                            .onAppear(perform: {
+                                print("onAppear")
+                            })
+                            .onDisappear(perform: {
+                                print("onDisappear")
+                            })
+                    }
+                }
+                
+            }
+            
+            Button(
+                action: {
+                    if self.type == "1" {
+                        self.type = "2"
+                    }
+                    else {
+                        self.type = "1"
+                    }
+                },
+                label: {
+                    Text("Change filter")
+                }
+            )
+            
+            List {
+
+                ForEach(0..<stringList.count) {
+                    index in
+                    if self.type == "1" {
                         Text(stringList[index])
                             .onAppear(perform: {
                                 print("onAppear")

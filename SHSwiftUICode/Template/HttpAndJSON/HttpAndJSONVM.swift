@@ -20,7 +20,8 @@ class HttpAndJSONVM: ObservableObject {
         
         // GET
         let url: String = "https://httpbin.org/get?name=seokho&nickname=sh"
-        AF.request(url, method: .get).validate()
+        
+        Alamofire.AF.request(url, method: .get).validate()
             .responseJSON {
                 (response) in
                 
@@ -38,6 +39,10 @@ class HttpAndJSONVM: ObservableObject {
                     let nickname = json["args"]["nickname"].string
                     
                     ILog.debug(tag: HttpAndJSONVM.TAG, content: "\(name ?? "") \(nickname ?? "")")
+                    
+                    // update view
+                    httpAndJSONModel.name = name ?? ""
+                    httpAndJSONModel.nickname = nickname ?? ""
                 }
                 break
             case .failure(_):

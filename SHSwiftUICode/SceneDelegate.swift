@@ -86,7 +86,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = EnviromentObjectCustomDemo().environmentObject(delegate.eocdData)
         
         
-        let contentView = ExtensionCustomView()
+//        let contentView = ExtensionCustomView()
+        
+        let contentView = HttpAndJSONDemo()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

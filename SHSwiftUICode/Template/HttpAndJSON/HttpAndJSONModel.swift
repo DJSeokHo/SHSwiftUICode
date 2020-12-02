@@ -11,8 +11,8 @@ struct HttpAndJSONModel: Identifiable {
     
     let id: Int = 0
     
-    var name: String = ""
-    var nickname: String = ""
+    var name: String?
+    var nickname: String?
     
 }
 

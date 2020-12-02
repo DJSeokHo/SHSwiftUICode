@@ -21,8 +21,8 @@ struct HttpAndJSONDemo: View {
                 Text("Request")
             })
             
-            Text(httpAndJSONVM.httpAndJSONModel.name).padding()
-            Text(httpAndJSONVM.httpAndJSONModel.nickname).padding()
+            Text(httpAndJSONVM.httpAndJSONModel.name ?? "").padding()
+            Text(httpAndJSONVM.httpAndJSONModel.nickname ?? "").padding()
         }
     }
 }

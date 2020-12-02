@@ -14,11 +14,16 @@ struct PropertyEnvironmentDemo: View {
     
     @Environment(\.calendar) var calendar: Calendar
     @Environment(\.locale) var locale: Locale
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         
-        Text(calendar.description)
+        VStack {
+            Text(calendar.description)
+            
+            Text(colorScheme == .light ? "Light Mode" : "Dark Mode")
+        }
+        
         
         // 唯一表达式与省略return（当函数体中只存在一个表达式的时候会直接可以省略return)
 //        Text(calendar.description)

@@ -10,6 +10,7 @@ import SwiftUI
 struct LayoutBasic: View {
     var body: some View {
         Group {
+           
             Text("Apple")
             Text("Banana")
             Text("Orange")

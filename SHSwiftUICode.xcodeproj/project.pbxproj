@@ -54,6 +54,11 @@
 		C3B59E2E257635DA00140E4B /* EnviromentObjectCustomDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E2D257635DA00140E4B /* EnviromentObjectCustomDemoDetail.swift */; };
 		C3B59E362576402000140E4B /* CustomPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E352576402000140E4B /* CustomPropertyWrapper.swift */; };
 		C3B59E3A2576405800140E4B /* WrappedValueDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E392576405800140E4B /* WrappedValueDemo.swift */; };
+		C3BAD1A525772E740072565A /* ExtensionCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BAD1A425772E740072565A /* ExtensionCustomView.swift */; };
+		C3BAD1AA25774FCB0072565A /* CustomViewActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BAD1A925774FCB0072565A /* CustomViewActivityIndicator.swift */; };
+		C3BAD1F0257765A80072565A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BAD1EF257765A80072565A /* Country.swift */; };
+		C3BAD1F4257765C40072565A /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BAD1F3257765C40072565A /* CountryView.swift */; };
+		C3BAD1F92577662D0072565A /* CountryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BAD1F82577662D0072565A /* CountryVM.swift */; };
 		C3C3A4C2257486490041F5D4 /* LayoutNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4C1257486490041F5D4 /* LayoutNavigationLink.swift */; };
 		C3C3A4C62574879D0041F5D4 /* LayoutNavigationLinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4C52574879D0041F5D4 /* LayoutNavigationLinkDetail.swift */; };
 		C3C3A4CC257488A00041F5D4 /* LayoutNavigationLinkM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C3A4CB257488A00041F5D4 /* LayoutNavigationLinkM.swift */; };
@@ -129,6 +134,11 @@
 		C3B59E2D257635DA00140E4B /* EnviromentObjectCustomDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentObjectCustomDemoDetail.swift; sourceTree = "<group>"; };
 		C3B59E352576402000140E4B /* CustomPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPropertyWrapper.swift; sourceTree = "<group>"; };
 		C3B59E392576405800140E4B /* WrappedValueDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedValueDemo.swift; sourceTree = "<group>"; };
+		C3BAD1A425772E740072565A /* ExtensionCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCustomView.swift; sourceTree = "<group>"; };
+		C3BAD1A925774FCB0072565A /* CustomViewActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewActivityIndicator.swift; sourceTree = "<group>"; };
+		C3BAD1EF257765A80072565A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		C3BAD1F3257765C40072565A /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		C3BAD1F82577662D0072565A /* CountryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVM.swift; sourceTree = "<group>"; };
 		C3C3A4C1257486490041F5D4 /* LayoutNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLink.swift; sourceTree = "<group>"; };
 		C3C3A4C52574879D0041F5D4 /* LayoutNavigationLinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLinkDetail.swift; sourceTree = "<group>"; };
 		C3C3A4CB257488A00041F5D4 /* LayoutNavigationLinkM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNavigationLinkM.swift; sourceTree = "<group>"; };
@@ -184,6 +194,9 @@
 		C30B8DAD25721464007CF79D /* SHSwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				C3BAD1EA257765700072565A /* Template */,
+				C3BAD1A825774FBD0072565A /* CustomView */,
+				C3BAD1A325772E540072565A /* ExtensionCustomView */,
 				C3C3A5072574D51A0041F5D4 /* Other */,
 				C3C3A4D72574A6010041F5D4 /* Property */,
 				C32F05D52573840D00E1A65A /* Layout */,
@@ -318,6 +331,64 @@
 				C3B59E392576405800140E4B /* WrappedValueDemo.swift */,
 			);
 			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		C3BAD1A325772E540072565A /* ExtensionCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAD1A425772E740072565A /* ExtensionCustomView.swift */,
+			);
+			path = ExtensionCustomView;
+			sourceTree = "<group>";
+		};
+		C3BAD1A825774FBD0072565A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAD1A925774FCB0072565A /* CustomViewActivityIndicator.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		C3BAD1EA257765700072565A /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAD1EB257765760072565A /* MVVMExample */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		C3BAD1EB257765760072565A /* MVVMExample */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAD1EE257765920072565A /* ViewModel */,
+				C3BAD1ED2577658D0072565A /* View */,
+				C3BAD1EC257765860072565A /* Model */,
+			);
+			path = MVVMExample;
+			sourceTree = "<group>";
+		};
+		C3BAD1EC257765860072565A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAD1EF257765A80072565A /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3BAD1ED2577658D0072565A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAD1F3257765C40072565A /* CountryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3BAD1EE257765920072565A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3BAD1F82577662D0072565A /* CountryVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C3C3A4C4257487810041F5D4 /* NavigationLinkAndAutoGoBack */ = {
@@ -484,6 +555,7 @@
 				C32F05A325735BAA00E1A65A /* CustomWebView.swift in Sources */,
 				C3B59E3A2576405800140E4B /* WrappedValueDemo.swift in Sources */,
 				C3C3A4DA2574A63C0041F5D4 /* PropertyStateDemo.swift in Sources */,
+				C3BAD1F92577662D0072565A /* CountryVM.swift in Sources */,
 				C32F05E12573B4D900E1A65A /* LayoutForm.swift in Sources */,
 				C32F05AC25735F8800E1A65A /* CustomMapView.swift in Sources */,
 				C3C3A4D525748E850041F5D4 /* LayoutNavigationLinkMDetailTwo.swift in Sources */,
@@ -509,6 +581,8 @@
 				C32F05D72573844900E1A65A /* LayoutBasic.swift in Sources */,
 				C32F05B22573601D00E1A65A /* AnimationScale.swift in Sources */,
 				C32F05C82573685900E1A65A /* AnimationToggleVisibility.swift in Sources */,
+				C3BAD1F0257765A80072565A /* Country.swift in Sources */,
+				C3BAD1AA25774FCB0072565A /* CustomViewActivityIndicator.swift in Sources */,
 				C3C3A4FD2574CBA80041F5D4 /* LayoutShowModal.swift in Sources */,
 				C3C3A4E32574B3E80041F5D4 /* PropertyObservedObjectDemo.swift in Sources */,
 				C3C3A4F42574C2DE0041F5D4 /* PropertyEnvironmentDemo.swift in Sources */,
@@ -524,6 +598,7 @@
 				C30B8DB125721464007CF79D /* SceneDelegate.swift in Sources */,
 				C32F05BC2573662600E1A65A /* AnimationRotationEffectSpring.swift in Sources */,
 				C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */,
+				C3BAD1A525772E740072565A /* ExtensionCustomView.swift in Sources */,
 				C30B8DB325721464007CF79D /* ContentView.swift in Sources */,
 				C32F05B8257365AA00E1A65A /* AnimationOffsetEaseOut.swift in Sources */,
 				C3C3A4CC257488A00041F5D4 /* LayoutNavigationLinkM.swift in Sources */,
@@ -542,6 +617,7 @@
 				C3B59E1D25762AA000140E4B /* ObservedObjectCustomDemo.swift in Sources */,
 				C3B59E1925761D5F00140E4B /* EnviromentObject.swift in Sources */,
 				C3C3A4FA2574CA8B0041F5D4 /* ObjectBinding.swift in Sources */,
+				C3BAD1F4257765C40072565A /* CountryView.swift in Sources */,
 				C3B59E2125762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift in Sources */,
 				C32F059F2573586200E1A65A /* BasicShape.swift in Sources */,
 				C30B8DC825721535007CF79D /* BasicTextField.swift in Sources */,

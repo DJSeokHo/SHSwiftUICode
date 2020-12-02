@@ -81,9 +81,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        let contentView = ObservedObjectCustomDemo()
         
-        let app = UIApplication.shared
-        let delegate = app.delegate as! AppDelegate
-        let contentView = EnviromentObjectCustomDemo().environmentObject(delegate.eocdData)
+//        let app = UIApplication.shared
+//        let delegate = app.delegate as! AppDelegate
+//        let contentView = EnviromentObjectCustomDemo().environmentObject(delegate.eocdData)
+        
+        
+        let contentView = ExtensionCustomView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

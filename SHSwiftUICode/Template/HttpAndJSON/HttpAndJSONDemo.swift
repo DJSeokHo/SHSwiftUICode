@@ -10,19 +10,25 @@ import SwiftUI
 struct HttpAndJSONDemo: View {
     
     @ObservedObject
-    var httpAndJSONVM: HttpAndJSONVM = HttpAndJSONVM()
+    private var httpAndJSONVM = HttpAndJSONVM()
     
     var body: some View {
         
-        VStack {
-            Button(action: {
-                httpAndJSONVM.request()
-            }, label: {
-                Text("Request")
-            })
+        ZStack {
+            VStack {
+                Button(action: {
+                    httpAndJSONVM.request()
+                }, label: {
+                    Text("Request")
+                })
+                
+                Text(httpAndJSONVM.httpAndJSONModel.name ?? "").padding()
+                Text(httpAndJSONVM.httpAndJSONModel.nickname ?? "").padding()
+            }
             
-            Text(httpAndJSONVM.httpAndJSONModel.name ?? "").padding()
-            Text(httpAndJSONVM.httpAndJSONModel.nickname ?? "").padding()
+            if(httpAndJSONVM.showProgress) {
+                CustomProgressView(style: UIActivityIndicatorView.Style.medium)
+            }
         }
     }
 }

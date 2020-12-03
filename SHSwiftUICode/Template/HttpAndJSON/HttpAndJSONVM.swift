@@ -16,19 +16,31 @@ class HttpAndJSONVM: ObservableObject {
     @Published
     var httpAndJSONModel: HttpAndJSONModel = HttpAndJSONModel()
     
+    @Published
+    var showProgress = false
+    
     func request() {
         
-        // GET
-        let url: String = "https://httpbin.org/get?name=seokho&nickname=sh"
+        showProgress = true
         
-        Alamofire.AF.request(url, method: .get).validate()
-            .responseJSON {
-                (response) in
-                
-                ILog.debug(tag: HttpAndJSONVM.TAG, content: response)
-                
-                self.parsing(response: response)
-            }
+        ThreadUtil.startThread {
+            // GET
+            let url: String = "https://httpbin.org/get?name=seokho&nickname=sh"
+            
+            Alamofire.AF.request(url, method: .get).validate()
+                .responseJSON {
+                    (response) in
+
+                    ILog.debug(tag: HttpAndJSONVM.TAG, content: response)
+                    
+                    ThreadUtil.startUIThread(runnable: {
+                        
+                        self.showProgress = false
+                        self.parsing(response: response)
+                        
+                    }, afterSeconds: 0)
+                }
+        }
     }
     
     func parsing(response: AFDataResponse<Any>) {

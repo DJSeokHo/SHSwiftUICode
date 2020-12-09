@@ -93,7 +93,7 @@ struct KRefreshScrollView<Content: View>: View {
         })
     }
     
-    func fireUpdate(){
+    func fireUpdate() {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             

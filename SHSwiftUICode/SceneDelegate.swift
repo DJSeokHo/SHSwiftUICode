@@ -88,7 +88,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        let contentView = ExtensionCustomView()
         
-        let contentView = HttpAndJSONDemo()
+//        let contentView = HttpAndJSONDemo()
+//        let contentView = RecyclerView()
+        let contentView = LoadMoreTest()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

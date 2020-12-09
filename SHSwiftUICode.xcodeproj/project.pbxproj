@@ -46,6 +46,11 @@
 		C32F05DA2573880600E1A65A /* LayoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F05D92573880600E1A65A /* LayoutList.swift */; };
 		C32F05DE2573ADD700E1A65A /* LayoutScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F05DD2573ADD700E1A65A /* LayoutScroll.swift */; };
 		C32F05E12573B4D900E1A65A /* LayoutForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F05E02573B4D900E1A65A /* LayoutForm.swift */; };
+		C33F3D40258089F8000D5D01 /* RecyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3D3F258089F8000D5D01 /* RecyclerView.swift */; };
+		C33F3D4725808B49000D5D01 /* RecyclerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3D4625808B49000D5D01 /* RecyclerViewModel.swift */; };
+		C33F3D4A25808BB7000D5D01 /* RecyclerViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3D4925808BB7000D5D01 /* RecyclerViewVM.swift */; };
+		C33F3D522580A7C7000D5D01 /* KRefreshScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3D512580A7C7000D5D01 /* KRefreshScrollView.swift */; };
+		C33F3D572580AC39000D5D01 /* LoadMoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3D562580AC39000D5D01 /* LoadMoreTest.swift */; };
 		C340D1F4257919A4004609AD /* ThreadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C340D1F3257919A4004609AD /* ThreadUtil.swift */; };
 		C36BF84C2577B1D900052F5B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C36BF84B2577B1D900052F5B /* SwiftyJSON */; };
 		C36BF8502577B1ED00052F5B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C36BF84F2577B1ED00052F5B /* Alamofire */; };
@@ -53,6 +58,7 @@
 		C36BF8592577B26F00052F5B /* HttpAndJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BF8582577B26F00052F5B /* HttpAndJSONModel.swift */; };
 		C36BF85D2577B27A00052F5B /* HttpAndJSONVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BF85C2577B27A00052F5B /* HttpAndJSONVM.swift */; };
 		C36BF8612577BB2000052F5B /* ILog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BF8602577BB2000052F5B /* ILog.swift */; };
+		C37DF304257A312C00775CF1 /* CustomIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DF303257A312C00775CF1 /* CustomIndicators.swift */; };
 		C3B59E1925761D5F00140E4B /* EnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E1825761D5F00140E4B /* EnviromentObject.swift */; };
 		C3B59E1D25762AA000140E4B /* ObservedObjectCustomDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E1C25762AA000140E4B /* ObservedObjectCustomDemo.swift */; };
 		C3B59E2125762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E2025762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift */; };
@@ -133,11 +139,17 @@
 		C32F05D92573880600E1A65A /* LayoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutList.swift; sourceTree = "<group>"; };
 		C32F05DD2573ADD700E1A65A /* LayoutScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutScroll.swift; sourceTree = "<group>"; };
 		C32F05E02573B4D900E1A65A /* LayoutForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutForm.swift; sourceTree = "<group>"; };
+		C33F3D3F258089F8000D5D01 /* RecyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerView.swift; sourceTree = "<group>"; };
+		C33F3D4625808B49000D5D01 /* RecyclerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerViewModel.swift; sourceTree = "<group>"; };
+		C33F3D4925808BB7000D5D01 /* RecyclerViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerViewVM.swift; sourceTree = "<group>"; };
+		C33F3D512580A7C7000D5D01 /* KRefreshScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRefreshScrollView.swift; sourceTree = "<group>"; };
+		C33F3D562580AC39000D5D01 /* LoadMoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTest.swift; sourceTree = "<group>"; };
 		C340D1F3257919A4004609AD /* ThreadUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadUtil.swift; sourceTree = "<group>"; };
 		C36BF8532577B23000052F5B /* HttpAndJSONDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAndJSONDemo.swift; sourceTree = "<group>"; };
 		C36BF8582577B26F00052F5B /* HttpAndJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAndJSONModel.swift; sourceTree = "<group>"; };
 		C36BF85C2577B27A00052F5B /* HttpAndJSONVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAndJSONVM.swift; sourceTree = "<group>"; };
 		C36BF8602577BB2000052F5B /* ILog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILog.swift; sourceTree = "<group>"; };
+		C37DF303257A312C00775CF1 /* CustomIndicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicators.swift; sourceTree = "<group>"; };
 		C3B59E1825761D5F00140E4B /* EnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentObject.swift; sourceTree = "<group>"; };
 		C3B59E1C25762AA000140E4B /* ObservedObjectCustomDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectCustomDemo.swift; sourceTree = "<group>"; };
 		C3B59E2025762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectCustomDemoDetail.swift; sourceTree = "<group>"; };
@@ -326,6 +338,50 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		C33F3D3E258089DD000D5D01 /* RecyclerView */ = {
+			isa = PBXGroup;
+			children = (
+				C33F3D552580AC1D000D5D01 /* LoadMoreTest */,
+				C33F3D4525808AFC000D5D01 /* ViewModel */,
+				C33F3D4425808AF4000D5D01 /* Model */,
+				C33F3D4325808AEA000D5D01 /* View */,
+			);
+			path = RecyclerView;
+			sourceTree = "<group>";
+		};
+		C33F3D4325808AEA000D5D01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C33F3D512580A7C7000D5D01 /* KRefreshScrollView.swift */,
+				C33F3D3F258089F8000D5D01 /* RecyclerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C33F3D4425808AF4000D5D01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C33F3D4625808B49000D5D01 /* RecyclerViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C33F3D4525808AFC000D5D01 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C33F3D4925808BB7000D5D01 /* RecyclerViewVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C33F3D552580AC1D000D5D01 /* LoadMoreTest */ = {
+			isa = PBXGroup;
+			children = (
+				C33F3D562580AC39000D5D01 /* LoadMoreTest.swift */,
+			);
+			path = LoadMoreTest;
+			sourceTree = "<group>";
+		};
 		C340D1F225791997004609AD /* Thread */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +449,14 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
+		C37DF302257A311800775CF1 /* CustomIndicators */ = {
+			isa = PBXGroup;
+			children = (
+				C37DF303257A312C00775CF1 /* CustomIndicators.swift */,
+			);
+			path = CustomIndicators;
+			sourceTree = "<group>";
+		};
 		C3B59E1B25762A8400140E4B /* CustomDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +497,8 @@
 		C3BAD1EA257765700072565A /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C33F3D3E258089DD000D5D01 /* RecyclerView */,
+				C37DF302257A311800775CF1 /* CustomIndicators */,
 				C30D561D25790F96000F18F1 /* CustomProgressView */,
 				C36BF8522577B21700052F5B /* HttpAndJSON */,
 				C3BAD1EB257765760072565A /* MVVMExample */,
@@ -662,6 +728,7 @@
 				C3C3A5172574D7ED0041F5D4 /* ViewStyleModifier.swift in Sources */,
 				C32F05C52573680200E1A65A /* AnimationRepeating.swift in Sources */,
 				C3C3A4DE2574A86E0041F5D4 /* PropertyBindingDemo.swift in Sources */,
+				C33F3D40258089F8000D5D01 /* RecyclerView.swift in Sources */,
 				C3C3A5092574D5240041F5D4 /* PreviewDeviceDemo.swift in Sources */,
 				C32F059425734FF000E1A65A /* BasicToggle.swift in Sources */,
 				C32F05BF2573666300E1A65A /* AnimationCombinedAnimation.swift in Sources */,
@@ -674,21 +741,25 @@
 				C32F05D72573844900E1A65A /* LayoutBasic.swift in Sources */,
 				C32F05B22573601D00E1A65A /* AnimationScale.swift in Sources */,
 				C32F05C82573685900E1A65A /* AnimationToggleVisibility.swift in Sources */,
+				C33F3D572580AC39000D5D01 /* LoadMoreTest.swift in Sources */,
 				C3BAD1F0257765A80072565A /* Country.swift in Sources */,
 				C3C3A4FD2574CBA80041F5D4 /* LayoutShowModal.swift in Sources */,
 				C3C3A4E32574B3E80041F5D4 /* PropertyObservedObjectDemo.swift in Sources */,
 				C3C3A4F42574C2DE0041F5D4 /* PropertyEnvironmentDemo.swift in Sources */,
 				C36BF8612577BB2000052F5B /* ILog.swift in Sources */,
+				C33F3D4725808B49000D5D01 /* RecyclerViewModel.swift in Sources */,
 				C32F05B5257364F500E1A65A /* AnimationOpacityLinear.swift in Sources */,
 				C32F05DE2573ADD700E1A65A /* LayoutScroll.swift in Sources */,
 				C3C3A5012574CC580041F5D4 /* LayoutShowAlert.swift in Sources */,
 				C32F058B2573484000E1A65A /* BasicSlider.swift in Sources */,
 				C30B8DC5257214CB007CF79D /* BasicText.swift in Sources */,
 				C32F05D025736E0600E1A65A /* GestureTap.swift in Sources */,
+				C33F3D4A25808BB7000D5D01 /* RecyclerViewVM.swift in Sources */,
 				C3C3A4CF2574890D0041F5D4 /* LayoutNavigationLinkMDetail.swift in Sources */,
 				C3C3A4ED2574BE150041F5D4 /* PropertyEnvironmentObjectDemo.swift in Sources */,
 				C30B8DD425727412007CF79D /* BasicImage.swift in Sources */,
 				C30B8DB125721464007CF79D /* SceneDelegate.swift in Sources */,
+				C37DF304257A312C00775CF1 /* CustomIndicators.swift in Sources */,
 				C32F05BC2573662600E1A65A /* AnimationRotationEffectSpring.swift in Sources */,
 				C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */,
 				C3BAD1A525772E740072565A /* ExtensionCustomView.swift in Sources */,
@@ -716,6 +787,7 @@
 				C3B59E2125762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift in Sources */,
 				C340D1F4257919A4004609AD /* ThreadUtil.swift in Sources */,
 				C32F059F2573586200E1A65A /* BasicShape.swift in Sources */,
+				C33F3D522580A7C7000D5D01 /* KRefreshScrollView.swift in Sources */,
 				C30B8DC825721535007CF79D /* BasicTextField.swift in Sources */,
 				C3C3A4C62574879D0041F5D4 /* LayoutNavigationLinkDetail.swift in Sources */,
 				C3B59E2B257635CB00140E4B /* EOCDData.swift in Sources */,

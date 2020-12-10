@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecyclerView: View {
+    
     var body: some View {
         
         GeometryReader {
@@ -31,15 +32,16 @@ struct SwiftRecyclerView: View {
             List(0..<self.recyclerViewVM.list.count, id: \.self) { index in
                 
                 if(index == self.recyclerViewVM.list.count - 1) {
-                    Text(recyclerViewVM.list[index].title).onAppear() {
-                        ILog.debug(tag: "???", content: "load more")
+                    SwiftRecyclerViewCell(recyclerViewItemModel: recyclerViewVM.list[index])
+                        .onAppear() {
+                            ILog.debug(tag: "???", content: "load more")
                         
-                        recyclerViewVM.loadMore()
+                            recyclerViewVM.loadMore()
 
                     }
                 }
                 else {
-                    Text(recyclerViewVM.list[index].title)
+                    SwiftRecyclerViewCell(recyclerViewItemModel: recyclerViewVM.list[index])
                 }
             
             }
@@ -52,6 +54,20 @@ struct SwiftRecyclerView: View {
     }
 }
 
+struct SwiftRecyclerViewCell: View {
+    
+    var recyclerViewItemModel: RecyclerViewItemModel
+  
+    var body: some View {
+        
+        VStack(alignment: .leading, spacing: 12) {
+            
+            Text(recyclerViewItemModel.id).fontWeight(.bold)
+            Text(recyclerViewItemModel.title)
+        }
+    }
+}
+
 struct CustomRecyclerScrollView: UIViewRepresentable {
     
     var width: CGFloat
@@ -60,6 +76,13 @@ struct CustomRecyclerScrollView: UIViewRepresentable {
     let recyclerViewVM = RecyclerViewVM()
     
     init(width: CGFloat, height: CGFloat) {
+        
+        // To remove only extra separators below the list:
+        UITableView.appearance().tableFooterView = UIView()
+
+        // To remove all separators including the actual ones:
+        UITableView.appearance().separatorStyle = .none
+        
         self.width = width
         self.height = height
         

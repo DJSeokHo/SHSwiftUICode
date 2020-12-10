@@ -8,6 +8,6 @@
 import SwiftUI
 
 struct RecyclerViewItemModel: Identifiable {
-    var id = UUID()
+    var id: String
     var title: String
 }

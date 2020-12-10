@@ -34,7 +34,7 @@ class RecyclerViewVM: ObservableObject {
                 self.list.removeAll()
                 self.list.append(contentsOf: list)
                 
-            }, afterSeconds: 2.5)
+            }, afterSeconds: 1.5)
             
         }
         
@@ -55,7 +55,7 @@ class RecyclerViewVM: ObservableObject {
                 self.isLoading = false
                 self.list.append(contentsOf: list)
                 
-            }, afterSeconds: 2.5)
+            }, afterSeconds: 1.5)
         }
     }
     
@@ -65,7 +65,7 @@ class RecyclerViewVM: ObservableObject {
         
         var recyclerViewItemModel: RecyclerViewItemModel
         for i in offset..<(offset + limit) {
-            recyclerViewItemModel = RecyclerViewItemModel(title: "item \(i)")
+            recyclerViewItemModel = RecyclerViewItemModel(id: String(i), title: "item \(i)")
             list.append(recyclerViewItemModel)
         }
         

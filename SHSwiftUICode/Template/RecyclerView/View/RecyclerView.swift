@@ -46,9 +46,9 @@ struct SwiftRecyclerView: View {
             
             }
             
-//            if(self.recyclerViewVM.isLoading) {
-//                CustomProgressView(style: UIActivityIndicatorView.Style.medium)
-//            }
+            if(self.recyclerViewVM.isLoading) {
+                CustomProgressView(style: UIActivityIndicatorView.Style.medium)
+            }
         }
         
     }

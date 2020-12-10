@@ -33,7 +33,13 @@ struct CustomProgressView: View {
 
             ActivityIndicator(style: style)
         }
-        .frame(width: .infinity, height: .infinity, alignment: .center)
+        
+        // .infinity is an allowed value for a frame's maxWidth NOT for its minWidth it seems.
+        // or app will crash
+        
+//        .frame(width: .infinity, height: .infinity, alignment: .center)
+        
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
     }
 }

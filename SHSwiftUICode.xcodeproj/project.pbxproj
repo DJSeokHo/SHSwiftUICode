@@ -59,6 +59,8 @@
 		C37DF304257A312C00775CF1 /* CustomIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DF303257A312C00775CF1 /* CustomIndicators.swift */; };
 		C3A295D62581B76D00EA5B1B /* ReloadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295D52581B76D00EA5B1B /* ReloadTest.swift */; };
 		C3A295DA2581C70500EA5B1B /* RecyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295D92581C70500EA5B1B /* RecyclerView.swift */; };
+		C3A295E32581E9E800EA5B1B /* SideMenuDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295E22581E9E800EA5B1B /* SideMenuDemo.swift */; };
+		C3A295EA2581FB6200EA5B1B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295E92581FB6200EA5B1B /* SideMenuView.swift */; };
 		C3B59E1925761D5F00140E4B /* EnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E1825761D5F00140E4B /* EnviromentObject.swift */; };
 		C3B59E1D25762AA000140E4B /* ObservedObjectCustomDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E1C25762AA000140E4B /* ObservedObjectCustomDemo.swift */; };
 		C3B59E2125762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E2025762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift */; };
@@ -150,6 +152,8 @@
 		C37DF303257A312C00775CF1 /* CustomIndicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicators.swift; sourceTree = "<group>"; };
 		C3A295D52581B76D00EA5B1B /* ReloadTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadTest.swift; sourceTree = "<group>"; };
 		C3A295D92581C70500EA5B1B /* RecyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerView.swift; sourceTree = "<group>"; };
+		C3A295E22581E9E800EA5B1B /* SideMenuDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuDemo.swift; sourceTree = "<group>"; };
+		C3A295E92581FB6200EA5B1B /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		C3B59E1825761D5F00140E4B /* EnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentObject.swift; sourceTree = "<group>"; };
 		C3B59E1C25762AA000140E4B /* ObservedObjectCustomDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectCustomDemo.swift; sourceTree = "<group>"; };
 		C3B59E2025762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectCustomDemoDetail.swift; sourceTree = "<group>"; };
@@ -465,6 +469,15 @@
 			path = ReloadTest;
 			sourceTree = "<group>";
 		};
+		C3A295E12581E9D500EA5B1B /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C3A295E22581E9E800EA5B1B /* SideMenuDemo.swift */,
+				C3A295E92581FB6200EA5B1B /* SideMenuView.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		C3B59E1B25762A8400140E4B /* CustomDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +518,7 @@
 		C3BAD1EA257765700072565A /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3A295E12581E9D500EA5B1B /* SideMenu */,
 				C33F3D3E258089DD000D5D01 /* RecyclerView */,
 				C37DF302257A311800775CF1 /* CustomIndicators */,
 				C30D561D25790F96000F18F1 /* CustomProgressView */,
@@ -761,6 +775,7 @@
 				C32F058B2573484000E1A65A /* BasicSlider.swift in Sources */,
 				C30B8DC5257214CB007CF79D /* BasicText.swift in Sources */,
 				C32F05D025736E0600E1A65A /* GestureTap.swift in Sources */,
+				C3A295E32581E9E800EA5B1B /* SideMenuDemo.swift in Sources */,
 				C33F3D4A25808BB7000D5D01 /* RecyclerViewVM.swift in Sources */,
 				C3C3A4CF2574890D0041F5D4 /* LayoutNavigationLinkMDetail.swift in Sources */,
 				C3C3A4ED2574BE150041F5D4 /* PropertyEnvironmentObjectDemo.swift in Sources */,
@@ -768,6 +783,7 @@
 				C30B8DB125721464007CF79D /* SceneDelegate.swift in Sources */,
 				C37DF304257A312C00775CF1 /* CustomIndicators.swift in Sources */,
 				C32F05BC2573662600E1A65A /* AnimationRotationEffectSpring.swift in Sources */,
+				C3A295EA2581FB6200EA5B1B /* SideMenuView.swift in Sources */,
 				C30B8DD725727BEA007CF79D /* BasicPicker.swift in Sources */,
 				C3BAD1A525772E740072565A /* ExtensionCustomView.swift in Sources */,
 				C30B8DB325721464007CF79D /* ContentView.swift in Sources */,
@@ -939,6 +955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"SHSwiftUICode/Preview Content\"";
 				DEVELOPMENT_TEAM = DU98VK6D82;
 				ENABLE_PREVIEWS = YES;
@@ -960,6 +977,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"SHSwiftUICode/Preview Content\"";
 				DEVELOPMENT_TEAM = DU98VK6D82;
 				ENABLE_PREVIEWS = YES;

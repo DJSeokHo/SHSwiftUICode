@@ -93,7 +93,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = LoadMoreTest()
 //        let contentView = ReloadTest()
 //        let contentView = SideMenuDemo()
-        let contentView = SpannedGridView()
+//        let contentView = SpannedGridView()
+        let contentView = BottomTabBarView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

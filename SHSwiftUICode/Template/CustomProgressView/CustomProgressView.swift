@@ -38,7 +38,7 @@ struct CustomProgressView: View {
         // or app will crash
         
 //        .frame(width: .infinity, height: .infinity, alignment: .center)
-        
+        .frame(minWidth: .infinity, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100    , maxHeight: .infinity, alignment: .center)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
     }

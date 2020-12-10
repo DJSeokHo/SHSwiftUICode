@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "ExyteGrid",
+        "repositoryURL": "https://github.com/exyte/Grid",
+        "state": {
+          "branch": null,
+          "revision": "12f1271635eec387b05f2428e98b80869bc17b0a",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "SwiftyJSON",
         "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
         "state": {

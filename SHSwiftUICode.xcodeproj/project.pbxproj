@@ -61,6 +61,8 @@
 		C3A295DA2581C70500EA5B1B /* RecyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295D92581C70500EA5B1B /* RecyclerView.swift */; };
 		C3A295E32581E9E800EA5B1B /* SideMenuDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295E22581E9E800EA5B1B /* SideMenuDemo.swift */; };
 		C3A295EA2581FB6200EA5B1B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295E92581FB6200EA5B1B /* SideMenuView.swift */; };
+		C3A295EF2582097600EA5B1B /* SpannedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A295EE2582097600EA5B1B /* SpannedGridView.swift */; };
+		C3A295F325820A1D00EA5B1B /* ExyteGrid in Frameworks */ = {isa = PBXBuildFile; productRef = C3A295F225820A1D00EA5B1B /* ExyteGrid */; };
 		C3B59E1925761D5F00140E4B /* EnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E1825761D5F00140E4B /* EnviromentObject.swift */; };
 		C3B59E1D25762AA000140E4B /* ObservedObjectCustomDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E1C25762AA000140E4B /* ObservedObjectCustomDemo.swift */; };
 		C3B59E2125762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B59E2025762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift */; };
@@ -154,6 +156,7 @@
 		C3A295D92581C70500EA5B1B /* RecyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerView.swift; sourceTree = "<group>"; };
 		C3A295E22581E9E800EA5B1B /* SideMenuDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuDemo.swift; sourceTree = "<group>"; };
 		C3A295E92581FB6200EA5B1B /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		C3A295EE2582097600EA5B1B /* SpannedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpannedGridView.swift; sourceTree = "<group>"; };
 		C3B59E1825761D5F00140E4B /* EnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentObject.swift; sourceTree = "<group>"; };
 		C3B59E1C25762AA000140E4B /* ObservedObjectCustomDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectCustomDemo.swift; sourceTree = "<group>"; };
 		C3B59E2025762ABD00140E4B /* ObservedObjectCustomDemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectCustomDemoDetail.swift; sourceTree = "<group>"; };
@@ -199,6 +202,7 @@
 			files = (
 				C36BF84C2577B1D900052F5B /* SwiftyJSON in Frameworks */,
 				C36BF8502577B1ED00052F5B /* Alamofire in Frameworks */,
+				C3A295F325820A1D00EA5B1B /* ExyteGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +482,14 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		C3A295ED2582090C00EA5B1B /* SpannedGrid */ = {
+			isa = PBXGroup;
+			children = (
+				C3A295EE2582097600EA5B1B /* SpannedGridView.swift */,
+			);
+			path = SpannedGrid;
+			sourceTree = "<group>";
+		};
 		C3B59E1B25762A8400140E4B /* CustomDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +530,7 @@
 		C3BAD1EA257765700072565A /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3A295ED2582090C00EA5B1B /* SpannedGrid */,
 				C3A295E12581E9D500EA5B1B /* SideMenu */,
 				C33F3D3E258089DD000D5D01 /* RecyclerView */,
 				C37DF302257A311800775CF1 /* CustomIndicators */,
@@ -672,6 +685,7 @@
 			packageProductDependencies = (
 				C36BF84B2577B1D900052F5B /* SwiftyJSON */,
 				C36BF84F2577B1ED00052F5B /* Alamofire */,
+				C3A295F225820A1D00EA5B1B /* ExyteGrid */,
 			);
 			productName = SHSwiftUICode;
 			productReference = C30B8DAB25721464007CF79D /* SHSwiftUICode.app */;
@@ -703,6 +717,7 @@
 			packageReferences = (
 				C36BF84A2577B1D900052F5B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				C36BF84E2577B1ED00052F5B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C3A295F125820A1D00EA5B1B /* XCRemoteSwiftPackageReference "Grid" */,
 			);
 			productRefGroup = C30B8DAC25721464007CF79D /* Products */;
 			projectDirPath = "";
@@ -813,6 +828,7 @@
 				C340D1F4257919A4004609AD /* ThreadUtil.swift in Sources */,
 				C32F059F2573586200E1A65A /* BasicShape.swift in Sources */,
 				C30B8DC825721535007CF79D /* BasicTextField.swift in Sources */,
+				C3A295EF2582097600EA5B1B /* SpannedGridView.swift in Sources */,
 				C3C3A4C62574879D0041F5D4 /* LayoutNavigationLinkDetail.swift in Sources */,
 				C3B59E2B257635CB00140E4B /* EOCDData.swift in Sources */,
 				C3B59E28257635B900140E4B /* EnviromentObjectCustomDemo.swift in Sources */,
@@ -1033,6 +1049,14 @@
 				minimumVersion = 5.4.0;
 			};
 		};
+		C3A295F125820A1D00EA5B1B /* XCRemoteSwiftPackageReference "Grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/Grid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1045,6 +1069,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C36BF84E2577B1ED00052F5B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C3A295F225820A1D00EA5B1B /* ExyteGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3A295F125820A1D00EA5B1B /* XCRemoteSwiftPackageReference "Grid" */;
+			productName = ExyteGrid;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

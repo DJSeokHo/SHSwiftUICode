@@ -40,8 +40,8 @@ struct HomeTest: View {
                     cellView(detail: listDate.data[index])
                 }
                
-
             }
+            
         }
         
     }

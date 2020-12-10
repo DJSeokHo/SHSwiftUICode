@@ -9,42 +9,67 @@ import Foundation
 
 class RecyclerViewVM: ObservableObject {
     
-    static let REFRESH = "REFRESH"
     private static let TAG = "RecyclerViewVM"
     
     @Published
-    var list: [RecyclerViewModel] = []
+    var list: [RecyclerViewItemModel] = []
+    
+    @Published
+    var isLoading = false
     
     func reload() {
         
         ILog.debug(tag: RecyclerViewVM.TAG, content: "reload")
         
-        list.removeAll()
+        self.isLoading = true
         
-        ThreadUtil.startUIThread(runnable: {
-            self.list.append(contentsOf: self.createDate(fromOffset: 0, limitIs: 20))
-        }, afterSeconds: 1.5)
+        ThreadUtil.startThread {
+            
+            let list = self.createDate(fromOffset: 0, limitIs: 20)
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.isLoading = false
+                
+                self.list.removeAll()
+                self.list.append(contentsOf: list)
+                
+            }, afterSeconds: 2.5)
+            
+        }
+        
     }
     
     func loadMore() {
         
         ILog.debug(tag: RecyclerViewVM.TAG, content: "loadMore")
         
-        ThreadUtil.startUIThread(runnable: {
-            self.list.append(contentsOf: self.createDate(fromOffset: self.list.count, limitIs: 20))
-        }, afterSeconds: 1.5)
+        self.isLoading = true
+        
+        ThreadUtil.startThread {
+            
+            let list = self.createDate(fromOffset: self.list.count, limitIs: 20)
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.isLoading = false
+                self.list.append(contentsOf: list)
+                
+            }, afterSeconds: 2.5)
+        }
     }
     
-    func createDate(fromOffset offset: Int, limitIs limit: Int) -> [RecyclerViewModel] {
+    func createDate(fromOffset offset: Int, limitIs limit: Int) -> [RecyclerViewItemModel] {
         
-        var list: [RecyclerViewModel] = []
+        var list: [RecyclerViewItemModel] = []
         
-        var recyclerViewModel: RecyclerViewModel
-        for i in offset..<limit {
-            recyclerViewModel = RecyclerViewModel(title: "item \(i)")
-            list.append(recyclerViewModel)
+        var recyclerViewItemModel: RecyclerViewItemModel
+        for i in offset..<(offset + limit) {
+            recyclerViewItemModel = RecyclerViewItemModel(title: "item \(i)")
+            list.append(recyclerViewItemModel)
         }
         
         return list
     }
+   
 }

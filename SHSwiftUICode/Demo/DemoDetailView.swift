@@ -6,28 +6,38 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct DemoItemView: View {
+struct DemoDetailView: View {
     
     var body: some View {
         
         VStack {
-            ItemImagePartView()
-            ItemContentPartView()
+            
+            DemoDetailMapPartView()
+                .frame(height: 300)
+            
+            DemoDetailImagePartView()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            DemoDetailContentPartView()
+            
+            Spacer()
         }
         
     }
 }
 
 
-struct ItemImagePartView: View {
+struct DemoDetailImagePartView: View {
     
     var body: some View {
         if #available(iOS 15.0, *) {
             Image("coding_with_cat")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 150, height: 150, alignment: Alignment.center)
+                .frame(width: 260, height: 260, alignment: Alignment.center)
                 .clipShape(Circle())
                 .overlay {
                     Circle().stroke(.gray, lineWidth: 4)
@@ -45,7 +55,7 @@ struct ItemImagePartView: View {
     }
 }
 
-struct ItemContentPartView: View {
+struct DemoDetailContentPartView: View {
         
     var body: some View {
         
@@ -64,21 +74,36 @@ struct ItemContentPartView: View {
                 Text("With")
                 Text("Cat")
             }
-          
+            
+            Divider()
+            
+            Text("About Coding with cat")
+                .font(.title2)
+            Text("Subscribe to my channel is useful.")
         }
         .padding()
         
     }
 }
 
+struct DemoDetailMapPartView: View {
+    
+    @State
+    private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
+        span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+    )
+    
+    var body: some View {
+        Map(coordinateRegion: $region)
+    }
+}
 
-struct CircleImage_Previews: PreviewProvider {
+
+struct DemoDetail_Previews: PreviewProvider {
     static var previews: some View {
        
-        VStack {
-            ItemImagePartView()
-            ItemContentPartView()
-        }
+        DemoDetailView()
       
     }
 }

@@ -11,8 +11,8 @@
 		5608285627951EB400FF3E54 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285527951EB400FF3E54 /* DemoModel.swift */; };
 		5608285827952E2600FF3E54 /* DemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285727952E2600FF3E54 /* DemoListView.swift */; };
 		5608285C27953C8700FF3E54 /* BasicTextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285B27953C8700FF3E54 /* BasicTextExample.swift */; };
+		5608286227955CE800FF3E54 /* DemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608286127955CE800FF3E54 /* DemoViewModel.swift */; };
 		C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30306E32792C2CC00800B2F /* DemoDetailView.swift */; };
-		C30306E62792C2DC00800B2F /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30306E52792C2DC00800B2F /* DemoView.swift */; };
 		C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */; };
 		C3DB2120279295AE004A94F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB211F279295AE004A94F3 /* Assets.xcassets */; };
 		C3DB2123279295AE004A94F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB2122279295AE004A94F3 /* Preview Assets.xcassets */; };
@@ -24,8 +24,8 @@
 		5608285527951EB400FF3E54 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		5608285727952E2600FF3E54 /* DemoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListView.swift; sourceTree = "<group>"; };
 		5608285B27953C8700FF3E54 /* BasicTextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextExample.swift; sourceTree = "<group>"; };
+		5608286127955CE800FF3E54 /* DemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewModel.swift; sourceTree = "<group>"; };
 		C30306E32792C2CC00800B2F /* DemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailView.swift; sourceTree = "<group>"; };
-		C30306E52792C2DC00800B2F /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		C3DB2118279295AD004A94F3 /* SHSwiftUICode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftUICode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSwiftUICodeApp.swift; sourceTree = "<group>"; };
 		C3DB211F279295AE004A94F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,21 +52,12 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
-		560828502795175B00FF3E54 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				56082851279517B200FF3E54 /* Item */,
-				5608285727952E2600FF3E54 /* DemoListView.swift */,
-			);
-			name = List;
-			sourceTree = "<group>";
-		};
-		56082851279517B200FF3E54 /* Item */ = {
+		560828502795175B00FF3E54 /* ListItem */ = {
 			isa = PBXGroup;
 			children = (
 				5608285227951B1300FF3E54 /* DemoListItemView.swift */,
 			);
-			name = Item;
+			name = ListItem;
 			sourceTree = "<group>";
 		};
 		5608285427951EA500FF3E54 /* Model */ = {
@@ -100,13 +91,22 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		5608286027955CDA00FF3E54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5608286127955CE800FF3E54 /* DemoViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		C30306E22792C2BB00800B2F /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5608285727952E2600FF3E54 /* DemoListView.swift */,
+				5608286027955CDA00FF3E54 /* ViewModel */,
 				5608285427951EA500FF3E54 /* Model */,
-				560828502795175B00FF3E54 /* List */,
+				560828502795175B00FF3E54 /* ListItem */,
 				5608284F2795175200FF3E54 /* Detail */,
-				C30306E52792C2DC00800B2F /* DemoView.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -228,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */,
-				C30306E62792C2DC00800B2F /* DemoView.swift in Sources */,
+				5608286227955CE800FF3E54 /* DemoViewModel.swift in Sources */,
 				5608285827952E2600FF3E54 /* DemoListView.swift in Sources */,
 				C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */,
 				5608285C27953C8700FF3E54 /* BasicTextExample.swift in Sources */,

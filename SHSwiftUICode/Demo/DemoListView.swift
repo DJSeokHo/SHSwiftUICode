@@ -7,76 +7,38 @@
 
 import SwiftUI
 
+struct DemoContentView: View {
+    
+    let viewModel = DemoViewModel()
+    
+    var body: some View {
+        
+        DemoListView().environmentObject(viewModel)
+        
+    }
+}
+
 struct DemoListView: View {
     
-    var list: [DemoModel] = [
-        DemoModel(
-            id: 0,
-            name: "coding with cat 1",
-            description: "subscribe coding with cat is useful",
-            state: "",
-            imageName: "coding_with_cat",
-            coordinates: DemoModel.Coordinates(latitude: 34.011_286, longitude: -116.166_868),
-            isFavorite: false
-        ),
-        DemoModel(
-            id: 1,
-            name: "coding with cat 2",
-            description: "subscribe coding with cat is useful",
-            state: "",
-            imageName: "coding_with_cat",
-            coordinates: DemoModel.Coordinates(latitude: 34.011_286, longitude: -116.166_868),
-            isFavorite: true
-        ),
-        DemoModel(
-            id: 2,
-            name: "coding with cat 3",
-            description: "subscribe coding with cat is useful",
-            state: "",
-            imageName: "coding_with_cat",
-            coordinates: DemoModel.Coordinates(latitude: 34.011_286, longitude: -116.166_868),
-            isFavorite: false
-        ),
-        DemoModel(
-            id: 3,
-            name: "coding with cat 4",
-            description: "subscribe coding with cat is useful",
-            state: "",
-            imageName: "coding_with_cat",
-            coordinates: DemoModel.Coordinates(latitude: 34.011_286, longitude: -116.166_868),
-            isFavorite: true
-        ),
-        DemoModel(
-            id: 4,
-            name: "coding with cat 5",
-            description: "subscribe coding with cat is useful",
-            state: "",
-            imageName: "coding_with_cat",
-            coordinates: DemoModel.Coordinates(latitude: 34.011_286, longitude: -116.166_868),
-            isFavorite: true
-        )
-    ]
-    
-    @State
-    var showFavoritesOnly = false
+    @EnvironmentObject
+    var viewModel: DemoViewModel
     
     var filteredList: [DemoModel] {
-        list.filter { demoModel in
+        viewModel.demoModelList.filter { demoModel in
             // if is false, return it
             // 如果只显示收藏的项目为假，取反后为真，那么整个表达式肯定是真，所以就不过滤，直接返回
             // 如果只显示收藏的项目为真，取反后为假，那么如果model的收藏也为假，那么整个表达式为假。需要被过滤掉。
-            (!showFavoritesOnly || demoModel.isFavorite)
+            (!viewModel.showFavoritesOnly || demoModel.isFavorite)
         }
     }
 
-    
     var body: some View {
         
         NavigationView {
             
             List() {
                 
-                Toggle(isOn: $showFavoritesOnly) {
+                Toggle(isOn: $viewModel.showFavoritesOnly) {
                     Text("Favorites only")
                 }
                 
@@ -96,18 +58,20 @@ struct DemoListView: View {
                 
             }
             .navigationBarTitle(Text("Coding with cat"))
+        }.onAppear {
+            
+            viewModel.load(offset: 0, limit: 20)
             
         }
-        
         
     }
 }
 
-struct DemoListView_Previews: PreviewProvider {
+struct DemoContentView_Previews: PreviewProvider {
     static var previews: some View {
        
         ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
-            DemoListView()
+            DemoContentView()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }

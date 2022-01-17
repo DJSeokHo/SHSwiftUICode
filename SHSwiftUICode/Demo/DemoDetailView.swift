@@ -10,6 +10,9 @@ import MapKit
 
 struct DemoDetailView: View {
     
+    @EnvironmentObject
+    var viewModel: DemoViewModel
+    
     var demoModel: DemoModel
     
     var body: some View {

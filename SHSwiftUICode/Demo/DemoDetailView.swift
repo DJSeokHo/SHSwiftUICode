@@ -101,16 +101,19 @@ struct DemoDetailContentPartView: View {
             
             Text(demoModel.name)
                 .font(.title)
-                .foregroundColor(.orange)
+                .foregroundColor(Color("Color6868AD")).bold()
             
             HStack {
                 
                 Text("Coding").font(.subheadline)
+                Text("With")
+                Text("Cat")
+                
                 // spacer 会自动填补行，列的空白，让其他内容贴边.
                 // 即，spacer填补行或者列的空白，按照行列所能填充的最大空间来进行填充.
                 Spacer()
-                Text("With")
-                Text("Cat")
+               
+                Text("subscribe").font(Font.system(size: 15)).bold().foregroundColor(Color.red)
             }
             
             Divider()

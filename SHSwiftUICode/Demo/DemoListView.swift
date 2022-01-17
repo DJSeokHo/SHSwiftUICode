@@ -74,18 +74,25 @@ struct DemoListView: View {
         
         NavigationView {
             
-            List(filteredList, id: \.id) { demoModel in
+            List() {
                 
-                NavigationLink(destination: {
-                    // 目标页面
-                    DemoDetailView(demoModel: demoModel)
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+                
+                ForEach(filteredList, id: \.id) { demoModel in
                     
-                }, label: {
-                    
-                    // 内容页面，在这里指的是列表的行view
-                    DemoListItemView(demoModel: demoModel)
-                    
-                })
+                    NavigationLink(destination: {
+                        // 目标页面
+                        DemoDetailView(demoModel: demoModel)
+                        
+                    }, label: {
+                        
+                        // 内容页面，在这里指的是列表的行view
+                        DemoListItemView(demoModel: demoModel)
+                        
+                    })
+                }
                 
             }
             .navigationBarTitle(Text("Coding with cat"))

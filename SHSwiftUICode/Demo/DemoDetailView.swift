@@ -10,31 +10,65 @@ import MapKit
 
 struct DemoDetailView: View {
     
+    var demoModel: DemoModel
+    
     var body: some View {
         
-        VStack {
+        ScrollView {
             
-            DemoDetailMapPartView()
+            DemoDetailMapPartView(
+                coordinate: CLLocationCoordinate2D(
+                    latitude: demoModel.coordinates.latitude,
+                    longitude: demoModel.coordinates.longitude
+                )
+            )
+                // 无视顶部navigation bar的区域，直接用画面填充
+                .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
-            DemoDetailImagePartView()
+            DemoDetailImagePartView(imageName: demoModel.imageName)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
-            DemoDetailContentPartView()
+            DemoDetailContentPartView(demoModel: demoModel)
             
+           
             Spacer()
         }
+        .navigationTitle(demoModel.name)
+        .navigationBarTitleDisplayMode(.inline)
         
     }
 }
 
+struct DemoDetailMapPartView: View {
+    
+    var coordinate: CLLocationCoordinate2D
+    
+    @State
+    private var region = MKCoordinateRegion()
+  
+    var body: some View {
+        Map(coordinateRegion: $region)
+            .onAppear {
+                
+                region = MKCoordinateRegion(
+                    center: coordinate,
+                    span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+                )
+                
+            }
+    }
+    
+}
 
 struct DemoDetailImagePartView: View {
     
+    var imageName: String
+    
     var body: some View {
         if #available(iOS 15.0, *) {
-            Image("coding_with_cat")
+            Image(imageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 260, height: 260, alignment: Alignment.center)
@@ -45,7 +79,7 @@ struct DemoDetailImagePartView: View {
                 .shadow(radius: 7)
         }
         else {
-            Image("coding_with_cat")
+            Image(imageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150, alignment: Alignment.center)
@@ -56,6 +90,8 @@ struct DemoDetailImagePartView: View {
 }
 
 struct DemoDetailContentPartView: View {
+    
+    var demoModel: DemoModel
         
     var body: some View {
         
@@ -63,13 +99,15 @@ struct DemoDetailContentPartView: View {
             alignment: HorizontalAlignment.leading
         ) {
             
-            Text("Hello, world!")
+            Text(demoModel.name)
                 .font(.title)
                 .foregroundColor(.orange)
             
             HStack {
                 
                 Text("Coding").font(.subheadline)
+                // spacer 会自动填补行，列的空白，让其他内容贴边.
+                // 即，spacer填补行或者列的空白，按照行列所能填充的最大空间来进行填充.
                 Spacer()
                 Text("With")
                 Text("Cat")
@@ -79,31 +117,26 @@ struct DemoDetailContentPartView: View {
             
             Text("About Coding with cat")
                 .font(.title2)
-            Text("Subscribe to my channel is useful.")
+            Text(demoModel.description)
         }
+        // padding 内边距
         .padding()
-        
     }
 }
-
-struct DemoDetailMapPartView: View {
-    
-    @State
-    private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
-        span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-    )
-    
-    var body: some View {
-        Map(coordinateRegion: $region)
-    }
-}
-
 
 struct DemoDetail_Previews: PreviewProvider {
     static var previews: some View {
        
-        DemoDetailView()
+        DemoDetailView(
+            demoModel: DemoModel(
+                id: 0,
+                name: "coding with cat 1",
+                description: "subscribe coding with cat is useful",
+                state: "",
+                imageName: "coding_with_cat",
+                coordinates: DemoModel.Coordinates(latitude: 34.011_286, longitude: -116.166_868)
+            )
+        )
       
     }
 }

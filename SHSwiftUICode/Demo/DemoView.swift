@@ -11,6 +11,6 @@ struct DemoView: View {
     
     var body: some View {
         
-        DemoDetailView()
+        DemoListView()
     }
 }

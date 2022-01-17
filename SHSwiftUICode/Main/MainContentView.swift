@@ -12,6 +12,7 @@ struct MainContentView: View {
         
         DemoView()
         
+//        BasicTextExample()
     }
 }
 

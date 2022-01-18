@@ -10,9 +10,11 @@ import SwiftUI
 struct MainContentView: View {
     var body: some View {
         
-        DemoContentView()
+//        DemoContentView()
         
-//        BasicTextExample()
+//        TextExample()
+//        ButtonExample()
+        LabelExample()
     }
 }
 

@@ -20,6 +20,9 @@ struct DemoContentView: View {
 
 struct DemoListView: View {
     
+    @State
+    var isInit = false
+    
     @EnvironmentObject
     var viewModel: DemoViewModel
     
@@ -60,8 +63,13 @@ struct DemoListView: View {
             .navigationBarTitle(Text("Coding with cat"))
         }.onAppear {
             
-            viewModel.load(offset: 0, limit: 20)
+            ILog.debug(tag: #file, content: "appear ???")
             
+            if !isInit {
+                viewModel.load(offset: 0, limit: 20)
+                isInit = true
+            }
+          
         }
         
     }

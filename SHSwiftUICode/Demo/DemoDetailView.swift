@@ -94,7 +94,14 @@ struct DemoDetailImagePartView: View {
 
 struct DemoDetailContentPartView: View {
     
+    @EnvironmentObject
+    var viewModel: DemoViewModel
+    
     var demoModel: DemoModel
+    
+    var demoModelIndex: Int {
+        viewModel.demoModelList.firstIndex(where: { $0.id == demoModel.id })!
+    }
         
     var body: some View {
         
@@ -102,9 +109,15 @@ struct DemoDetailContentPartView: View {
             alignment: HorizontalAlignment.leading
         ) {
             
-            Text(demoModel.name)
-                .font(.title)
-                .foregroundColor(Color("Color6868AD")).bold()
+            HStack {
+                
+                Text(demoModel.name)
+                    .font(.title)
+                    .foregroundColor(Color("Color6868AD")).bold()
+                
+                FavoriteButton(isSet: $viewModel.demoModelList[demoModelIndex].isFavorite)
+            }
+         
             
             HStack {
                 
@@ -127,6 +140,25 @@ struct DemoDetailContentPartView: View {
         }
         // padding 内边距
         .padding()
+    }
+}
+
+struct FavoriteButton: View {
+    
+    @Binding
+    var isSet: Bool
+
+    var body: some View {
+        
+        Button(
+            action: {
+                isSet.toggle()
+            }, label: {
+                Label("Toggle Favorite", systemImage: isSet ? "star.fill" : "star")
+                    .labelStyle(.iconOnly)
+                    .foregroundColor(isSet ? .yellow : .gray)
+            }
+        )
     }
 }
 

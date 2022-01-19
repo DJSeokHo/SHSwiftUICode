@@ -14,7 +14,10 @@ struct MainContentView: View {
         
 //        TextExample()
 //        ButtonExample()
-        LabelExample()
+//        LabelExample()
+//        TextFieldExample()
+//        TextEditorExample()
+        SecureFieldExample()
     }
 }
 

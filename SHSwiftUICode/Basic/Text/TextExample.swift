@@ -26,6 +26,14 @@ struct TextExample: View {
             Text("Coding with cat").frame(width: 100)
             Text("Coding with cat").frame(width: 100).lineLimit(1)
         }
+        .frame(
+            minWidth: 0,
+            maxWidth: .infinity,
+            minHeight: 0,
+            maxHeight: .infinity,
+            alignment: Alignment.center
+        )
+        .background(Color.gray)
        
     }
     

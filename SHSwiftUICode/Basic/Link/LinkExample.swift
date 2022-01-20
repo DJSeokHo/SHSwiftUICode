@@ -9,7 +9,19 @@ import SwiftUI
 
 struct LinkExample: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        // 用链接的描述和地址来初始化 Link
+        VStack {
+            
+            Link("google link", destination: URL(string: "https://www.google.com")!)
+                .foregroundColor(Color.orange)
+            
+            Spacer().frame(height: 20)
+            
+            Link("coding with cat github", destination: URL(string: "https://github.com/DJSeokHo")!)
+                .foregroundColor(Color.black)
+        }
+        
     }
 }
 

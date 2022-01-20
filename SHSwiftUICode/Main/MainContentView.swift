@@ -17,7 +17,11 @@ struct MainContentView: View {
 //        LabelExample()
 //        TextFieldExample()
 //        TextEditorExample()
-        SecureFieldExample()
+//        SecureFieldExample()
+//        LinkExample()
+//        ToggleExample()
+//        SliderExample()
+        StepperExample()
     }
 }
 

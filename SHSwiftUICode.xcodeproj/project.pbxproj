@@ -12,6 +12,14 @@
 		5608285827952E2600FF3E54 /* DemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285727952E2600FF3E54 /* DemoListView.swift */; };
 		5608285C27953C8700FF3E54 /* TextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285B27953C8700FF3E54 /* TextExample.swift */; };
 		5608286227955CE800FF3E54 /* DemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608286127955CE800FF3E54 /* DemoViewModel.swift */; };
+		561C72B4279A8BEC001440F5 /* ProgressExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72B3279A8BEC001440F5 /* ProgressExample.swift */; };
+		561C72B7279A9102001440F5 /* PickerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72B6279A9101001440F5 /* PickerExample.swift */; };
+		561C72B9279A96D2001440F5 /* ColorPickerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72B8279A96D2001440F5 /* ColorPickerExample.swift */; };
+		561C72BB279A979F001440F5 /* DatePickerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72BA279A979F001440F5 /* DatePickerExample.swift */; };
+		561C72BE279AA00C001440F5 /* GroupBoxExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72BD279AA00C001440F5 /* GroupBoxExample.swift */; };
+		561C72C0279AA0CB001440F5 /* DisclosureGroupExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72BF279AA0CB001440F5 /* DisclosureGroupExample.swift */; };
+		561C72C3279AA219001440F5 /* OutlineGroupExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72C2279AA219001440F5 /* OutlineGroupExample.swift */; };
+		561C72C6279AA6D9001440F5 /* ListExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72C5279AA6D9001440F5 /* ListExample.swift */; };
 		566602A0279947F70023BE4C /* ToggleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666029F279947F70023BE4C /* ToggleExample.swift */; };
 		566602A32799493F0023BE4C /* StepperExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566602A22799493F0023BE4C /* StepperExample.swift */; };
 		566602A627994AB20023BE4C /* SliderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566602A527994AB20023BE4C /* SliderExample.swift */; };
@@ -35,6 +43,14 @@
 		5608285727952E2600FF3E54 /* DemoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListView.swift; sourceTree = "<group>"; };
 		5608285B27953C8700FF3E54 /* TextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExample.swift; sourceTree = "<group>"; };
 		5608286127955CE800FF3E54 /* DemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewModel.swift; sourceTree = "<group>"; };
+		561C72B3279A8BEC001440F5 /* ProgressExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressExample.swift; sourceTree = "<group>"; };
+		561C72B6279A9101001440F5 /* PickerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerExample.swift; sourceTree = "<group>"; };
+		561C72B8279A96D2001440F5 /* ColorPickerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerExample.swift; sourceTree = "<group>"; };
+		561C72BA279A979F001440F5 /* DatePickerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerExample.swift; sourceTree = "<group>"; };
+		561C72BD279AA00C001440F5 /* GroupBoxExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBoxExample.swift; sourceTree = "<group>"; };
+		561C72BF279AA0CB001440F5 /* DisclosureGroupExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureGroupExample.swift; sourceTree = "<group>"; };
+		561C72C2279AA219001440F5 /* OutlineGroupExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineGroupExample.swift; sourceTree = "<group>"; };
+		561C72C5279AA6D9001440F5 /* ListExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExample.swift; sourceTree = "<group>"; };
 		5666029F279947F70023BE4C /* ToggleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleExample.swift; sourceTree = "<group>"; };
 		566602A22799493F0023BE4C /* StepperExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperExample.swift; sourceTree = "<group>"; };
 		566602A527994AB20023BE4C /* SliderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderExample.swift; sourceTree = "<group>"; };
@@ -42,6 +58,7 @@
 		567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExample.swift; sourceTree = "<group>"; };
 		567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldExample.swift; sourceTree = "<group>"; };
 		567D9D712798090D0024F8EE /* LinkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExample.swift; sourceTree = "<group>"; };
+		568736E4279E6F9200DF7772 /* ConsoleBasic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConsoleBasic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		56AAB21727969B92004E8130 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		56AAB2192796A5A8004E8130 /* document.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = document.md; sourceTree = "<group>"; };
 		56AAB21B2796A819004E8130 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
@@ -92,6 +109,10 @@
 		5608285927953C6500FF3E54 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				561C72C4279AA6CC001440F5 /* List */,
+				561C72BC279A9FFC001440F5 /* Group */,
+				561C72B5279A90F2001440F5 /* Picker */,
+				561C72B2279A8BD5001440F5 /* Progress */,
 				566602A427994AA20023BE4C /* Slider */,
 				566602A1279949310023BE4C /* Stepper */,
 				5666029E279947EC0023BE4C /* Toggle */,
@@ -125,6 +146,42 @@
 				5608286127955CE800FF3E54 /* DemoViewModel.swift */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		561C72B2279A8BD5001440F5 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				561C72B3279A8BEC001440F5 /* ProgressExample.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		561C72B5279A90F2001440F5 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				561C72B6279A9101001440F5 /* PickerExample.swift */,
+				561C72B8279A96D2001440F5 /* ColorPickerExample.swift */,
+				561C72BA279A979F001440F5 /* DatePickerExample.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		561C72BC279A9FFC001440F5 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				561C72BD279AA00C001440F5 /* GroupBoxExample.swift */,
+				561C72BF279AA0CB001440F5 /* DisclosureGroupExample.swift */,
+				561C72C2279AA219001440F5 /* OutlineGroupExample.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		561C72C4279AA6CC001440F5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				561C72C5279AA6D9001440F5 /* ListExample.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		5666029E279947EC0023BE4C /* Toggle */ = {
@@ -167,6 +224,22 @@
 				567D9D712798090D0024F8EE /* LinkExample.swift */,
 			);
 			path = Link;
+			sourceTree = "<group>";
+		};
+		568736E2279E6E5A00DF7772 /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				568736E3279E6F7100DF7772 /* Basic */,
+			);
+			path = Console;
+			sourceTree = "<group>";
+		};
+		568736E3279E6F7100DF7772 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				568736E4279E6F9200DF7772 /* ConsoleBasic.playground */,
+			);
+			path = Basic;
 			sourceTree = "<group>";
 		};
 		56AAB21427969ACA004E8130 /* Main */ = {
@@ -241,6 +314,7 @@
 		C3DB211A279295AD004A94F3 /* SHSwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				568736E2279E6E5A00DF7772 /* Console */,
 				56AAB21527969B76004E8130 /* Framework */,
 				5608285D27954C2800FF3E54 /* Constants */,
 				5608285927953C6500FF3E54 /* Basic */,
@@ -339,11 +413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561C72B7279A9102001440F5 /* PickerExample.swift in Sources */,
 				C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */,
 				5608286227955CE800FF3E54 /* DemoViewModel.swift in Sources */,
 				567D9D6A2797F4980024F8EE /* TextEditorExample.swift in Sources */,
+				561C72B4279A8BEC001440F5 /* ProgressExample.swift in Sources */,
 				5608285827952E2600FF3E54 /* DemoListView.swift in Sources */,
 				56AAB21F2796AE2A004E8130 /* LabelExample.swift in Sources */,
+				561C72BB279A979F001440F5 /* DatePickerExample.swift in Sources */,
 				56AAB21C2796A819004E8130 /* ButtonExample.swift in Sources */,
 				567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */,
 				C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */,
@@ -352,9 +429,14 @@
 				566602A32799493F0023BE4C /* StepperExample.swift in Sources */,
 				567D9D722798090D0024F8EE /* LinkExample.swift in Sources */,
 				5608285C27953C8700FF3E54 /* TextExample.swift in Sources */,
+				561C72BE279AA00C001440F5 /* GroupBoxExample.swift in Sources */,
 				C3DB212B27929CCD004A94F3 /* MainContentView.swift in Sources */,
+				561C72B9279A96D2001440F5 /* ColorPickerExample.swift in Sources */,
 				566602A0279947F70023BE4C /* ToggleExample.swift in Sources */,
+				561C72C6279AA6D9001440F5 /* ListExample.swift in Sources */,
 				567D9D6D2797F7AA0024F8EE /* TextFieldExample.swift in Sources */,
+				561C72C0279AA0CB001440F5 /* DisclosureGroupExample.swift in Sources */,
+				561C72C3279AA219001440F5 /* OutlineGroupExample.swift in Sources */,
 				5608285627951EB400FF3E54 /* DemoModel.swift in Sources */,
 				5608285327951B1300FF3E54 /* DemoListItemView.swift in Sources */,
 			);

@@ -21,7 +21,15 @@ struct MainContentView: View {
 //        LinkExample()
 //        ToggleExample()
 //        SliderExample()
-        StepperExample()
+//        StepperExample()
+//        ProgressExample()
+//        PickerExample()
+//        ColorPickerExample()
+//        DatePickerExample()
+//        GroupBoxExample()
+//        DisclosureGroupExample()
+//        OutlineGroupExample()
+        ListExample()
     }
 }
 

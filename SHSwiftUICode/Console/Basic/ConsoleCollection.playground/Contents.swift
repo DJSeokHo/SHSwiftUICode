@@ -1,36 +1,61 @@
 import UIKit
 
-//arrayTest()
-//setTest()
-dictionaryTest()
+/**
+ 集合测试
+ */
 
-func dictionaryTest() {
+/*
+ 排列
+ */
+func arrayTest() {
     
-    // 创建一个空字典
-    var namesOfIntegers: [Int: String] = [:]
+    var someInts: [Int] = []
+    print("someInts is of type [Int] with \(someInts.count) items.")
+    // 打印“someInts is of type [Int] with 0 items.”
     
-    var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
-    print("The dictionary of airports contains \(airports.count) items.")
-    // 打印“The dictionary of airports contains 2 items.”（这个字典有两个数据项）
-    if airports.isEmpty {
-        print("The airports dictionary is empty.")
-    } else {
-        print("The airports dictionary is not empty.")
+    someInts.append(3)
+    someInts = []
+    
+    var shoppingList: [String] = ["Eggs", "Milk"]
+    // shoppingList 已经被构造并且拥有两个初始项。
+    
+    print("The shopping list contains \(shoppingList.count) items.")
+    // 输出“The shopping list contains 2 items.”（这个数组有2个项）
+    
+    if shoppingList.isEmpty {
+        print("The shopping list is empty.")
     }
-    // 打印“The airports dictionary is not empty.”
-    
-    airports["LHR"] = "London"
-    
-    if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
-        print("The old value for DUB was \(oldValue).")
+    else {
+        print("The shopping list is not empty.")
     }
-    // 输出“The old value for DUB was Dublin.”
+    // 打印“The shopping list is not empty.”（shoppinglist 不是空的）
     
-    for (airportCode, airportName) in airports {
-        print("\(airportCode): \(airportName)")
+    shoppingList.append("Flour")
+    // shoppingList 现在有3个数据项，似乎有人在摊煎饼
+    
+    shoppingList += ["Baking Powder"]
+    // shoppingList 现在有四项了
+    shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
+    // shoppingList 现在有七项了
+    
+    shoppingList.insert("Maple Syrup", at: 0)
+    
+    let mapleSyrup = shoppingList.remove(at: 0)
+    print(mapleSyrup)
+    
+    for item in shoppingList {
+        print(item)
+    }
+    
+    for (index, value) in shoppingList.enumerated() {
+        print("Item \(String(index + 1)): \(value)")
     }
 }
+arrayTest()
 
+/*
+ 集合
+ */
 func setTest() {
     /*
      集合用来存储相同类型并且没有确定顺序的值。当集合元素顺序不重要时或者希望确保每个元素只出现一次时可以使用集合而不是数组。
@@ -83,48 +108,36 @@ func setTest() {
     oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
     // [1, 2, 9]
 }
+setTest()
 
-func arrayTest() {
+
+/*
+ 字典
+ */
+func dictionaryTest() {
     
-    var someInts: [Int] = []
-    print("someInts is of type [Int] with \(someInts.count) items.")
-    // 打印“someInts is of type [Int] with 0 items.”
+    // 创建一个空字典
+    var namesOfIntegers: [Int: String] = [:]
     
-    someInts.append(3)
-    someInts = []
-    
-    var shoppingList: [String] = ["Eggs", "Milk"]
-    // shoppingList 已经被构造并且拥有两个初始项。
-    
-    print("The shopping list contains \(shoppingList.count) items.")
-    // 输出“The shopping list contains 2 items.”（这个数组有2个项）
-    
-    if shoppingList.isEmpty {
-        print("The shopping list is empty.")
+    var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+    print("The dictionary of airports contains \(airports.count) items.")
+    // 打印“The dictionary of airports contains 2 items.”（这个字典有两个数据项）
+    if airports.isEmpty {
+        print("The airports dictionary is empty.")
+    } else {
+        print("The airports dictionary is not empty.")
     }
-    else {
-        print("The shopping list is not empty.")
+    // 打印“The airports dictionary is not empty.”
+    
+    airports["LHR"] = "London"
+    
+    if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+        print("The old value for DUB was \(oldValue).")
     }
-    // 打印“The shopping list is not empty.”（shoppinglist 不是空的）
+    // 输出“The old value for DUB was Dublin.”
     
-    shoppingList.append("Flour")
-    // shoppingList 现在有3个数据项，似乎有人在摊煎饼
-    
-    shoppingList += ["Baking Powder"]
-    // shoppingList 现在有四项了
-    shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
-    // shoppingList 现在有七项了
-    
-    shoppingList.insert("Maple Syrup", at: 0)
-    
-    let mapleSyrup = shoppingList.remove(at: 0)
-    print(mapleSyrup)
-    
-    for item in shoppingList {
-        print(item)
-    }
-    
-    for (index, value) in shoppingList.enumerated() {
-        print("Item \(String(index + 1)): \(value)")
+    for (airportCode, airportName) in airports {
+        print("\(airportCode): \(airportName)")
     }
 }
+dictionaryTest()

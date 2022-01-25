@@ -1,8 +1,8 @@
 import UIKit
 
-stringTest()
-
-// 字符串和字符
+/**
+ 字符串和字符
+ */
 func stringTest() {
     let someString = "Some string literal value"
     let quotation = """
@@ -16,3 +16,4 @@ func stringTest() {
     print(someString)
     print(quotation)
 }
+stringTest()

@@ -1,8 +1,11 @@
 import UIKit
 
-/*
+/**
+ 枚举
  结构体和枚举是值类型
  */
+
+
 enum CompassPoint {
     case north
     case south
@@ -24,7 +27,10 @@ case .west:
     print("Where the skies are blue")
 }
 
-// 枚举成员的遍历
+
+/*
+ 枚举成员的遍历
+ */
 enum Beverage: CaseIterable {
     case coffee, tea, juice
 }
@@ -35,12 +41,13 @@ for beverage in Beverage.allCases {
     print(beverage)
 }
 
-// 关联值
+/*
+ 关联值
+ */
 enum Barcode {
     case upc(Int, Int, Int, Int)
     case qrCode(String)
 }
-
 //var productBarcode = Barcode.upc(8, 85909, 51226, 3)
 var productBarcode = Barcode.qrCode("ABCDEFGHIJKLMNOP")
 switch productBarcode {

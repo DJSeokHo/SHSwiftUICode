@@ -1,14 +1,86 @@
 import UIKit
 
-/*
+/**
  控制流
  */
 
-//forInTest()
-//whileTest()
-//ifTest()
-switchTest()
 
+/*
+ for 循环
+ */
+func forInTest() {
+    
+    let names = ["Anna", "Alex", "Brian", "Jack"]
+    for name in names {
+        print("Hello, \(name)!")
+    }
+    
+    
+    let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+    for (animalName, legCount) in numberOfLegs {
+        print("\(animalName)s have \(legCount) legs")
+    }
+    
+    for index in 1...5 {
+        print("\(index) times 5 is \(index * 5)")
+    }
+    
+    let minutes = 60
+    for tickMark in 0..<minutes {
+        // 每一分钟都渲染一个刻度线（60次）
+        print(tickMark)
+    }
+    
+    let minuteInterval = 5
+    for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
+        // 每5分钟渲染一个刻度线（0, 5, 10, 15 ... 45, 50, 55）
+        print(tickMark)
+    }
+}
+forInTest()
+
+
+/*
+ while 循环
+ */
+func whileTest() {
+    var index = 0
+    while index < 10 {
+        print(index)
+        index += 1
+    }
+    
+    index = 0
+    
+    repeat {
+        print(index)
+        index += 1
+    } while index < 10
+}
+whileTest()
+
+
+/*
+ if 条件控制
+ */
+func ifTest() {
+    
+    let temperatureInFahrenheit = 90
+    if temperatureInFahrenheit <= 32 {
+        print("It's very cold. Consider wearing a scarf.")
+    } else if temperatureInFahrenheit >= 86 {
+        print("It's really warm. Don't forget to wear sunscreen.")
+    } else {
+        print("It's not that cold. Wear a t-shirt.")
+    }
+    // 输出“It's really warm. Don't forget to wear sunscreen.”
+}
+ifTest()
+
+
+/*
+ switch 条件控制
+ */
 func switchTest() {
     
     let someCharacter: Character = "z"
@@ -57,68 +129,11 @@ func switchTest() {
     switch integerToDescribe {
     case 2, 3, 5, 7, 11, 13, 17, 19:
         description += " a prime number, and also"
-        fallthrough
+        fallthrough // 向下击穿
     default:
         description += " an integer."
     }
     print(description)
     // 输出“The number 5 is a prime number, and also an integer.”
 }
-
-func ifTest() {
-    
-    let temperatureInFahrenheit = 90
-    if temperatureInFahrenheit <= 32 {
-        print("It's very cold. Consider wearing a scarf.")
-    } else if temperatureInFahrenheit >= 86 {
-        print("It's really warm. Don't forget to wear sunscreen.")
-    } else {
-        print("It's not that cold. Wear a t-shirt.")
-    }
-    // 输出“It's really warm. Don't forget to wear sunscreen.”
-}
-
-func whileTest() {
-    var index = 0
-    while index < 10 {
-        print(index)
-        index += 1
-    }
-    
-    index = 0
-    
-    repeat {
-        print(index)
-        index += 1
-    } while index < 10
-}
-
-func forInTest() {
-    
-    let names = ["Anna", "Alex", "Brian", "Jack"]
-    for name in names {
-        print("Hello, \(name)!")
-    }
-    
-    
-    let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
-    for (animalName, legCount) in numberOfLegs {
-        print("\(animalName)s have \(legCount) legs")
-    }
-    
-    for index in 1...5 {
-        print("\(index) times 5 is \(index * 5)")
-    }
-    
-    let minutes = 60
-    for tickMark in 0..<minutes {
-        // 每一分钟都渲染一个刻度线（60次）
-        print(tickMark)
-    }
-    
-    let minuteInterval = 5
-    for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
-        // 每5分钟渲染一个刻度线（0, 5, 10, 15 ... 45, 50, 55）
-        print(tickMark)
-    }
-}
+switchTest()

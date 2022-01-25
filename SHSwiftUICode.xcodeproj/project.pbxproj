@@ -73,6 +73,7 @@
 		56AAB21B2796A819004E8130 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
 		56AAB21E2796AE2A004E8130 /* LabelExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExample.swift; sourceTree = "<group>"; };
 		C30306E32792C2CC00800B2F /* DemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailView.swift; sourceTree = "<group>"; };
+		C3BB357A279FFA65000329BB /* ConsoleProperty.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConsoleProperty.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C3DB2118279295AD004A94F3 /* SHSwiftUICode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftUICode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSwiftUICodeApp.swift; sourceTree = "<group>"; };
 		C3DB211F279295AE004A94F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,13 +141,6 @@
 				5608285B27953C8700FF3E54 /* TextExample.swift */,
 			);
 			path = Text;
-			sourceTree = "<group>";
-		};
-		5608285D27954C2800FF3E54 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		5608286027955CDA00FF3E54 /* ViewModel */ = {
@@ -256,6 +250,7 @@
 				56A99A69279FEABE0033E2C7 /* ConsoleEnum.playground */,
 				56A99A6A279FEBB40033E2C7 /* ConsoleClass.playground */,
 				56A99A6B279FED640033E2C7 /* ConsoleStruct.playground */,
+				C3BB357A279FFA65000329BB /* ConsoleProperty.playground */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -334,7 +329,6 @@
 			children = (
 				568736E2279E6E5A00DF7772 /* Console */,
 				56AAB21527969B76004E8130 /* Framework */,
-				5608285D27954C2800FF3E54 /* Constants */,
 				5608285927953C6500FF3E54 /* Basic */,
 				C30306E22792C2BB00800B2F /* Demo */,
 				C3DB212927929CA8004A94F3 /* Main */,

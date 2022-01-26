@@ -123,4 +123,81 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 
 /*
  属性观察器
+ 
+ 属性观察器监控和响应属性值的变化，每次属性被设置值的时候都会调用属性观察器，即使新值和当前值相同的时候也不例外。
+ 你可以在以下位置添加属性观察器：
+ 自定义的存储属性
+ 继承的存储属性
+ 继承的计算属性
+ 
+ 可以为属性添加其中一个或两个观察器：
+ willSet 在新的值被设置之前调用
+ didSet 在新的值被设置之后调用
  */
+class StepCounter {
+    // 和计算属性的差别是，这里需要一个初始值
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps) {
+            print("将 totalSteps 的值设置为 \(newTotalSteps)")
+        }
+        didSet {
+            if totalSteps >= oldValue  {
+                print("增加了 \(totalSteps - oldValue) 步")
+            }
+            else {
+                print("减少了 \(oldValue - totalSteps) 步")
+            }
+        }
+    }
+}
+
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+// 将 totalSteps 的值设置为 200
+// 增加了 200 步
+stepCounter.totalSteps = 360
+// 将 totalSteps 的值设置为 360
+// 增加了 160 步
+stepCounter.totalSteps = 896
+// 将 totalSteps 的值设置为 896
+// 增加了 536 步
+stepCounter.totalSteps = 800
+
+
+/*
+ 属性包装器
+ 
+ 属性包装器在管理属性如何存储和定义属性的代码之间添加了一个分隔层。举例来说，如果你的属性需要线程安全性检查或者需要在数据库中存储它们的基本数据，那么必须给每个属性添加同样的逻辑代码。当使用属性包装器时，你只需在定义属性包装器时编写一次管理代码，然后应用到多个属性上来进行复用。
+ 定义一个属性包装器，你需要创建一个定义 wrappedValue 属性的结构体、枚举或者类。在下面的代码中，TwelveOrLess 结构体确保它包装的值始终是小于等于 12 的数字。如果要求它存储一个更大的数字，它则会存储 12 这个数字。
+ */
+@propertyWrapper
+struct TwelveOrLess {
+    private var number = 0
+    var wrappedValue: Int {
+        get {
+            return number
+        }
+        set {
+            number = min(newValue, 12)
+        }
+    }
+}
+
+struct SmallRectangle {
+    @TwelveOrLess
+    var height: Int
+    @TwelveOrLess
+    var width: Int
+}
+
+var rectangle = SmallRectangle()
+print(rectangle.height)
+// 打印 "0"
+
+rectangle.height = 10
+print(rectangle.height)
+// 打印 "10"
+
+rectangle.height = 24
+print(rectangle.height)
+// 打印 "12"

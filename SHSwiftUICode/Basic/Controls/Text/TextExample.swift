@@ -13,15 +13,20 @@ struct TextExample: View {
         
         VStack {
             
-            Text("Coding with cat").bold().font(Font.system(size: 20, weight: Font.Weight.bold)).italic()
+            Text("Coding with cat")
+                .font(Font.system(size: 20, weight: Font.Weight.bold))
+                .italic()
+                .bold()
             
-            Text("Coding with cat").foregroundColor(Color.orange)
+            Text("Coding with cat")
+                .foregroundColor(Color.orange)
                 .font(Font.custom("Monaco", size: 30))
             
-            Text("Coding with cat").border(.red, width: 2).padding(6)
-            Text("Coding with cat").padding(6).border(.red, width: 2)
+            // 可以看见，padding的作用类似于margin
+            Text("Coding with cat").border(.red, width: 2).padding(.all, 6) // 先border 再padding
+            Text("Coding with cat").padding(.all, 6).border(.red, width: 2) // 先padding 再border
             
-            Text("Coding with cat").foregroundColor(Color.black).underline().padding(5)
+            Text("Coding with cat").underline().padding(.all, 5).foregroundColor(Color.black)
             
             Text("Coding with cat").frame(width: 100)
             Text("Coding with cat").frame(width: 100).lineLimit(1)

@@ -34,11 +34,11 @@ struct TextFieldExample: View {
                     ILog.debug(tag: #file, content: stringOne)
                 }
             ).keyboardType(.webSearch)
-                .padding(10)
+                .padding(.all, 20)
                 .autocapitalization(.none)
                 .border(isEditing ? .orange : .black, width: 1)
                 .disableAutocorrection(true)
-                .padding(10)
+                .padding(.all, 16)
             
             Text(stringOne)
                 .foregroundColor(isEditing ? .orange : .black)

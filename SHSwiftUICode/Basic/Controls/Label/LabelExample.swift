@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/**
+ Label 就是图标 + 标题。我们可以用官方提供的 SFSymbol 显示图标
+ 也可以还是图片的名字
+ Label("闪电", image: "lightning")
+ */
 struct LabelExample: View {
     var body: some View {
         
@@ -29,7 +34,8 @@ struct LabelExample: View {
                     .frame(width: 60, height: 60, alignment: Alignment.center)
                     .clipShape(Circle())
                     .shadow(radius: 7)
-            }).padding().border(Color.orange)
+                
+            }).padding(.all, 20).border(Color.orange)
             
             Spacer().frame(height: 20)
             
@@ -45,11 +51,11 @@ struct LabelExample: View {
                     .clipShape(Circle())
                     .shadow(radius: 7)
             })
-                .padding()
+                .padding(.all, 20)
                 .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(60)
-                .padding(8).overlay(
-                    RoundedRectangle(cornerRadius: 54)
+                .padding(.all, 8).overlay(
+                    RoundedRectangle(cornerRadius: 60)
                         .stroke(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.red]), startPoint: .leading, endPoint: .trailing), lineWidth: 6)
                 )
         }

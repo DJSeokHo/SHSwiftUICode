@@ -7,16 +7,59 @@
 
 import SwiftUI
 
+private struct DevelopmentItem: Identifiable, Hashable {
+    let id = UUID()
+    let title: String
+}
 
 struct ListExample: View {
     var body: some View {
         
-        BasicList()
-       
+//        BasicList()
+        SelectionList()
     }
 }
 
+struct SelectionList: View {
+    
+    private let developmentItemArray = [
+        DevelopmentItem(title: "Android"),
+        DevelopmentItem(title:  "iOS"),
+        DevelopmentItem(title: "Python")
+    ]
+    
+    @State
+    var selection = Set<Development>()
+    
+    var body: some View {
+        
+        NavigationView {
+            /*
+             List 还支持传入 selection 参数，是用来配合 EditButton
+             使用的。添加了 selection 参数后，点击 Edit 就会在左侧出现选择框了。
+             
+             这个不起作用。。。
+             */
+            List(developmentItemArray, id: \.self, selection: $selection) { developmentItem in
+                Text(developmentItem.title)
+            }
+            .navigationBarItems(trailing: EditButton())
+            .navigationBarTitle(Text("Select \(selection.count) items"))
+        }
+        
+    }
+    
+    
+}
+
 struct BasicList: View {
+    
+    private let developmentItemArray = [
+        DevelopmentItem(title: "Android"),
+        DevelopmentItem(title:  "iOS"),
+        DevelopmentItem(title: "Python")
+    ]
+    
     var body: some View {
         
         VStack {
@@ -57,14 +100,3 @@ struct ListExample_Previews: PreviewProvider {
       
     }
 }
-
-private struct DevelopmentItem: Identifiable, Hashable {
-    let id = UUID()
-    let title: String
-}
-
-private let developmentItemArray = [
-    DevelopmentItem(title: "Android"),
-    DevelopmentItem(title:  "iOS"),
-    DevelopmentItem(title: "Python")
-]

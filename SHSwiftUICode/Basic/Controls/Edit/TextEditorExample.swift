@@ -26,7 +26,7 @@ struct TextEditorExample: View {
             TextEditor(text: $stringForTextEdit)
                .foregroundColor(Color.orange)
                .font(.system(size: 15))
-               .padding(10).border(Color.orange, width: 2).padding(10)
+               .padding(.all, 10).border(Color.orange, width: 2).padding(.all, 10)
             
             // 可以用 .lineLimit, .lineSpacing, .minimumScaleFactor 等
             // modifier 修改行间距或字间距
@@ -35,7 +35,7 @@ struct TextEditorExample: View {
                .foregroundColor(Color.gray)
                .font(.system(size: 15))
                .lineSpacing(10)
-               .padding(10).border(Color.black, width: 1)
+               .padding(.all, 10).border(Color.black, width: 1)
                .frame(height: 280)
             
         }

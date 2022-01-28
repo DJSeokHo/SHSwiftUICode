@@ -29,7 +29,15 @@ struct MainContentView: View {
 //        GroupBoxExample()
 //        DisclosureGroupExample()
 //        OutlineGroupExample()
-        ListExample()
+//        ListExample()
+//        SectionExample()
+//        ScrollViewExample()
+//        FormExample()
+//        EditButtonExample()
+//        NavigationViewExample()
+//        NavigationLinkExample()
+        
+        VStackExample()
     }
 }
 

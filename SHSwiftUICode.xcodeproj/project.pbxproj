@@ -37,6 +37,23 @@
 		56C67A8327A3BA4D0058A330 /* NavigationViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A8227A3BA4D0058A330 /* NavigationViewExample.swift */; };
 		56C67A8627A3BA930058A330 /* NavigationLinkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A8527A3BA930058A330 /* NavigationLinkExample.swift */; };
 		56C67A8B27A3BBB90058A330 /* VStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A8A27A3BBB90058A330 /* VStackExample.swift */; };
+		56C67A8E27A3BF8B0058A330 /* HStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A8D27A3BF8B0058A330 /* HStackExample.swift */; };
+		56C67A9127A3C1B60058A330 /* ZStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A9027A3C1B60058A330 /* ZStackExample.swift */; };
+		56C67A9527A3C69E0058A330 /* LazyVStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A9427A3C69E0058A330 /* LazyVStackExample.swift */; };
+		56C67A9727A3C7BC0058A330 /* LazyHStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A9627A3C7BC0058A330 /* LazyHStackExample.swift */; };
+		56C67A9927A3C7E80058A330 /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A9827A3C7E80058A330 /* LazyVGridExample.swift */; };
+		56C67A9B27A3C9C60058A330 /* LazyHGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A9A27A3C9C60058A330 /* LazyHGridExample.swift */; };
+		56C67A9E27A3CB030058A330 /* SpacerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67A9D27A3CB030058A330 /* SpacerExample.swift */; };
+		56C67AA127A3CBB40058A330 /* ScrollViewReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AA027A3CBB40058A330 /* ScrollViewReaderExample.swift */; };
+		56C67AA427A3CCB00058A330 /* GeometryReaderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AA327A3CCB00058A330 /* GeometryReaderExample.swift */; };
+		56C67AA727A3CD260058A330 /* EmptyViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AA627A3CD260058A330 /* EmptyViewExample.swift */; };
+		56C67AA927A3CDA40058A330 /* DividerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AA827A3CDA40058A330 /* DividerExample.swift */; };
+		56C67AAB27A3CE060058A330 /* ShapesExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AAA27A3CE060058A330 /* ShapesExample.swift */; };
+		56C67AAD27A3CECD0058A330 /* MenuExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AAC27A3CECD0058A330 /* MenuExample.swift */; };
+		56C67AB027A3CF620058A330 /* AngularGradientExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AAF27A3CF620058A330 /* AngularGradientExample.swift */; };
+		56C67AB227A3CF870058A330 /* LinearGradientExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AB127A3CF870058A330 /* LinearGradientExample.swift */; };
+		56C67AB427A3CFB00058A330 /* RadialGradientExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AB327A3CFB00058A330 /* RadialGradientExample.swift */; };
+		56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AB527A3D0030058A330 /* BasicContentView.swift */; };
 		C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30306E32792C2CC00800B2F /* DemoDetailView.swift */; };
 		C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */; };
 		C3DB2120279295AE004A94F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB211F279295AE004A94F3 /* Assets.xcassets */; };
@@ -77,6 +94,23 @@
 		56C67A8227A3BA4D0058A330 /* NavigationViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewExample.swift; sourceTree = "<group>"; };
 		56C67A8527A3BA930058A330 /* NavigationLinkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkExample.swift; sourceTree = "<group>"; };
 		56C67A8A27A3BBB90058A330 /* VStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackExample.swift; sourceTree = "<group>"; };
+		56C67A8D27A3BF8B0058A330 /* HStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackExample.swift; sourceTree = "<group>"; };
+		56C67A9027A3C1B60058A330 /* ZStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackExample.swift; sourceTree = "<group>"; };
+		56C67A9427A3C69E0058A330 /* LazyVStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVStackExample.swift; sourceTree = "<group>"; };
+		56C67A9627A3C7BC0058A330 /* LazyHStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHStackExample.swift; sourceTree = "<group>"; };
+		56C67A9827A3C7E80058A330 /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
+		56C67A9A27A3C9C60058A330 /* LazyHGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridExample.swift; sourceTree = "<group>"; };
+		56C67A9D27A3CB030058A330 /* SpacerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerExample.swift; sourceTree = "<group>"; };
+		56C67AA027A3CBB40058A330 /* ScrollViewReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewReaderExample.swift; sourceTree = "<group>"; };
+		56C67AA327A3CCB00058A330 /* GeometryReaderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderExample.swift; sourceTree = "<group>"; };
+		56C67AA627A3CD260058A330 /* EmptyViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewExample.swift; sourceTree = "<group>"; };
+		56C67AA827A3CDA40058A330 /* DividerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerExample.swift; sourceTree = "<group>"; };
+		56C67AAA27A3CE060058A330 /* ShapesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesExample.swift; sourceTree = "<group>"; };
+		56C67AAC27A3CECD0058A330 /* MenuExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuExample.swift; sourceTree = "<group>"; };
+		56C67AAF27A3CF620058A330 /* AngularGradientExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularGradientExample.swift; sourceTree = "<group>"; };
+		56C67AB127A3CF870058A330 /* LinearGradientExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientExample.swift; sourceTree = "<group>"; };
+		56C67AB327A3CFB00058A330 /* RadialGradientExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientExample.swift; sourceTree = "<group>"; };
+		56C67AB527A3D0030058A330 /* BasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
 		C30306E32792C2CC00800B2F /* DemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailView.swift; sourceTree = "<group>"; };
 		C3DB2118279295AD004A94F3 /* SHSwiftUICode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftUICode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSwiftUICodeApp.swift; sourceTree = "<group>"; };
@@ -123,8 +157,11 @@
 		5608285927953C6500FF3E54 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				56C67AAE27A3CF520058A330 /* Paints */,
+				56C67AA527A3CD1B0058A330 /* Other */,
 				56C67A8827A3BB8B0058A330 /* Layout */,
 				56C67A8727A3BB7A0058A330 /* Controls */,
+				56C67AB527A3D0030058A330 /* BasicContentView.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -355,17 +392,79 @@
 		56C67A8827A3BB8B0058A330 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				56C67A8927A3BBA80058A330 /* VStack */,
+				56C67AA227A3CCA80058A330 /* GeometryReader */,
+				56C67A9F27A3CBAC0058A330 /* ScrollViewReader */,
+				56C67A9C27A3CAF40058A330 /* Spacer */,
+				56C67A9327A3C6910058A330 /* Lazy */,
+				56C67A9227A3C6820058A330 /* Stack */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		56C67A8927A3BBA80058A330 /* VStack */ = {
+		56C67A9227A3C6820058A330 /* Stack */ = {
 			isa = PBXGroup;
 			children = (
+				56C67A9027A3C1B60058A330 /* ZStackExample.swift */,
+				56C67A8D27A3BF8B0058A330 /* HStackExample.swift */,
 				56C67A8A27A3BBB90058A330 /* VStackExample.swift */,
 			);
-			path = VStack;
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		56C67A9327A3C6910058A330 /* Lazy */ = {
+			isa = PBXGroup;
+			children = (
+				56C67A9427A3C69E0058A330 /* LazyVStackExample.swift */,
+				56C67A9627A3C7BC0058A330 /* LazyHStackExample.swift */,
+				56C67A9827A3C7E80058A330 /* LazyVGridExample.swift */,
+				56C67A9A27A3C9C60058A330 /* LazyHGridExample.swift */,
+			);
+			path = Lazy;
+			sourceTree = "<group>";
+		};
+		56C67A9C27A3CAF40058A330 /* Spacer */ = {
+			isa = PBXGroup;
+			children = (
+				56C67A9D27A3CB030058A330 /* SpacerExample.swift */,
+			);
+			path = Spacer;
+			sourceTree = "<group>";
+		};
+		56C67A9F27A3CBAC0058A330 /* ScrollViewReader */ = {
+			isa = PBXGroup;
+			children = (
+				56C67AA027A3CBB40058A330 /* ScrollViewReaderExample.swift */,
+			);
+			path = ScrollViewReader;
+			sourceTree = "<group>";
+		};
+		56C67AA227A3CCA80058A330 /* GeometryReader */ = {
+			isa = PBXGroup;
+			children = (
+				56C67AA327A3CCB00058A330 /* GeometryReaderExample.swift */,
+			);
+			path = GeometryReader;
+			sourceTree = "<group>";
+		};
+		56C67AA527A3CD1B0058A330 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				56C67AA627A3CD260058A330 /* EmptyViewExample.swift */,
+				56C67AA827A3CDA40058A330 /* DividerExample.swift */,
+				56C67AAA27A3CE060058A330 /* ShapesExample.swift */,
+				56C67AAC27A3CECD0058A330 /* MenuExample.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		56C67AAE27A3CF520058A330 /* Paints */ = {
+			isa = PBXGroup;
+			children = (
+				56C67AAF27A3CF620058A330 /* AngularGradientExample.swift */,
+				56C67AB127A3CF870058A330 /* LinearGradientExample.swift */,
+				56C67AB327A3CFB00058A330 /* RadialGradientExample.swift */,
+			);
+			path = Paints;
 			sourceTree = "<group>";
 		};
 		C30306E22792C2BB00800B2F /* Demo */ = {
@@ -500,37 +599,54 @@
 			files = (
 				56C67A8627A3BA930058A330 /* NavigationLinkExample.swift in Sources */,
 				561C72B7279A9102001440F5 /* PickerExample.swift in Sources */,
+				56C67AA927A3CDA40058A330 /* DividerExample.swift in Sources */,
 				C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */,
+				56C67AB027A3CF620058A330 /* AngularGradientExample.swift in Sources */,
+				56C67A9727A3C7BC0058A330 /* LazyHStackExample.swift in Sources */,
 				5608286227955CE800FF3E54 /* DemoViewModel.swift in Sources */,
 				567D9D6A2797F4980024F8EE /* TextEditorExample.swift in Sources */,
 				56C67A7A27A3B42A0058A330 /* ScrollViewExample.swift in Sources */,
 				561C72B4279A8BEC001440F5 /* ProgressExample.swift in Sources */,
 				5608285827952E2600FF3E54 /* DemoListView.swift in Sources */,
+				56C67A8E27A3BF8B0058A330 /* HStackExample.swift in Sources */,
 				56C67A8327A3BA4D0058A330 /* NavigationViewExample.swift in Sources */,
 				56AAB21F2796AE2A004E8130 /* LabelExample.swift in Sources */,
+				56C67AA727A3CD260058A330 /* EmptyViewExample.swift in Sources */,
 				561C72BB279A979F001440F5 /* DatePickerExample.swift in Sources */,
 				56AAB21C2796A819004E8130 /* ButtonExample.swift in Sources */,
 				567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */,
+				56C67A9B27A3C9C60058A330 /* LazyHGridExample.swift in Sources */,
 				56C67A7D27A3B5960058A330 /* FormExample.swift in Sources */,
 				C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */,
+				56C67A9127A3C1B60058A330 /* ZStackExample.swift in Sources */,
 				56AAB21827969B92004E8130 /* Debug.swift in Sources */,
+				56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */,
 				566602A627994AB20023BE4C /* SliderExample.swift in Sources */,
 				566602A32799493F0023BE4C /* StepperExample.swift in Sources */,
 				567D9D722798090D0024F8EE /* LinkExample.swift in Sources */,
 				56C67A7727A3B3010058A330 /* SectionExample.swift in Sources */,
+				56C67AB227A3CF870058A330 /* LinearGradientExample.swift in Sources */,
+				56C67A9E27A3CB030058A330 /* SpacerExample.swift in Sources */,
 				5608285C27953C8700FF3E54 /* TextExample.swift in Sources */,
+				56C67A9527A3C69E0058A330 /* LazyVStackExample.swift in Sources */,
 				561C72BE279AA00C001440F5 /* GroupBoxExample.swift in Sources */,
 				56C67A8B27A3BBB90058A330 /* VStackExample.swift in Sources */,
+				56C67AAB27A3CE060058A330 /* ShapesExample.swift in Sources */,
 				C3DB212B27929CCD004A94F3 /* MainContentView.swift in Sources */,
 				561C72B9279A96D2001440F5 /* ColorPickerExample.swift in Sources */,
+				56C67AB427A3CFB00058A330 /* RadialGradientExample.swift in Sources */,
+				56C67AA127A3CBB40058A330 /* ScrollViewReaderExample.swift in Sources */,
 				566602A0279947F70023BE4C /* ToggleExample.swift in Sources */,
 				561C72C6279AA6D9001440F5 /* ListExample.swift in Sources */,
 				567D9D6D2797F7AA0024F8EE /* TextFieldExample.swift in Sources */,
 				561C72C0279AA0CB001440F5 /* DisclosureGroupExample.swift in Sources */,
+				56C67A9927A3C7E80058A330 /* LazyVGridExample.swift in Sources */,
 				561C72C3279AA219001440F5 /* OutlineGroupExample.swift in Sources */,
+				56C67AAD27A3CECD0058A330 /* MenuExample.swift in Sources */,
 				5608285627951EB400FF3E54 /* DemoModel.swift in Sources */,
 				56C67A8027A3B88A0058A330 /* EditButtonExample.swift in Sources */,
 				5608285327951B1300FF3E54 /* DemoListItemView.swift in Sources */,
+				56C67AA427A3CCB00058A330 /* GeometryReaderExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

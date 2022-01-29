@@ -1,0 +1,5 @@
+View与View间的公用数据使用@State + @Binding。
+
+多个View与Class间的公用数据：对View用@ObservedObject，让Class满足ObservableObject协议。
+
+父View与子View对Class间的公用数据：父View用@ObservedObject，子View用@EnvironmentObject，Class满足ObservableObject协议

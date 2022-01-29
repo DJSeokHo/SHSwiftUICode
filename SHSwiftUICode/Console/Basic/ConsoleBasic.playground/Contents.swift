@@ -44,6 +44,6 @@ var greeting = "Console Basic"
 //
 //let extensionExample = ExtensionExample()
 //extensionExample.test()
-
-let protocolExample = ProtocolExample()
-protocolExample.test()
+//
+//let protocolExample = ProtocolExample()
+//protocolExample.test()

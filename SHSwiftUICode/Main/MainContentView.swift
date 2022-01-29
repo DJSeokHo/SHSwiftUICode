@@ -56,7 +56,13 @@ struct MainContentView: View {
         
 //        AngularGradientExample()
 //        LinearGradientExample()
-        RadialGradientExample()
+//        RadialGradientExample()
+        
+//        PropertyExample()
+//        StateExample()
+//        BindingExample()
+//        ObservedObjectExample()
+        EnvironmentObjectExample()
     }
 }
 

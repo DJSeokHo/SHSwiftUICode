@@ -8,9 +8,10 @@
 import SwiftUI
 
 /**
-     A property wrapper type for an observable object supplied by a parent or ancestor view.
-     翻译：父视图或祖先视图提供的可观察对象的属性包装器类型。
-     注意⚠️：强调可观察（Class应当满足ObservableObject协议），强调对象（必须是Class而不是Struct or Enum）
+    A property wrapper type for an observable object supplied by a parent or ancestor view.
+    翻译：父视图或祖先视图提供的可观察对象的属性包装器类型。
+    注意⚠️：强调可观察（Class应当满足ObservableObject协议），强调对象（必须是Class而不是Struct or Enum）
+    
  */
 struct EnvironmentObjectExample: View {
     
@@ -52,6 +53,8 @@ struct SubEnvironmentObjectExample: View {
      
      被 @EnvironmentObject 有点像 viewModel
      在子view上用的话有点像在fragment上使用
+     
+     从名字上可以看出，这个修饰器是针对全局环境的。通过它，我们可以避免在初始 View 时创建 ObservableObject, 而是从环境中获取 ObservableObject
      */
     @EnvironmentObject
     var subject: DevelopmentSubject

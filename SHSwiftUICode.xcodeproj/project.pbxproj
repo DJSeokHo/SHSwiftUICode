@@ -63,6 +63,7 @@
 		C325B2FD27A525A10039AAB2 /* EnvironmentObjectExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325B2FC27A525A10039AAB2 /* EnvironmentObjectExample.swift */; };
 		C325B2FF27A525E60039AAB2 /* DevelopmentSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325B2FE27A525E60039AAB2 /* DevelopmentSubject.swift */; };
 		C325B30227A532610039AAB2 /* EnvironmentExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325B30127A532610039AAB2 /* EnvironmentExample.swift */; };
+		C36CBCBC27FC82590078A35C /* IHelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CBCBB27FC82590078A35C /* IHelloWorld.swift */; };
 		C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */; };
 		C3DB2120279295AE004A94F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB211F279295AE004A94F3 /* Assets.xcassets */; };
 		C3DB2123279295AE004A94F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB2122279295AE004A94F3 /* Preview Assets.xcassets */; };
@@ -129,6 +130,7 @@
 		C325B2FE27A525E60039AAB2 /* DevelopmentSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentSubject.swift; sourceTree = "<group>"; };
 		C325B30027A5288E0039AAB2 /* document.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = document.txt; sourceTree = "<group>"; };
 		C325B30127A532610039AAB2 /* EnvironmentExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentExample.swift; sourceTree = "<group>"; };
+		C36CBCBB27FC82590078A35C /* IHelloWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHelloWorld.swift; sourceTree = "<group>"; };
 		C3DB2118279295AD004A94F3 /* SHSwiftUICode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftUICode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSwiftUICodeApp.swift; sourceTree = "<group>"; };
 		C3DB211F279295AE004A94F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -530,6 +532,22 @@
 			path = EnvironmentObjectExample;
 			sourceTree = "<group>";
 		};
+		C36CBCB927FC81F80078A35C /* SwiftUIInAction */ = {
+			isa = PBXGroup;
+			children = (
+				C36CBCBA27FC820C0078A35C /* IHelloWorld */,
+			);
+			path = SwiftUIInAction;
+			sourceTree = "<group>";
+		};
+		C36CBCBA27FC820C0078A35C /* IHelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				C36CBCBB27FC82590078A35C /* IHelloWorld.swift */,
+			);
+			path = IHelloWorld;
+			sourceTree = "<group>";
+		};
 		C3DB210F279295AC004A94F3 = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +567,7 @@
 		C3DB211A279295AD004A94F3 /* SHSwiftUICode */ = {
 			isa = PBXGroup;
 			children = (
+				C36CBCB927FC81F80078A35C /* SwiftUIInAction */,
 				568736E2279E6E5A00DF7772 /* Console */,
 				56AAB21527969B76004E8130 /* Framework */,
 				5608285927953C6500FF3E54 /* Basic */,
@@ -673,6 +692,7 @@
 				56AAB21827969B92004E8130 /* Debug.swift in Sources */,
 				56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */,
 				C325B2FA27A522E50039AAB2 /* Developer.swift in Sources */,
+				C36CBCBC27FC82590078A35C /* IHelloWorld.swift in Sources */,
 				566602A627994AB20023BE4C /* SliderExample.swift in Sources */,
 				566602A32799493F0023BE4C /* StepperExample.swift in Sources */,
 				C325B2F727A522610039AAB2 /* ObservedObjectExample.swift in Sources */,

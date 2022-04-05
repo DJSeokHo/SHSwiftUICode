@@ -62,7 +62,8 @@ struct MainContentView: View {
 //        StateExample()
 //        BindingExample()
 //        ObservedObjectExample()
-        EnvironmentObjectExample()
+//        EnvironmentObjectExample()
+        IHelloWorld()
     }
 }
 

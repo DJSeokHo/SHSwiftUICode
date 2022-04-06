@@ -23,6 +23,10 @@
 		566602A0279947F70023BE4C /* ToggleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666029F279947F70023BE4C /* ToggleExample.swift */; };
 		566602A32799493F0023BE4C /* StepperExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566602A22799493F0023BE4C /* StepperExample.swift */; };
 		566602A627994AB20023BE4C /* SliderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566602A527994AB20023BE4C /* SliderExample.swift */; };
+		566C77F027FD4715003DFAFE /* IIStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77EF27FD4715003DFAFE /* IIStack.swift */; };
+		566C77F227FD600B003DFAFE /* IIStackHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77F127FD600B003DFAFE /* IIStackHomework.swift */; };
+		566C77F527FD79F2003DFAFE /* IIISimpleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77F427FD79F1003DFAFE /* IIISimpleTable.swift */; };
+		566C77F827FD7ED3003DFAFE /* IVFoodPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77F727FD7ED3003DFAFE /* IVFoodPin.swift */; };
 		567D9D6A2797F4980024F8EE /* TextEditorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D692797F4980024F8EE /* TextEditorExample.swift */; };
 		567D9D6D2797F7AA0024F8EE /* TextFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */; };
 		567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */; };
@@ -87,6 +91,10 @@
 		5666029F279947F70023BE4C /* ToggleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleExample.swift; sourceTree = "<group>"; };
 		566602A22799493F0023BE4C /* StepperExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperExample.swift; sourceTree = "<group>"; };
 		566602A527994AB20023BE4C /* SliderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderExample.swift; sourceTree = "<group>"; };
+		566C77EF27FD4715003DFAFE /* IIStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIStack.swift; sourceTree = "<group>"; };
+		566C77F127FD600B003DFAFE /* IIStackHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIStackHomework.swift; sourceTree = "<group>"; };
+		566C77F427FD79F1003DFAFE /* IIISimpleTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIISimpleTable.swift; sourceTree = "<group>"; };
+		566C77F727FD7ED3003DFAFE /* IVFoodPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVFoodPin.swift; sourceTree = "<group>"; };
 		567D9D692797F4980024F8EE /* TextEditorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorExample.swift; sourceTree = "<group>"; };
 		567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExample.swift; sourceTree = "<group>"; };
 		567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldExample.swift; sourceTree = "<group>"; };
@@ -260,6 +268,31 @@
 				566602A527994AB20023BE4C /* SliderExample.swift */,
 			);
 			path = Slider;
+			sourceTree = "<group>";
+		};
+		566C77EE27FD4705003DFAFE /* IIStack */ = {
+			isa = PBXGroup;
+			children = (
+				566C77EF27FD4715003DFAFE /* IIStack.swift */,
+				566C77F127FD600B003DFAFE /* IIStackHomework.swift */,
+			);
+			path = IIStack;
+			sourceTree = "<group>";
+		};
+		566C77F327FD79DE003DFAFE /* IIISimpleTable */ = {
+			isa = PBXGroup;
+			children = (
+				566C77F427FD79F1003DFAFE /* IIISimpleTable.swift */,
+			);
+			path = IIISimpleTable;
+			sourceTree = "<group>";
+		};
+		566C77F627FD7EBC003DFAFE /* IVFoodPin */ = {
+			isa = PBXGroup;
+			children = (
+				566C77F727FD7ED3003DFAFE /* IVFoodPin.swift */,
+			);
+			path = IVFoodPin;
 			sourceTree = "<group>";
 		};
 		567D9D682797F4810024F8EE /* Edit */ = {
@@ -535,6 +568,9 @@
 		C36CBCB927FC81F80078A35C /* SwiftUIInAction */ = {
 			isa = PBXGroup;
 			children = (
+				566C77F627FD7EBC003DFAFE /* IVFoodPin */,
+				566C77F327FD79DE003DFAFE /* IIISimpleTable */,
+				566C77EE27FD4705003DFAFE /* IIStack */,
 				C36CBCBA27FC820C0078A35C /* IHelloWorld */,
 			);
 			path = SwiftUIInAction;
@@ -687,6 +723,7 @@
 				567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */,
 				56C67A9B27A3C9C60058A330 /* LazyHGridExample.swift in Sources */,
 				56C67A7D27A3B5960058A330 /* FormExample.swift in Sources */,
+				566C77F227FD600B003DFAFE /* IIStackHomework.swift in Sources */,
 				C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */,
 				56C67A9127A3C1B60058A330 /* ZStackExample.swift in Sources */,
 				56AAB21827969B92004E8130 /* Debug.swift in Sources */,
@@ -701,6 +738,7 @@
 				56C67AB227A3CF870058A330 /* LinearGradientExample.swift in Sources */,
 				56C67A9E27A3CB030058A330 /* SpacerExample.swift in Sources */,
 				C325B2FD27A525A10039AAB2 /* EnvironmentObjectExample.swift in Sources */,
+				566C77F527FD79F2003DFAFE /* IIISimpleTable.swift in Sources */,
 				5608285C27953C8700FF3E54 /* TextExample.swift in Sources */,
 				56C67A9527A3C69E0058A330 /* LazyVStackExample.swift in Sources */,
 				561C72BE279AA00C001440F5 /* GroupBoxExample.swift in Sources */,
@@ -710,6 +748,7 @@
 				C3DB212B27929CCD004A94F3 /* MainContentView.swift in Sources */,
 				561C72B9279A96D2001440F5 /* ColorPickerExample.swift in Sources */,
 				56C67AB427A3CFB00058A330 /* RadialGradientExample.swift in Sources */,
+				566C77F827FD7ED3003DFAFE /* IVFoodPin.swift in Sources */,
 				56C67AA127A3CBB40058A330 /* ScrollViewReaderExample.swift in Sources */,
 				566602A0279947F70023BE4C /* ToggleExample.swift in Sources */,
 				561C72C6279AA6D9001440F5 /* ListExample.swift in Sources */,
@@ -722,6 +761,7 @@
 				56C67A8027A3B88A0058A330 /* EditButtonExample.swift in Sources */,
 				5608285327951B1300FF3E54 /* DemoListItemView.swift in Sources */,
 				56C67AA427A3CCB00058A330 /* GeometryReaderExample.swift in Sources */,
+				566C77F027FD4715003DFAFE /* IIStack.swift in Sources */,
 				C325B2FF27A525E60039AAB2 /* DevelopmentSubject.swift in Sources */,
 				C325B2F427A520190039AAB2 /* BindingExample.swift in Sources */,
 				C325B2ED27A504560039AAB2 /* PropertyExample.swift in Sources */,

@@ -63,7 +63,15 @@ struct MainContentView: View {
 //        BindingExample()
 //        ObservedObjectExample()
 //        EnvironmentObjectExample()
-        IHelloWorld()
+//        IHelloWorld()
+        
+        if #available(iOS 15.0, *) {
+//            IIStack()
+//            IIStackHomework()
+            
+//            IIISimpleTable()
+            RestaurantListView()
+        }
     }
 }
 

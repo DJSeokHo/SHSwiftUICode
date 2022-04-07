@@ -31,6 +31,7 @@
 		567D9D6D2797F7AA0024F8EE /* TextFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */; };
 		567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */; };
 		567D9D722798090D0024F8EE /* LinkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D712798090D0024F8EE /* LinkExample.swift */; };
+		568ECDBE27FEA2E3009CE795 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568ECDBD27FEA2E3009CE795 /* Restaurant.swift */; };
 		56AAB21827969B92004E8130 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21727969B92004E8130 /* Debug.swift */; };
 		56AAB21C2796A819004E8130 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21B2796A819004E8130 /* ButtonExample.swift */; };
 		56AAB21F2796AE2A004E8130 /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21E2796AE2A004E8130 /* LabelExample.swift */; };
@@ -100,6 +101,7 @@
 		567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldExample.swift; sourceTree = "<group>"; };
 		567D9D712798090D0024F8EE /* LinkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExample.swift; sourceTree = "<group>"; };
 		568736E4279E6F9200DF7772 /* ConsoleBasic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConsoleBasic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		568ECDBD27FEA2E3009CE795 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		56AAB21727969B92004E8130 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		56AAB2192796A5A8004E8130 /* document.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = document.md; sourceTree = "<group>"; };
 		56AAB21B2796A819004E8130 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 		566C77F627FD7EBC003DFAFE /* IVFoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				568ECDBC27FEA2D9009CE795 /* Model */,
 				566C77F727FD7ED3003DFAFE /* IVFoodPin.swift */,
 			);
 			path = IVFoodPin;
@@ -327,6 +330,14 @@
 				568736E4279E6F9200DF7772 /* ConsoleBasic.playground */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		568ECDBC27FEA2D9009CE795 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				568ECDBD27FEA2E3009CE795 /* Restaurant.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		56AAB21427969ACA004E8130 /* Main */ = {
@@ -722,6 +733,7 @@
 				56AAB21C2796A819004E8130 /* ButtonExample.swift in Sources */,
 				567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */,
 				56C67A9B27A3C9C60058A330 /* LazyHGridExample.swift in Sources */,
+				568ECDBE27FEA2E3009CE795 /* Restaurant.swift in Sources */,
 				56C67A7D27A3B5960058A330 /* FormExample.swift in Sources */,
 				566C77F227FD600B003DFAFE /* IIStackHomework.swift in Sources */,
 				C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */,

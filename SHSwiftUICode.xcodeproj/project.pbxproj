@@ -32,6 +32,7 @@
 		567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */; };
 		567D9D722798090D0024F8EE /* LinkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D712798090D0024F8EE /* LinkExample.swift */; };
 		568ECDBE27FEA2E3009CE795 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568ECDBD27FEA2E3009CE795 /* Restaurant.swift */; };
+		568ECDC227FEB2E6009CE795 /* ActivityViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568ECDC127FEB2E6009CE795 /* ActivityViewUtility.swift */; };
 		56AAB21827969B92004E8130 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21727969B92004E8130 /* Debug.swift */; };
 		56AAB21C2796A819004E8130 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21B2796A819004E8130 /* ButtonExample.swift */; };
 		56AAB21F2796AE2A004E8130 /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21E2796AE2A004E8130 /* LabelExample.swift */; };
@@ -102,6 +103,7 @@
 		567D9D712798090D0024F8EE /* LinkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExample.swift; sourceTree = "<group>"; };
 		568736E4279E6F9200DF7772 /* ConsoleBasic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConsoleBasic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		568ECDBD27FEA2E3009CE795 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		568ECDC127FEB2E6009CE795 /* ActivityViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewUtility.swift; sourceTree = "<group>"; };
 		56AAB21727969B92004E8130 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		56AAB2192796A5A8004E8130 /* document.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = document.md; sourceTree = "<group>"; };
 		56AAB21B2796A819004E8130 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
@@ -340,6 +342,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		568ECDBF27FEB2C4009CE795 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				568ECDC027FEB2D5009CE795 /* ActivityView */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		568ECDC027FEB2D5009CE795 /* ActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				568ECDC127FEB2E6009CE795 /* ActivityViewUtility.swift */,
+			);
+			path = ActivityView;
+			sourceTree = "<group>";
+		};
 		56AAB21427969ACA004E8130 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +377,7 @@
 		56AAB21627969B7D004E8130 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				568ECDBF27FEB2C4009CE795 /* SwiftUI */,
 				56AAB21727969B92004E8130 /* Debug.swift */,
 			);
 			path = Utility;
@@ -724,6 +743,7 @@
 				567D9D6A2797F4980024F8EE /* TextEditorExample.swift in Sources */,
 				56C67A7A27A3B42A0058A330 /* ScrollViewExample.swift in Sources */,
 				561C72B4279A8BEC001440F5 /* ProgressExample.swift in Sources */,
+				568ECDC227FEB2E6009CE795 /* ActivityViewUtility.swift in Sources */,
 				5608285827952E2600FF3E54 /* DemoListView.swift in Sources */,
 				56C67A8E27A3BF8B0058A330 /* HStackExample.swift in Sources */,
 				56C67A8327A3BA4D0058A330 /* NavigationViewExample.swift in Sources */,

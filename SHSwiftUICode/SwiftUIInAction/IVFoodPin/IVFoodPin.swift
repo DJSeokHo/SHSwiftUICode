@@ -41,11 +41,42 @@ struct RestaurantListView: View {
             
             ForEach(restaurants.indices, id: \.self) { index in
               
-//                RestaurantListItemView(restaurant: $restaurants[index])
+//                RestaurantListItemFullImageView(restaurant: $restaurants[index])
                 
-                RestaurantListItemFullImageView(restaurant: $restaurants[index])
+                RestaurantListItemView(restaurant: $restaurants[index])
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
+                        // 这个 action 会导致 swipe to delete 的 onDelete 失效
+                        // 所以不用这个也行，改用contextMenu (长按弹出菜单)
+                        // 或者把删除加到这里，如果允许 full swipe 将自动执行这里的第一个按钮动作
+                        
+                        Button {
+                            restaurants.remove(at: index)
+                        } label: {
+                            Image(systemName: "trash")
+                        }
+                        .tint(.red)
+                        
+                        Button {
+
+                        } label: {
+                            Image(systemName: "heart")
+                        }
+                        .tint(.green)
+
+                        Button {
+                          
+                        } label: {
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                        .tint(.orange)
+
+                    })
                 
             }
+            .onDelete(perform: { indexSet in
+                // swipe to delete
+                restaurants.remove(atOffsets: indexSet)
+            })
             .listRowSeparator(.hidden)
         }
         // 視圖在 iOS 15 內預設為使用嵌入式分組樣式（ inset grouped style ）。嵌入式分組清單樣式為顯示一個具有顏色的背景，然後於清單視圖的四周加上了間距。如果要改變清單視圖的樣式，你可以使用 listStyle 修飾器至 List
@@ -59,6 +90,10 @@ private struct RestaurantListItemView: View {
     
     @State
     private var showOptions = false
+    
+    @State
+    private var showActivityView = false
+    
     @State
     private var showError = false
     
@@ -99,6 +134,34 @@ private struct RestaurantListItemView: View {
             }
            
         }
+        .contextMenu {
+            Button(action: {
+                showError.toggle()
+            }, label: {
+                HStack {
+                    Text("Reserve a table")
+                    Image(systemName: "phone")
+                }
+            })
+            
+            Button(action: {
+                restaurant.isFavorite.toggle()
+            }, label: {
+                HStack {
+                    Text(restaurant.isFavorite ? "Remove from favorites" : "Mark as favorite")
+                    Image(systemName: "heart")
+                }
+            })
+            
+            Button(action: {
+                showActivityView.toggle()
+            }, label: {
+                HStack {
+                    Text("Share")
+                    Image(systemName: "square.and.arrow.up")
+                }
+            })
+        }
         .onTapGesture {
             showOptions.toggle()
         }
@@ -106,7 +169,7 @@ private struct RestaurantListItemView: View {
             ActionSheet(
                 title: Text("What do you want to do?"), message: nil, buttons: [
                     .default(Text("Reserve a table")) {
-                        showError.toggle()
+                        
                     },
                     .default(Text(restaurant.isFavorite ? "Remove from favorites" : "Mark as favorite")) {
                         restaurant.isFavorite.toggle()
@@ -122,8 +185,17 @@ private struct RestaurantListItemView: View {
                   secondaryButton: .cancel()
             )
         }
+        .sheet(isPresented: $showActivityView) {
+            let defaultText = "Just checking in at \(restaurant.name)"
+
+            if let imageToShare = UIImage(named: restaurant.image) {
+                ActivityView(activityItems: [defaultText, imageToShare])
+            } else {
+                ActivityView(activityItems: [defaultText])
+            }
+        }
     }
-    
+
 }
 
 private struct RestaurantListItemFullImageView: View {

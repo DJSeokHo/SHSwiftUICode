@@ -37,51 +37,59 @@ struct RestaurantListView: View {
   
     var body: some View {
        
-        List {
+        NavigationView {
             
-            ForEach(restaurants.indices, id: \.self) { index in
-              
-//                RestaurantListItemFullImageView(restaurant: $restaurants[index])
+            List {
                 
-                RestaurantListItemView(restaurant: $restaurants[index])
-                    .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
-                        // 这个 action 会导致 swipe to delete 的 onDelete 失效
-                        // 所以不用这个也行，改用contextMenu (长按弹出菜单)
-                        // 或者把删除加到这里，如果允许 full swipe 将自动执行这里的第一个按钮动作
-                        
-                        Button {
-                            restaurants.remove(at: index)
-                        } label: {
-                            Image(systemName: "trash")
-                        }
-                        .tint(.red)
-                        
-                        Button {
+                ForEach(restaurants.indices, id: \.self) { index in
+                  
+    //                RestaurantListItemFullImageView(restaurant: $restaurants[index])
+                    
+                    RestaurantListItemView(restaurant: $restaurants[index])
+                        .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
+                            // 这个 action 会导致 swipe to delete 的 onDelete 失效
+                            // 所以不用这个也行，改用contextMenu (长按弹出菜单)
+                            // 或者把删除加到这里，如果允许 full swipe 将自动执行这里的第一个按钮动作
+                            
+                            Button {
+                                restaurants.remove(at: index)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                            .tint(.red)
+                            
+                            Button {
 
-                        } label: {
-                            Image(systemName: "heart")
-                        }
-                        .tint(.green)
+                            } label: {
+                                Image(systemName: "heart")
+                            }
+                            .tint(.green)
 
-                        Button {
-                          
-                        } label: {
-                            Image(systemName: "square.and.arrow.up")
-                        }
-                        .tint(.orange)
+                            Button {
+                              
+                            } label: {
+                                Image(systemName: "square.and.arrow.up")
+                            }
+                            .tint(.orange)
 
-                    })
-                
+                        })
+                    
+                }
+                .onDelete(perform: { indexSet in
+                    // swipe to delete
+                    restaurants.remove(atOffsets: indexSet)
+                })
+                .listRowSeparator(.hidden)
             }
-            .onDelete(perform: { indexSet in
-                // swipe to delete
-                restaurants.remove(atOffsets: indexSet)
-            })
-            .listRowSeparator(.hidden)
+            // 視圖在 iOS 15 內預設為使用嵌入式分組樣式（ inset grouped style ）。嵌入式分組清單樣式為顯示一個具有顏色的背景，然後於清單視圖的四周加上了間距。如果要改變清單視圖的樣式，你可以使用 listStyle 修飾器至 List
+            .listStyle(.plain)
+            .navigationTitle("FoodPin")
+            .navigationBarTitleDisplayMode(
+                .automatic
+//                .large
+//                .inline
+            )
         }
-        // 視圖在 iOS 15 內預設為使用嵌入式分組樣式（ inset grouped style ）。嵌入式分組清單樣式為顯示一個具有顏色的背景，然後於清單視圖的四周加上了間距。如果要改變清單視圖的樣式，你可以使用 listStyle 修飾器至 List
-        .listStyle(.plain)
-        
         
     }
 }

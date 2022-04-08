@@ -26,7 +26,7 @@
 		566C77F027FD4715003DFAFE /* IIStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77EF27FD4715003DFAFE /* IIStack.swift */; };
 		566C77F227FD600B003DFAFE /* IIStackHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77F127FD600B003DFAFE /* IIStackHomework.swift */; };
 		566C77F527FD79F2003DFAFE /* IIISimpleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77F427FD79F1003DFAFE /* IIISimpleTable.swift */; };
-		566C77F827FD7ED3003DFAFE /* IVFoodPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77F727FD7ED3003DFAFE /* IVFoodPin.swift */; };
+		566C77F827FD7ED3003DFAFE /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C77F727FD7ED3003DFAFE /* RestaurantListView.swift */; };
 		567D9D6A2797F4980024F8EE /* TextEditorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D692797F4980024F8EE /* TextEditorExample.swift */; };
 		567D9D6D2797F7AA0024F8EE /* TextFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */; };
 		567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */; };
@@ -97,7 +97,7 @@
 		566C77EF27FD4715003DFAFE /* IIStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIStack.swift; sourceTree = "<group>"; };
 		566C77F127FD600B003DFAFE /* IIStackHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIStackHomework.swift; sourceTree = "<group>"; };
 		566C77F427FD79F1003DFAFE /* IIISimpleTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIISimpleTable.swift; sourceTree = "<group>"; };
-		566C77F727FD7ED3003DFAFE /* IVFoodPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IVFoodPin.swift; sourceTree = "<group>"; };
+		566C77F727FD7ED3003DFAFE /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		567D9D692797F4980024F8EE /* TextEditorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorExample.swift; sourceTree = "<group>"; };
 		567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExample.swift; sourceTree = "<group>"; };
 		567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldExample.swift; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 			children = (
 				568ECDC327FEBE93009CE795 /* Detail */,
 				568ECDBC27FEA2D9009CE795 /* Model */,
-				566C77F727FD7ED3003DFAFE /* IVFoodPin.swift */,
+				566C77F727FD7ED3003DFAFE /* RestaurantListView.swift */,
 			);
 			path = IVFoodPin;
 			sourceTree = "<group>";
@@ -792,7 +792,7 @@
 				C3DB212B27929CCD004A94F3 /* MainContentView.swift in Sources */,
 				561C72B9279A96D2001440F5 /* ColorPickerExample.swift in Sources */,
 				56C67AB427A3CFB00058A330 /* RadialGradientExample.swift in Sources */,
-				566C77F827FD7ED3003DFAFE /* IVFoodPin.swift in Sources */,
+				566C77F827FD7ED3003DFAFE /* RestaurantListView.swift in Sources */,
 				56C67AA127A3CBB40058A330 /* ScrollViewReaderExample.swift in Sources */,
 				566602A0279947F70023BE4C /* ToggleExample.swift in Sources */,
 				561C72C6279AA6D9001440F5 /* ListExample.swift in Sources */,

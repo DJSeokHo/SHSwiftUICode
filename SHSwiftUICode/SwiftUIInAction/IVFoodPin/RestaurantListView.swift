@@ -45,35 +45,56 @@ struct RestaurantListView: View {
                   
     //                RestaurantListItemFullImageView(restaurant: $restaurants[index])
                     
-                    RestaurantListItemView(restaurant: $restaurants[index])
-                        .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
-                            // 这个 action 会导致 swipe to delete 的 onDelete 失效
-                            // 所以不用这个也行，改用contextMenu (长按弹出菜单)
-                            // 或者把删除加到这里，如果允许 full swipe 将自动执行这里的第一个按钮动作
-                            
-                            Button {
-                                restaurants.remove(at: index)
-                            } label: {
-                                Image(systemName: "trash")
-                            }
-                            .tint(.red)
-                            
-                            Button {
+                    ZStack(alignment: .leading) {
+                        
+                        NavigationLink(destination: {
+                            RestaurantDetailView(restaurant: restaurants[index])
+                        }) {
+                            /*
+                             MARK: 移除向右的箭头指示器
+                             ZStack(alignment: .leading) {
+                                 NavigationLink(destination: RestaurantDetailView(restaurant: restaurants[index])) {
+                                     EmptyView()
+                                 }
+                                 .opacity(0)
 
-                            } label: {
-                                Image(systemName: "heart")
-                            }
-                            .tint(.green)
+                                 BasicTextImageRow(restaurant: $restaurants[index])
+                             }
+                             */
+                            EmptyView()
+                        }
+                        .opacity(0)
+                        
+                        RestaurantListItemView(restaurant: $restaurants[index])
+                            .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
+                                // 这个 action 会导致 swipe to delete 的 onDelete 失效
+                                // 所以不用这个也行，改用contextMenu (长按弹出菜单)
+                                // 或者把删除加到这里，如果允许 full swipe 将自动执行这里的第一个按钮动作
+                                
+                                Button {
+                                    restaurants.remove(at: index)
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
+                                .tint(.red)
+                                
+                                Button {
 
-                            Button {
-                              
-                            } label: {
-                                Image(systemName: "square.and.arrow.up")
-                            }
-                            .tint(.orange)
+                                } label: {
+                                    Image(systemName: "heart")
+                                }
+                                .tint(.green)
 
-                        })
-                    
+                                Button {
+                                  
+                                } label: {
+                                    Image(systemName: "square.and.arrow.up")
+                                }
+                                .tint(.orange)
+
+                            })
+                    }
+                  
                 }
                 .onDelete(perform: { indexSet in
                     // swipe to delete
@@ -90,6 +111,8 @@ struct RestaurantListView: View {
 //                .inline
             )
         }
+        // 返回按鈕的預設顏色為藍色。如果想要變更為其他顏色，你可以在 NavigationView 使用.accentColor 修飾器並指定你的偏好顏色
+        .accentColor(.white)
         
     }
 }

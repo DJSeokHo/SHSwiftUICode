@@ -31,6 +31,7 @@ struct RestaurantDetailView: View {
                 
                 TopImageView(restaurant: restaurant)
                 DescriptionView(restaurant: restaurant)
+                InfoView(restaurant: restaurant)
             }
             
         }
@@ -94,6 +95,41 @@ struct RestaurantDetailView: View {
     }
 }
 
+private struct InfoView: View {
+    
+    var restaurant: Restaurant
+    
+    var body: some View {
+        
+        HStack(alignment: .top) {
+            
+            VStack(alignment: .leading) {
+                
+                Text("ADDRESS")
+                    .font(.system(.headline, design: .rounded))
+                
+                Text(restaurant.location)
+                
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            
+            VStack(alignment: .leading) {
+                
+                Text("PHONE")
+                    .font(.system(.headline, design: .rounded))
+                
+                Text(restaurant.phone)
+                
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            
+        }
+        .padding(.horizontal)
+        
+    }
+    
+}
+
 private struct DescriptionView: View {
     
     var restaurant: Restaurant
@@ -125,12 +161,28 @@ private struct TopImageView: View {
                     
                     // image 和 下方文字 两个部分都用了无限高度，所以VStack会自动调节他们的比例为1:1并且抵满
                     
-                    Image(systemName: "heart")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
-                        .padding()
-                        .font(.system(size: 30))
-                        .foregroundColor(.white)
-                        .padding(.top, 40)
+                    if restaurant.isFavorite {
+                        Spacer()
+                        
+                        Image(systemName: "heart.fill")
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
+                            .padding()
+                            .font(.system(size: 30))
+                            .foregroundColor(.yellow)
+                            .padding(.top, 40)
+                    }
+                    else {
+                        
+                        Spacer()
+                        
+                        Image(systemName: "heart")
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
+                            .padding()
+                            .font(.system(size: 30))
+                            .foregroundColor(.white)
+                            .padding(.top, 40)
+                    }
+                   
                     
                     TopInfoView(restaurant: restaurant)
                     

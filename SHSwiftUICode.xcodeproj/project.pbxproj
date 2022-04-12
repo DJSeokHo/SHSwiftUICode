@@ -675,6 +675,7 @@
 				C30306E22792C2BB00800B2F /* Demo */,
 				C3DB212927929CA8004A94F3 /* Main */,
 				C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */,
+				C3DB211F279295AE004A94F3 /* Assets.xcassets */,
 				C3DB2121279295AE004A94F3 /* Preview Content */,
 			);
 			path = SHSwiftUICode;
@@ -683,7 +684,6 @@
 		C3DB2121279295AE004A94F3 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				C3DB211F279295AE004A94F3 /* Assets.xcassets */,
 				C3DB2122279295AE004A94F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";

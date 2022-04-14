@@ -71,6 +71,7 @@ struct MainContentView: View {
             
 //            IIISimpleTable()
 //            RestaurantMapView()
+//            ReviewView()
             RestaurantListView()
         }
     }

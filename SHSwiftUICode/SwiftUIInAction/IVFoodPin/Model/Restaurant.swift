@@ -9,6 +9,34 @@ import Foundation
 
 struct Restaurant {
     
+    enum Rating: String, CaseIterable {
+        
+        case awesome
+        
+        case good
+        
+        case okay
+        
+        case bad
+        
+        case terrible
+        
+        var image: String {
+            /*
+             MARK: 只读计算属性的声明可以去掉 get 关键字和花括号
+             */
+            switch self {
+                
+                case .awesome: return "love"
+                case .good: return "cool"
+                case .okay: return "happy"
+                case .bad: return "sad"
+                case .terrible: return "angry"
+                
+            }
+        }
+    }
+    
     var name: String = ""
     var type: String = ""
     var location: String = ""

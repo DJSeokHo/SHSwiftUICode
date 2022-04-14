@@ -187,9 +187,9 @@ private struct RestaurantListItemView: View {
                 }
             })
         }
-        .onTapGesture {
-            showOptions.toggle()
-        }
+//        .onTapGesture {
+//            showOptions.toggle()
+//        }
         .actionSheet(isPresented: $showOptions) {
             ActionSheet(
                 title: Text("What do you want to do?"), message: nil, buttons: [
@@ -271,9 +271,9 @@ private struct RestaurantListItemFullImageView: View {
             }
            
         }
-        .onTapGesture {
-            showOptions.toggle()
-        }
+//        .onTapGesture {
+//            showOptions.toggle()
+//        }
         .actionSheet(isPresented: $showOptions) {
             ActionSheet(
                 title: Text("What do you want to do?"), message: nil, buttons: [

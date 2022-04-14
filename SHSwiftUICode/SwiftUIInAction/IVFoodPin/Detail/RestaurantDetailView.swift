@@ -32,6 +32,7 @@ struct RestaurantDetailView: View {
                 TopImageView(restaurant: restaurant)
                 DescriptionView(restaurant: restaurant)
                 InfoView(restaurant: restaurant)
+                MapView(restaurant: restaurant)
             }
             
         }
@@ -91,6 +92,29 @@ struct RestaurantDetailView: View {
 //            }
 //
 //        }
+        
+    }
+}
+
+@available(iOS 15.0, *)
+private struct MapView: View {
+    
+    var restaurant: Restaurant
+    
+    var body: some View {
+        
+        NavigationLink(
+            destination:
+                RestaurantMapView(location: restaurant.location)
+                    .edgesIgnoringSafeArea(.all)
+        ) {
+            RestaurantMapView(location: restaurant.location)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(height: 200)
+                .cornerRadius(20)
+                .padding()
+        }
+       
         
     }
 }

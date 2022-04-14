@@ -63,6 +63,7 @@
 		56C67AB227A3CF870058A330 /* LinearGradientExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AB127A3CF870058A330 /* LinearGradientExample.swift */; };
 		56C67AB427A3CFB00058A330 /* RadialGradientExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AB327A3CFB00058A330 /* RadialGradientExample.swift */; };
 		56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C67AB527A3D0030058A330 /* BasicContentView.swift */; };
+		56FAAF5F28069C770030C8B5 /* RestaurantMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FAAF5E28069C770030C8B5 /* RestaurantMapView.swift */; };
 		C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30306E32792C2CC00800B2F /* DemoDetailView.swift */; };
 		C325B2ED27A504560039AAB2 /* PropertyExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325B2EC27A504560039AAB2 /* PropertyExample.swift */; };
 		C325B2F227A50CA00039AAB2 /* StateExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325B2F127A50CA00039AAB2 /* StateExample.swift */; };
@@ -140,6 +141,7 @@
 		56C67AB127A3CF870058A330 /* LinearGradientExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientExample.swift; sourceTree = "<group>"; };
 		56C67AB327A3CFB00058A330 /* RadialGradientExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientExample.swift; sourceTree = "<group>"; };
 		56C67AB527A3D0030058A330 /* BasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
+		56FAAF5E28069C770030C8B5 /* RestaurantMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapView.swift; sourceTree = "<group>"; };
 		C30306E32792C2CC00800B2F /* DemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailView.swift; sourceTree = "<group>"; };
 		C325B2EC27A504560039AAB2 /* PropertyExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyExample.swift; sourceTree = "<group>"; };
 		C325B2F127A50CA00039AAB2 /* StateExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateExample.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		566C77F627FD7EBC003DFAFE /* IVFoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				56FAAF5D28069C5A0030C8B5 /* Common */,
 				568976E42805701100E82925 /* Resources */,
 				568ECDC327FEBE93009CE795 /* Detail */,
 				568ECDBC27FEA2D9009CE795 /* Model */,
@@ -587,6 +590,14 @@
 			path = Paints;
 			sourceTree = "<group>";
 		};
+		56FAAF5D28069C5A0030C8B5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				56FAAF5E28069C770030C8B5 /* RestaurantMapView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		C30306E22792C2BB00800B2F /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -796,6 +807,7 @@
 				5608285827952E2600FF3E54 /* DemoListView.swift in Sources */,
 				56C67A8E27A3BF8B0058A330 /* HStackExample.swift in Sources */,
 				56C67A8327A3BA4D0058A330 /* NavigationViewExample.swift in Sources */,
+				56FAAF5F28069C770030C8B5 /* RestaurantMapView.swift in Sources */,
 				56AAB21F2796AE2A004E8130 /* LabelExample.swift in Sources */,
 				56C67AA727A3CD260058A330 /* EmptyViewExample.swift in Sources */,
 				561C72BB279A979F001440F5 /* DatePickerExample.swift in Sources */,

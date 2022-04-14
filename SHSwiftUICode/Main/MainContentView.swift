@@ -70,6 +70,7 @@ struct MainContentView: View {
 //            IIStackHomework()
             
 //            IIISimpleTable()
+//            RestaurantMapView()
             RestaurantListView()
         }
     }

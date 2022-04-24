@@ -22,6 +22,32 @@ private struct TopLabelView: View {
     }
 }
 
+
+private struct CenterImagesView: View {
+
+    var body: some View {
+        
+        HStack(alignment: .bottom, spacing: 10) {
+            Image("user1")
+                .resizable() // 如欲於 SwiftUI 調整圖片的話，我們可以加上 resizable 修飾器
+                .aspectRatio(contentMode: .fit)
+            
+            Image("user2")
+                .resizable() // 如欲於 SwiftUI 調整圖片的話，我們可以加上 resizable 修飾器
+                .aspectRatio(contentMode: .fit)
+            
+            Image("user3")
+                .resizable() // 如欲於 SwiftUI 調整圖片的話，我們可以加上 resizable 修飾器
+                .aspectRatio(contentMode: .fit)
+        }
+        .padding(.horizontal, 20)
+        
+        Text("Need help with coding problems? Register!")
+        
+    }
+}
+
+
 @available(iOS 15.0, *)
 private struct VBottomButtonView: View {
     var body: some View {
@@ -96,23 +122,7 @@ struct IIStack: View {
             
             TopLabelView()
             
-            HStack(alignment: .bottom, spacing: 10) {
-                Image("user1")
-                    .resizable() // 如欲於 SwiftUI 調整圖片的話，我們可以加上 resizable 修飾器
-                    .aspectRatio(contentMode: .fit)
-                
-                Image("user2")
-                    .resizable() // 如欲於 SwiftUI 調整圖片的話，我們可以加上 resizable 修飾器
-                    .aspectRatio(contentMode: .fit)
-                
-                Image("user3")
-                    .resizable() // 如欲於 SwiftUI 調整圖片的話，我們可以加上 resizable 修飾器
-                    .aspectRatio(contentMode: .fit)
-            }
-            .padding(.horizontal, 20)
-            
-            Text("Need help with coding problems? Register!")
-            
+            CenterImagesView()
             /*
              關鍵在於使用一種 SwiftUI 的特殊元件，元件名稱為留白（spacer），
              留白視圖是一種沒有內容的視圖，在堆疊視圖內充滿一定的空間。
@@ -123,7 +133,8 @@ struct IIStack: View {
             
             if verticalSizeClass == .compact {
                 HBottomButtonView()
-            } else {
+            }
+            else {
                 VBottomButtonView()
             }
 

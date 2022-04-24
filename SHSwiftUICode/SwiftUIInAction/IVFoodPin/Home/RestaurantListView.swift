@@ -10,45 +10,24 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct RestaurantListView: View {
     
-    var restaurants = dummyData()
-    
-    @State
-    private var showActions = false
-    
     var body: some View {
-        
-        ListView(restaurants: restaurants, onItemClick: { restaurant in
-            ILog.debug(tag: #file, content: "\(restaurant.name)")
-            showActions.toggle()
-        })
-        .actionSheet(isPresented: $showActions) {
-            ActionSheet(
-                title: Text("What do you want to do?"),
-                message: nil,
-                buttons: [
-                    .default(Text("Reserve a table")),
-                    .default(Text("Mark as favorite")),
-                    .cancel()
-                ]
-            )
-        }
+        ListView()
     }
 }
 
 @available(iOS 15.0, *)
 private struct ListView: View {
     
-    var restaurants: [Restaurant]
-    
-    var onItemClick: (_ restaurant: Restaurant) -> Void
+    @State
+    var restaurants = dummyData()
     
     var body: some View {
         
         List {
             ForEach(restaurants.indices, id: \.self) { index in
             
-                ListItemView(restaurant: restaurants[index], onItemClick: onItemClick)
-                    .listRowSeparator(.hidden) // 去掉分割线需要用在列表项上
+                ListItemView(restaurant: $restaurants[index])
+                .listRowSeparator(.hidden) // 去掉分割线需要用在列表项上
                 
 //                ListBigItemView(restaurant: restaurants[index])
 //                    .listRowSeparator(.hidden) // 去掉分割线需要用在列表项上
@@ -62,9 +41,15 @@ private struct ListView: View {
 
 private struct ListItemView: View {
     
+    @Binding
     var restaurant: Restaurant
     
-    var onItemClick: (_ restaurant: Restaurant) -> Void
+    @State
+    private var showActions = false
+    
+    @State
+    private var showAlert = false
+    
     
     var body: some View {
         
@@ -89,9 +74,48 @@ private struct ListItemView: View {
                     .foregroundColor(.gray)
             }
             .padding(.top, 6)
+            
+            if restaurant.isFavorite {
+               
+                Image(systemName: "heart.fill")
+                    .resizable()
+                    .frame(width: 16, height: 16)
+                    .foregroundColor(.yellow)
+                    .padding(.top, 6)
+            }
         }
         .onTapGesture {
-            onItemClick(restaurant)
+            
+            ILog.debug(tag: #file, content: restaurant.name)
+            self.showActions.toggle()
+            
+        }
+        
+        .actionSheet(isPresented: $showActions) {
+            
+            ActionSheet(
+                title: Text("What do you want to do?"),
+                message: nil,
+                buttons: [
+                    .default(Text("Reserve a table")) {
+                        self.showAlert.toggle()
+                    },
+                    .default(Text("Mark as favorite")) {
+                        self.restaurant.isFavorite.toggle()
+                    },
+                    .cancel()
+                ]
+            )
+            
+        }
+        .alert(isPresented: $showAlert) {
+            
+            Alert(
+                title: Text("Not yet available"),
+                message: Text("Sorry, this feature is not available yet. Please retry later."),
+                primaryButton: .default(Text("OK")),
+                secondaryButton: .cancel()
+            )
         }
     }
 }
@@ -133,6 +157,7 @@ private struct ListBigItemView: View {
 struct RestaurantListView_Previews: PreviewProvider {
     static var previews: some View {
         RestaurantListView()
+            .previewDevice("iPhone 12 Pro")
         RestaurantListView().preferredColorScheme(.dark)
     }
 }

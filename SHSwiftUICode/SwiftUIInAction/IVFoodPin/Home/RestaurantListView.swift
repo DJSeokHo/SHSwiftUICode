@@ -24,14 +24,40 @@ private struct ListView: View {
     var body: some View {
         
         List {
+            
             ForEach(restaurants.indices, id: \.self) { index in
             
                 ListItemView(restaurant: $restaurants[index])
-                .listRowSeparator(.hidden) // 去掉分割线需要用在列表项上
                 
-//                ListBigItemView(restaurant: restaurants[index])
-//                    .listRowSeparator(.hidden) // 去掉分割线需要用在列表项上
+//                ListBigItemView(restaurant: $restaurants[index])
             }
+            // MARK: SwiftUI 可以讓開發者很簡單的就實作出滑動刪除功能。SwiftUI內建一個 .onDelete 修飾器，你可以將這個修飾器附加到 ForEach  後
+            .onDelete(perform: { indexSet in
+                
+                restaurants.remove(atOffsets: indexSet)
+                
+            })
+            // MARK: 向右滑动列表项时，出现2个滑出菜单，这个固然好，但是！！！！！会导致上面左滑删除的onDelete失效，这里不太推荐。
+            // MARK: 或者你也可以把删除加入到这个滑出菜单里，把方向从 .leading 改成 .trailing
+//            .swipeActions(edge: .leading, allowsFullSwipe: false, content: {
+//
+//                Button {
+//
+//                } label: {
+//                    Image(systemName: "heart")
+//                }
+//                .tint(.green)
+//
+//                Button {
+//
+//                } label: {
+//                    Image(systemName: "square.and.arrow.up")
+//                }
+//                .tint(.orange)
+//            })
+            // MARK: 去掉分割线
+            .listRowSeparator(.hidden)
+           
         }
         .listStyle(.plain) // 扁平
         
@@ -90,7 +116,6 @@ private struct ListItemView: View {
             self.showActions.toggle()
             
         }
-        
         .actionSheet(isPresented: $showActions) {
             
             ActionSheet(
@@ -122,7 +147,14 @@ private struct ListItemView: View {
 
 private struct ListBigItemView: View {
     
+    @Binding
     var restaurant: Restaurant
+    
+    @State
+    private var showActions = false
+    
+    @State
+    private var showAlert = false
     
     var body: some View {
      
@@ -136,19 +168,63 @@ private struct ListBigItemView: View {
             
             VStack(alignment: .leading) {
                 
-                Text(restaurant.name)
-                    .font(.system(.title2, design: .rounded))
+                HStack(alignment: .top) {
+                    
+                    Text(restaurant.name)
+                        .font(.system(.title2, design: .rounded))
+                    
+                    Spacer()
+                    
+                    if restaurant.isFavorite {
+                       
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(.yellow)
+                    }
+                }
                 
-                Text(restaurant.name)
+                Text(restaurant.type)
                     .font(.system(.body, design: .rounded))
                 
-                Text(restaurant.name)
+                Text(restaurant.location)
                     .font(.system(.subheadline, design: .rounded))
                     .foregroundColor(.gray)
             }
             .padding(.horizontal)
             .padding(.bottom)
         }
+        .onTapGesture {
+            
+            ILog.debug(tag: #file, content: restaurant.name)
+            self.showActions.toggle()
+            
+        }
+        .actionSheet(isPresented: $showActions) {
+            
+            ActionSheet(
+                title: Text("What do you want to do?"),
+                message: nil,
+                buttons: [
+                    .default(Text("Reserve a table")) {
+                        self.showAlert.toggle()
+                    },
+                    .default(Text("Mark as favorite")) {
+                        self.restaurant.isFavorite.toggle()
+                    },
+                    .cancel()
+                ]
+            )
+            
+        }
+        .alert(isPresented: $showAlert) {
+            
+            Alert(
+                title: Text("Not yet available"),
+                message: Text("Sorry, this feature is not available yet. Please retry later."),
+                primaryButton: .default(Text("OK")),
+                secondaryButton: .cancel()
+            )
+        }
+        
         
     }
 }

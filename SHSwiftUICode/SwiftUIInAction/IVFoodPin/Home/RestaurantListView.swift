@@ -110,29 +110,50 @@ private struct ListItemView: View {
                     .padding(.top, 6)
             }
         }
-        .onTapGesture {
+        // MARK: 除了滑動動作之外，我們將實作如何顯示內容選單（ context menu ）的動作。iOS的使用者通常會在清單列上點擊並按著不放以帶出一個內容選單（參見圖 10.5）Page 261。與滑動動作相似，使用 SwiftUI 框架建立功能簡單非常的容易，你只要將  contextMenu 容器加至一個視圖中，然後設置它的選單項目即可。在 BasicTextImageView 中，移除 .onTapGesture 與 .actionSheet 修飾器。然後將 .contextMenu 修飾器加入  HStack 視圖中
+        .contextMenu(menuItems: {
             
-            ILog.debug(tag: #file, content: restaurant.name)
-            self.showActions.toggle()
+            Button(action: {
+                self.showAlert.toggle()
+            }, label: {
+                HStack {
+                    Text("Reserve a table")
+                    Image(systemName: "phone")
+                }
+            })
             
-        }
-        .actionSheet(isPresented: $showActions) {
-            
-            ActionSheet(
-                title: Text("What do you want to do?"),
-                message: nil,
-                buttons: [
-                    .default(Text("Reserve a table")) {
-                        self.showAlert.toggle()
-                    },
-                    .default(Text("Mark as favorite")) {
-                        self.restaurant.isFavorite.toggle()
-                    },
-                    .cancel()
-                ]
-            )
-            
-        }
+            Button(action: {
+                restaurant.isFavorite.toggle()
+            }, label: {
+                HStack {
+                    Text("Mark as favorite")
+                    Image(systemName: "heart")
+                }
+            })
+        })
+//        .onTapGesture {
+//
+//            ILog.debug(tag: #file, content: restaurant.name)
+//            self.showActions.toggle()
+//
+//        }
+//        .actionSheet(isPresented: $showActions) {
+//
+//            ActionSheet(
+//                title: Text("What do you want to do?"),
+//                message: nil,
+//                buttons: [
+//                    .default(Text("Reserve a table")) {
+//                        self.showAlert.toggle()
+//                    },
+//                    .default(Text("Mark as favorite")) {
+//                        self.restaurant.isFavorite.toggle()
+//                    },
+//                    .cancel()
+//                ]
+//            )
+//
+//        }
         .alert(isPresented: $showAlert) {
             
             Alert(

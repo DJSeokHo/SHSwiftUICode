@@ -22,6 +22,7 @@
 		561C72C6279AA6D9001440F5 /* ListExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C72C5279AA6D9001440F5 /* ListExample.swift */; };
 		5630E5DA280956F5002646B4 /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630E5D9280956F5002646B4 /* RestaurantListView.swift */; };
 		5630E5DD28095758002646B4 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630E5DC28095758002646B4 /* Restaurant.swift */; };
+		565120CD281940CF00132E04 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565120CC281940CF00132E04 /* ActivityView.swift */; };
 		566602A0279947F70023BE4C /* ToggleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666029F279947F70023BE4C /* ToggleExample.swift */; };
 		566602A32799493F0023BE4C /* StepperExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566602A22799493F0023BE4C /* StepperExample.swift */; };
 		566602A627994AB20023BE4C /* SliderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566602A527994AB20023BE4C /* SliderExample.swift */; };
@@ -32,7 +33,6 @@
 		567D9D6D2797F7AA0024F8EE /* TextFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */; };
 		567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */; };
 		567D9D722798090D0024F8EE /* LinkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D9D712798090D0024F8EE /* LinkExample.swift */; };
-		568ECDC227FEB2E6009CE795 /* ActivityViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568ECDC127FEB2E6009CE795 /* ActivityViewUtility.swift */; };
 		56AAB21827969B92004E8130 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21727969B92004E8130 /* Debug.swift */; };
 		56AAB21C2796A819004E8130 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21B2796A819004E8130 /* ButtonExample.swift */; };
 		56AAB21F2796AE2A004E8130 /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AAB21E2796AE2A004E8130 /* LabelExample.swift */; };
@@ -93,6 +93,7 @@
 		561C72C5279AA6D9001440F5 /* ListExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExample.swift; sourceTree = "<group>"; };
 		5630E5D9280956F5002646B4 /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
 		5630E5DC28095758002646B4 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		565120CC281940CF00132E04 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		5666029F279947F70023BE4C /* ToggleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleExample.swift; sourceTree = "<group>"; };
 		566602A22799493F0023BE4C /* StepperExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperExample.swift; sourceTree = "<group>"; };
 		566602A527994AB20023BE4C /* SliderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderExample.swift; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		567D9D712798090D0024F8EE /* LinkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExample.swift; sourceTree = "<group>"; };
 		568736E4279E6F9200DF7772 /* ConsoleBasic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConsoleBasic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		568976EA280570D900E82925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		568ECDC127FEB2E6009CE795 /* ActivityViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewUtility.swift; sourceTree = "<group>"; };
 		56AAB21727969B92004E8130 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		56AAB2192796A5A8004E8130 /* document.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = document.md; sourceTree = "<group>"; };
 		56AAB21B2796A819004E8130 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
@@ -269,6 +269,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		565120CB281940B500132E04 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				565120CC281940CF00132E04 /* ActivityView.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		5666029E279947EC0023BE4C /* Toggle */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +321,7 @@
 		566C77F627FD7EBC003DFAFE /* IVFoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				565120CB281940B500132E04 /* Share */,
 				5630E5DB28095758002646B4 /* Model */,
 				5630E5D8280956E6002646B4 /* Home */,
 			);
@@ -356,17 +365,8 @@
 		568ECDBF27FEB2C4009CE795 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				568ECDC027FEB2D5009CE795 /* ActivityView */,
 			);
 			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		568ECDC027FEB2D5009CE795 /* ActivityView */ = {
-			isa = PBXGroup;
-			children = (
-				568ECDC127FEB2E6009CE795 /* ActivityViewUtility.swift */,
-			);
-			path = ActivityView;
 			sourceTree = "<group>";
 		};
 		56AAB21427969ACA004E8130 /* Main */ = {
@@ -765,7 +765,6 @@
 				56C67A7A27A3B42A0058A330 /* ScrollViewExample.swift in Sources */,
 				C3C60D952805B48D005C55DE /* UIColorExtension.swift in Sources */,
 				561C72B4279A8BEC001440F5 /* ProgressExample.swift in Sources */,
-				568ECDC227FEB2E6009CE795 /* ActivityViewUtility.swift in Sources */,
 				5608285827952E2600FF3E54 /* DemoListView.swift in Sources */,
 				56C67A8E27A3BF8B0058A330 /* HStackExample.swift in Sources */,
 				56C67A8327A3BA4D0058A330 /* NavigationViewExample.swift in Sources */,
@@ -795,6 +794,7 @@
 				566C77F527FD79F2003DFAFE /* IIISimpleTable.swift in Sources */,
 				5608285C27953C8700FF3E54 /* TextExample.swift in Sources */,
 				56C67A9527A3C69E0058A330 /* LazyVStackExample.swift in Sources */,
+				565120CD281940CF00132E04 /* ActivityView.swift in Sources */,
 				561C72BE279AA00C001440F5 /* GroupBoxExample.swift in Sources */,
 				56C67A8B27A3BBB90058A330 /* VStackExample.swift in Sources */,
 				5630E5DD28095758002646B4 /* Restaurant.swift in Sources */,

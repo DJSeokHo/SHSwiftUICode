@@ -76,6 +76,9 @@ private struct ListItemView: View {
     @State
     private var showAlert = false
     
+    @State
+    private var showShare = false
+    
     
     var body: some View {
         
@@ -130,6 +133,25 @@ private struct ListItemView: View {
                     Image(systemName: "heart")
                 }
             })
+            
+            Button(action: {
+                self.showShare.toggle()
+            }, label: {
+                Text("Share")
+                Image(systemName: "square.and.arrow.up")
+            })
+        })
+        .sheet(isPresented: $showShare, content: {
+            
+            let defaultText = "Just checking in at \(restaurant.name)"
+            
+            if let imageToShare = UIImage(named: restaurant.image) {
+                ActivityView(activityItems: [defaultText, imageToShare])
+            }
+            else {
+                ActivityView(activityItems: [defaultText])
+            }
+                             
         })
 //        .onTapGesture {
 //

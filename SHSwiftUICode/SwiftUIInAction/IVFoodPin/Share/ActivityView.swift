@@ -1,8 +1,8 @@
 //
-//  ActivityViewUtility.swift
+//  ActivityView.swift
 //  SHSwiftUICode
 //
-//  Created by 浩 SHI on 2022/04/07.
+//  Created by 浩 SHI on 2022/04/27.
 //
 
 import Foundation
@@ -21,4 +21,5 @@ struct ActivityView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
+    
 }

@@ -65,6 +65,8 @@ struct MainContentView: View {
 //        EnvironmentObjectExample()
 //        IHelloWorld()
         
+//        FullScreenModalView()
+        
         if #available(iOS 15.0, *) {
 //            IIStack()
 //            IIStackHomework()

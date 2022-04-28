@@ -15,6 +15,7 @@ struct RestaurantListView: View {
     }
 }
 
+
 @available(iOS 15.0, *)
 private struct ListView: View {
     
@@ -23,43 +24,47 @@ private struct ListView: View {
     
     var body: some View {
         
-        List {
-            
-            ForEach(restaurants.indices, id: \.self) { index in
-            
-                ListItemView(restaurant: $restaurants[index])
+        NavigationUtility(navigationTitle: "FoodPin") {
+
+            List {
                 
-//                ListBigItemView(restaurant: $restaurants[index])
+                ForEach(restaurants.indices, id: \.self) { index in
+                
+                    ListItemView(restaurant: $restaurants[index])
+                    
+    //                ListBigItemView(restaurant: $restaurants[index])
+                }
+                // MARK: SwiftUI 可以讓開發者很簡單的就實作出滑動刪除功能。SwiftUI內建一個 .onDelete 修飾器，你可以將這個修飾器附加到 ForEach  後
+                .onDelete(perform: { indexSet in
+                    
+                    restaurants.remove(atOffsets: indexSet)
+                    
+                })
+                // MARK: 向右滑动列表项时，出现2个滑出菜单，这个固然好，但是！！！！！会导致上面左滑删除的onDelete失效，这里不太推荐。
+                // MARK: 或者你也可以把删除加入到这个滑出菜单里，把方向从 .leading 改成 .trailing
+    //            .swipeActions(edge: .leading, allowsFullSwipe: false, content: {
+    //
+    //                Button {
+    //
+    //                } label: {
+    //                    Image(systemName: "heart")
+    //                }
+    //                .tint(.green)
+    //
+    //                Button {
+    //
+    //                } label: {
+    //                    Image(systemName: "square.and.arrow.up")
+    //                }
+    //                .tint(.orange)
+    //            })
+                // MARK: 去掉分割线
+                .listRowSeparator(.hidden)
+               
             }
-            // MARK: SwiftUI 可以讓開發者很簡單的就實作出滑動刪除功能。SwiftUI內建一個 .onDelete 修飾器，你可以將這個修飾器附加到 ForEach  後
-            .onDelete(perform: { indexSet in
-                
-                restaurants.remove(atOffsets: indexSet)
-                
-            })
-            // MARK: 向右滑动列表项时，出现2个滑出菜单，这个固然好，但是！！！！！会导致上面左滑删除的onDelete失效，这里不太推荐。
-            // MARK: 或者你也可以把删除加入到这个滑出菜单里，把方向从 .leading 改成 .trailing
-//            .swipeActions(edge: .leading, allowsFullSwipe: false, content: {
-//
-//                Button {
-//
-//                } label: {
-//                    Image(systemName: "heart")
-//                }
-//                .tint(.green)
-//
-//                Button {
-//
-//                } label: {
-//                    Image(systemName: "square.and.arrow.up")
-//                }
-//                .tint(.orange)
-//            })
-            // MARK: 去掉分割线
-            .listRowSeparator(.hidden)
-           
+            .listStyle(.plain) // 扁平
+
         }
-        .listStyle(.plain) // 扁平
         
     }
 }
@@ -146,10 +151,11 @@ private struct ListItemView: View {
             let defaultText = "Just checking in at \(restaurant.name)"
             
             if let imageToShare = UIImage(named: restaurant.image) {
-                ActivityView(activityItems: [defaultText, imageToShare])
+                
+                ActivityViewUtility.share(activityItems: [defaultText, imageToShare])
             }
             else {
-                ActivityView(activityItems: [defaultText])
+                ActivityViewUtility.share(activityItems: [defaultText])
             }
                              
         })

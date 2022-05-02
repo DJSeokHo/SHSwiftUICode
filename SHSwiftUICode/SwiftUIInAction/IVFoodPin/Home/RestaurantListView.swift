@@ -24,14 +24,19 @@ private struct ListView: View {
     
     var body: some View {
         
-        NavigationUtility(navigationTitle: "FoodPin") {
+        NavigationWrapper(navigationTitle: "FoodPin", tintColor: .white) {
 
             List {
                 
                 ForEach(restaurants.indices, id: \.self) { index in
                 
-                    ListItemView(restaurant: $restaurants[index])
+                    NavigationLinkWrapper(withIndicator: false, destination: {
+                        RestaurantDetailView(restaurant: restaurants[index])
+                    }, contentView: {
+                        ListItemView(restaurant: $restaurants[index])
+                    })
                     
+//                    ListItemView(restaurant: $restaurants[index])
     //                ListBigItemView(restaurant: $restaurants[index])
                 }
                 // MARK: SwiftUI 可以讓開發者很簡單的就實作出滑動刪除功能。SwiftUI內建一個 .onDelete 修飾器，你可以將這個修飾器附加到 ForEach  後
@@ -152,10 +157,10 @@ private struct ListItemView: View {
             
             if let imageToShare = UIImage(named: restaurant.image) {
                 
-                ActivityViewUtility.share(activityItems: [defaultText, imageToShare])
+                ActivityViewWrapper.share(activityItems: [defaultText, imageToShare])
             }
             else {
-                ActivityViewUtility.share(activityItems: [defaultText])
+                ActivityViewWrapper.share(activityItems: [defaultText])
             }
                              
         })

@@ -65,13 +65,11 @@ struct RestaurantDetailView: View {
     var heart: some View {
         
         VStack {
-            
-            Image(systemName: "heart")
-            
+            Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
                 .padding()
                 .font(.system(size: 30))
-                .foregroundColor(.white)
+                .foregroundColor(restaurant.isFavorite ? .yellow : .white)
                 .padding(.top, 40)
 
         }

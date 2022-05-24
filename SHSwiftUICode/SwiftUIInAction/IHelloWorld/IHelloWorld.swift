@@ -85,5 +85,6 @@ private struct HelloWorld: View {
 struct IHelloWorld_Previews: PreviewProvider {
     static var previews: some View {
         IHelloWorld()
+            .previewDevice("iPhone 12 Pro")
     }
 }

@@ -11,6 +11,15 @@ import SwiftUI
 struct RestaurantListView: View {
     
     init() {
+        initNavigationBar()
+    }
+    
+    var body: some View {
+        ListView()
+    }
+    
+    private func initNavigationBar() {
+        
         // MARK: 我們簡短的介紹了如何自訂導覽列，不過有幾個自訂的功能我想要進一步討論，目前的 SwiftUI 版本並沒有支援所有原生的自訂類型，舉例來說，變更導覽列標題顏色的話需要恢復使用 UIKit。
         
         let navBarAppearance = UINavigationBarAppearance()
@@ -24,10 +33,6 @@ struct RestaurantListView: View {
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         UINavigationBar.appearance().compactAppearance = navBarAppearance
         
-    }
-    
-    var body: some View {
-        ListView()
     }
 }
 

@@ -7,9 +7,40 @@
 
 import SwiftUI
 
-private struct TopLabelView: View {
+@available(iOS 15.0, *)
+struct IIStackHomework: View {
+    
+    @Environment(\.verticalSizeClass)
+    var verticalSizeClass
     
     var body: some View {
+       
+        ZStack {
+            
+            VStack(spacing: 10) {
+                
+                topLabelView
+                
+                centerImageView
+                
+                Spacer()
+                
+                if verticalSizeClass == .compact {
+                    bottomButtonViewInHorizontal
+                } else {
+                    bottomButtonViewInVertical
+                }
+            }
+            .padding(.top, 30)
+        }
+        .background {
+            Image("background")
+                .resizable()
+                .ignoresSafeArea()
+        }
+    }
+    
+    private var topLabelView: some View {
         
         VStack {
             
@@ -24,11 +55,25 @@ private struct TopLabelView: View {
         }
         
     }
-}
-
-@available(iOS 15.0, *)
-private struct VBottomButtonView: View {
-    var body: some View {
+    
+    private var centerImageView: some View {
+        
+        HStack {
+            
+            Image("student")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            Image("tutor")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+        }
+        .padding(.horizontal, 20)
+        
+    }
+    
+    private var bottomButtonViewInVertical: some View {
         
         VStack {
             
@@ -54,12 +99,10 @@ private struct VBottomButtonView: View {
             .background(Color.gray)
             .cornerRadius(10)
         }
+        
     }
-}
-
-@available(iOS 15.0, *)
-private struct HBottomButtonView: View {
-    var body: some View {
+    
+    private var bottomButtonViewInHorizontal: some View {
         
         HStack {
             
@@ -84,51 +127,6 @@ private struct HBottomButtonView: View {
             .foregroundColor(.white)
             .background(Color.gray)
             .cornerRadius(10)
-        }
-    }
-}
-
-@available(iOS 15.0, *)
-struct IIStackHomework: View {
-    
-    @Environment(\.verticalSizeClass)
-    var verticalSizeClass
-    
-    var body: some View {
-       
-        ZStack {
-            
-            VStack {
-                
-                TopLabelView()
-                
-                HStack {
-                    
-                    Image("student")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
-                    Image("tutor")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
-                }
-                .padding(.horizontal, 20)
-                
-                Spacer()
-                
-                if verticalSizeClass == .compact {
-                    HBottomButtonView()
-                } else {
-                    VBottomButtonView()
-                }
-            }
-            .padding(.top, 30)
-        }
-        .background {
-            Image("background")
-                .resizable()
-                .ignoresSafeArea()
         }
     }
 }

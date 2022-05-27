@@ -172,6 +172,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E58A302840B57E00DF270E /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				56AAB21727969B92004E8130 /* Debug.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		04E58A312840B5A400DF270E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C3C6917B281AC4A00014C4DD /* ActivityView */,
+				04E58A302840B57E00DF270E /* Debug */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		04E58A322840B5AA00DF270E /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				C3C69180281AD1C10014C4DD /* Navigation */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		04E58A332840B5CB00DF270E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C3C60D942805B48D005C55DE /* UIColorExtension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		5608284F2795175200FF3E54 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,9 +416,8 @@
 		56AAB21627969B7D004E8130 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				C3C69180281AD1C10014C4DD /* Navigation */,
-				C3C6917B281AC4A00014C4DD /* ActivityView */,
-				56AAB21727969B92004E8130 /* Debug.swift */,
+				04E58A322840B5AA00DF270E /* SwiftUI */,
+				04E58A312840B5A400DF270E /* Common */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -649,7 +681,7 @@
 		C3C60D932805B47E005C55DE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C3C60D942805B48D005C55DE /* UIColorExtension.swift */,
+				04E58A332840B5CB00DF270E /* Common */,
 			);
 			path = Extension;
 			sourceTree = "<group>";

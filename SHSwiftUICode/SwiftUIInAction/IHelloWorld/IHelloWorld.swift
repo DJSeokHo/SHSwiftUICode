@@ -23,43 +23,55 @@ private struct ContentView: View {
         
         VStack {
             
-            Button(action: {
-             
-                speak(text: "Happy Programming")
-                
-            }, label: {
-              
-                Text("Happy Programming")
-                    .fontWeight(.bold)
-                    .font(.system(.title, design: .rounded))
-                
-            })
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.yellow)
-            .cornerRadius(20)
+            topView
             
-            Button(action: {
-                
-               speak(text: "Hello World")
-                
-            }, label: {
-              
-                Text("Hello World")
-                    .fontWeight(.bold)
-                    .font(.system(.title, design: .rounded))
-                
-            })
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.purple)
-            .cornerRadius(20)
+            bottomView
             
         }
         
     }
     
-    func speak(text: String) {
+    private var topView: some View {
+        
+        Button(action: {
+         
+            speak(text: "Happy Programming")
+            
+        }, label: {
+          
+            Text("Happy Programming")
+                .fontWeight(.bold)
+                .font(.system(.title, design: .rounded))
+            
+        })
+        .padding()
+        .foregroundColor(.white)
+        .background(Color.yellow)
+        .cornerRadius(20)
+        
+    }
+    
+    private var bottomView: some View {
+            
+        Button(action: {
+            
+           speak(text: "Hello World")
+            
+        }, label: {
+          
+            Text("Hello World")
+                .fontWeight(.bold)
+                .font(.system(.title, design: .rounded))
+            
+        })
+        .padding()
+        .foregroundColor(.white)
+        .background(Color.purple)
+        .cornerRadius(20)
+        
+    }
+    
+    private func speak(text: String) {
         
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
@@ -70,21 +82,24 @@ private struct ContentView: View {
     }
 }
 
-private struct HelloWorld: View {
-    
-    var body: some View {
-        
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .fontWeight(.bold)
-//            .font(.title)
-            .font(.system(.title, design: .rounded))
-    }
-    
-}
+//private struct HelloWorld: View {
+//
+//    var body: some View {
+//
+//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//            .fontWeight(.bold)
+////            .font(.title)
+//            .font(.system(.title, design: .rounded))
+//    }
+//
+//}
 
 struct IHelloWorld_Previews: PreviewProvider {
     static var previews: some View {
         IHelloWorld()
             .previewDevice("iPhone 12 Pro")
+        
+        IHelloWorld()
+            .previewDevice("iPhone 8")
     }
 }

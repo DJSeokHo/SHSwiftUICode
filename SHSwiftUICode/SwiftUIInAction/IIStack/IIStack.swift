@@ -8,8 +8,43 @@
 import SwiftUI
 
 @available(iOS 15.0, *)
-private struct TopLabelView: View {
+struct IIStack: View {
+    
+    @Environment(\.verticalSizeClass)
+    var verticalSizeClass
+    
     var body: some View {
+        
+        VStack(spacing: 20) {
+            
+            topLabelView
+            
+            centerImagesView
+            
+            centerLabelView
+            
+            /*
+             關鍵在於使用一種 SwiftUI 的特殊元件，元件名稱為留白（spacer），
+             留白視圖是一種沒有內容的視圖，在堆疊視圖內充滿一定的空間。
+             舉例，當你將留白視圖置於垂直佈局中時，它會在堆疊中的垂直方向盡可能的擴展。
+             留白視圖加入完成後，它會盡可能在垂直堆疊視圖中擴展及佔滿空間，然後將標籤往螢幕上方推動
+             */
+            Spacer()
+            
+            if verticalSizeClass == .compact {
+                bottomButtonViewInHorizontal
+            }
+            else {
+                bottomButtonViewInVertical
+            }
+
+        }
+        .padding(.top, 30)
+        
+    }
+    
+    private var topLabelView: some View {
+        
         VStack {
             
             Text("Instant Developer")
@@ -19,13 +54,10 @@ private struct TopLabelView: View {
             
             Text("Get help from experts in 15 minutes")
         }
+        
     }
-}
-
-
-private struct CenterImagesView: View {
-
-    var body: some View {
+    
+    private var centerImagesView: some View {
         
         HStack(alignment: .bottom, spacing: 10) {
             Image("user1")
@@ -42,15 +74,15 @@ private struct CenterImagesView: View {
         }
         .padding(.horizontal, 20)
         
+    }
+    
+    private var centerLabelView: some View {
+        
         Text("Need help with coding problems? Register!")
         
     }
-}
-
-
-@available(iOS 15.0, *)
-private struct VBottomButtonView: View {
-    var body: some View {
+    
+    private var bottomButtonViewInVertical: some View {
         
         VStack {
             
@@ -76,12 +108,10 @@ private struct VBottomButtonView: View {
             .background(Color.gray)
             .cornerRadius(10)
         }
+        
     }
-}
-
-@available(iOS 15.0, *)
-private struct HBottomButtonView: View {
-    var body: some View {
+    
+    private var bottomButtonViewInHorizontal: some View {
         
         HStack {
             
@@ -107,42 +137,10 @@ private struct HBottomButtonView: View {
             .background(Color.gray)
             .cornerRadius(10)
         }
-    }
-}
-
-@available(iOS 15.0, *)
-struct IIStack: View {
-    
-    @Environment(\.verticalSizeClass)
-    var verticalSizeClass
-    
-    var body: some View {
-        
-        VStack(spacing: 20) {
-            
-            TopLabelView()
-            
-            CenterImagesView()
-            /*
-             關鍵在於使用一種 SwiftUI 的特殊元件，元件名稱為留白（spacer），
-             留白視圖是一種沒有內容的視圖，在堆疊視圖內充滿一定的空間。
-             舉例，當你將留白視圖置於垂直佈局中時，它會在堆疊中的垂直方向盡可能的擴展。
-             留白視圖加入完成後，它會盡可能在垂直堆疊視圖中擴展及佔滿空間，然後將標籤往螢幕上方推動
-             */
-            Spacer()
-            
-            if verticalSizeClass == .compact {
-                HBottomButtonView()
-            }
-            else {
-                VBottomButtonView()
-            }
-
-        }
-        .padding(.top, 30)
         
     }
 }
+
 
 @available(iOS 15.0, *)
 struct IIStack_Previews: PreviewProvider {

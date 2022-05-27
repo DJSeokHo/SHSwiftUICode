@@ -75,6 +75,7 @@ struct MainContentView: View {
             RestaurantListView()
 //            RestaurantMapView()
 //            ReviewView()
+//            MapView()
             
         }
     }

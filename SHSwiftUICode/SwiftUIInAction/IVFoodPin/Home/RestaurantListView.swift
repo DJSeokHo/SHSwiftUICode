@@ -307,8 +307,18 @@ private struct ListBigItemView: View {
 @available(iOS 15.0, *)
 struct RestaurantListView_Previews: PreviewProvider {
     static var previews: some View {
+        
         RestaurantListView()
             .previewDevice("iPhone 12 Pro")
-        RestaurantListView().preferredColorScheme(.dark)
+        
+        RestaurantListView()
+            .preferredColorScheme(.dark)
+            .previewDevice("iPhone 12 Pro")
+        
+        // MARK: 上述的程式碼中，我們加上了  environment 修飾器，然後設定動態型態大小為  .xxxLarge，預覽視圖接著會顯示加大字型後的 UI
+        RestaurantListView()
+            .preferredColorScheme(.dark)
+            .environment(\.dynamicTypeSize, .xxxLarge)
+            .previewDevice("iPhone 12 Pro")
     }
 }

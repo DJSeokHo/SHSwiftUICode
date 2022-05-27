@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04E58A382840B6E800DF270E /* ActivityViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E58A372840B6E800DF270E /* ActivityViewUtility.swift */; };
+		04E58A3C2840C18700DF270E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E58A3B2840C18700DF270E /* MapView.swift */; };
 		5608285327951B1300FF3E54 /* DemoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285227951B1300FF3E54 /* DemoListItemView.swift */; };
 		5608285627951EB400FF3E54 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285527951EB400FF3E54 /* DemoModel.swift */; };
 		5608285827952E2600FF3E54 /* DemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285727952E2600FF3E54 /* DemoListView.swift */; };
@@ -82,6 +83,7 @@
 
 /* Begin PBXFileReference section */
 		04E58A372840B6E800DF270E /* ActivityViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewUtility.swift; path = SHSwiftUICode/Framework/Utility/Common/ActivityView/ActivityViewUtility.swift; sourceTree = SOURCE_ROOT; };
+		04E58A3B2840C18700DF270E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5608285227951B1300FF3E54 /* DemoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListItemView.swift; sourceTree = "<group>"; };
 		5608285527951EB400FF3E54 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
 		5608285727952E2600FF3E54 /* DemoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,14 @@
 				04E58A372840B6E800DF270E /* ActivityViewUtility.swift */,
 			);
 			path = ActivityView;
+			sourceTree = "<group>";
+		};
+		04E58A3A2840C17500DF270E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				04E58A3B2840C18700DF270E /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		5608284F2795175200FF3E54 /* Detail */ = {
@@ -362,6 +372,7 @@
 		566C77F627FD7EBC003DFAFE /* IVFoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				04E58A3A2840C17500DF270E /* Map */,
 				C30A12C3282BAE32001402BB /* Resources */,
 				C3BCDD2F281F7B2E00558042 /* Detail */,
 				5630E5DB28095758002646B4 /* Model */,
@@ -845,6 +856,7 @@
 				56C67AA927A3CDA40058A330 /* DividerExample.swift in Sources */,
 				C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */,
 				56C67AB027A3CF620058A330 /* AngularGradientExample.swift in Sources */,
+				04E58A3C2840C18700DF270E /* MapView.swift in Sources */,
 				56C67A9727A3C7BC0058A330 /* LazyHStackExample.swift in Sources */,
 				5608286227955CE800FF3E54 /* DemoViewModel.swift in Sources */,
 				567D9D6A2797F4980024F8EE /* TextEditorExample.swift in Sources */,

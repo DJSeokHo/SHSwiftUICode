@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 @available(iOS 15.0, *)
 struct RestaurantDetailView: View {
@@ -24,6 +25,7 @@ struct RestaurantDetailView: View {
                 image
                 info
                 addressAndPhone
+                map
                 
             }
             
@@ -46,7 +48,7 @@ struct RestaurantDetailView: View {
 
     }
     
-    var image: some View {
+    private var image: some View {
         
         Image(restaurant.image)
             .resizable()
@@ -62,7 +64,7 @@ struct RestaurantDetailView: View {
         
     }
     
-    var heart: some View {
+    private var heart: some View {
         
         VStack {
             Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
@@ -92,7 +94,7 @@ struct RestaurantDetailView: View {
         
     }
     
-    var headerInfo: some View {
+    private var headerInfo: some View {
         
         VStack(alignment: .leading, spacing: 5, content: {
             
@@ -112,14 +114,14 @@ struct RestaurantDetailView: View {
         
     }
     
-    var info: some View {
+    private var info: some View {
         
         Text(restaurant.description)
             .padding()
         
     }
     
-    var addressAndPhone: some View {
+    private var addressAndPhone: some View {
         
         HStack(alignment: .top, content: {
             
@@ -151,7 +153,29 @@ struct RestaurantDetailView: View {
         .padding(.horizontal)
         
     }
+    
+    private var map: some View {
+        
+        NavigationLink(
+            destination: {
+                
+                MapView(location: restaurant.location)
+                    .edgesIgnoringSafeArea(.all)
+                
+            }
+        ) {
+            
+            MapView(location: restaurant.location)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(height: 200)
+                .cornerRadius(20)
+                .padding()
+            
+        }
+    }
+    
 }
+
 
 @available(iOS 15.0, *)
 struct RestaurantDetailView_Previews: PreviewProvider {

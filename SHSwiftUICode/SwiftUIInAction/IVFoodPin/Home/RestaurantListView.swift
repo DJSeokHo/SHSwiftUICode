@@ -61,6 +61,7 @@ private struct ListView: View {
     //                ListBigItemView(restaurant: $restaurants[index])
                 }
                 // MARK: SwiftUI 可以讓開發者很簡單的就實作出滑動刪除功能。SwiftUI內建一個 .onDelete 修飾器，你可以將這個修飾器附加到 ForEach  後
+                // ForEach.
                 .onDelete(perform: { indexSet in
                     
                     restaurants.remove(atOffsets: indexSet)
@@ -85,9 +86,11 @@ private struct ListView: View {
     //                .tint(.orange)
     //            })
                 // MARK: 去掉分割线
+                // ForEach.
                 .listRowSeparator(.hidden)
                
             }
+            // List.
             .listStyle(.plain) // 扁平
 
         }
@@ -145,6 +148,7 @@ private struct ListItemView: View {
             }
         }
         // MARK: 除了滑動動作之外，我們將實作如何顯示內容選單（ context menu ）的動作。iOS的使用者通常會在清單列上點擊並按著不放以帶出一個內容選單（參見圖 10.5）Page 261。與滑動動作相似，使用 SwiftUI 框架建立功能簡單非常的容易，你只要將  contextMenu 容器加至一個視圖中，然後設置它的選單項目即可。在 BasicTextImageView 中，移除 .onTapGesture 與 .actionSheet 修飾器。然後將 .contextMenu 修飾器加入  HStack 視圖中
+        // HStack.
         .contextMenu(menuItems: {
             
             Button(action: {
@@ -172,6 +176,7 @@ private struct ListItemView: View {
                 Image(systemName: "square.and.arrow.up")
             })
         })
+        // HStack.
         .sheet(isPresented: $showShare, content: {
             
             let defaultText = "Just checking in at \(restaurant.name)"
@@ -208,6 +213,7 @@ private struct ListItemView: View {
 //            )
 //
 //        }
+        // HStack.
         .alert(isPresented: $showAlert) {
             
             Alert(
@@ -309,16 +315,16 @@ struct RestaurantListView_Previews: PreviewProvider {
     static var previews: some View {
         
         RestaurantListView()
-            .previewDevice("iPhone 12 Pro")
+            .previewDevice("iPhone 13 Pro Max")
         
         RestaurantListView()
             .preferredColorScheme(.dark)
-            .previewDevice("iPhone 12 Pro")
+            .previewDevice("iPhone 13 mini")
         
         // MARK: 上述的程式碼中，我們加上了  environment 修飾器，然後設定動態型態大小為  .xxxLarge，預覽視圖接著會顯示加大字型後的 UI
         RestaurantListView()
             .preferredColorScheme(.dark)
             .environment(\.dynamicTypeSize, .xxxLarge)
-            .previewDevice("iPhone 12 Pro")
+            .previewDevice("iPhone 13 Pro Max")
     }
 }

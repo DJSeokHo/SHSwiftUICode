@@ -17,14 +17,41 @@ struct IHelloWorld: View {
     
 }
 
+private struct HeartView: View {
+    
+    @State
+    private var colorChange = false
+    
+    @State
+    private var sizeChange = false
+    
+    var body: some View {
+        
+        Image(systemName: "heart.fill")
+            .font(.system(size: 200))
+            .foregroundColor(colorChange ? .yellow : .red)
+            .scaleEffect(sizeChange ? 1.5 : 1)
+            .animation(.default)
+            .onTapGesture {
+                self.colorChange.toggle()
+            }
+            .onLongPressGesture {
+                self.sizeChange.toggle()
+            }
+        
+    }
+    
+}
+
 private struct ContentView: View {
     
     var body: some View {
         
         VStack {
             
-            topView
+            HeartView()
             
+            topView
             bottomView
             
         }
@@ -61,11 +88,11 @@ private struct ContentView: View {
           
             Text("Hello World")
                 .fontWeight(.bold)
+                .foregroundColor(.white)
                 .font(.system(.title, design: .rounded))
             
         })
         .padding()
-        .foregroundColor(.white)
         .background(Color.purple)
         .cornerRadius(20)
         
@@ -82,24 +109,9 @@ private struct ContentView: View {
     }
 }
 
-//private struct HelloWorld: View {
-//
-//    var body: some View {
-//
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//            .fontWeight(.bold)
-////            .font(.title)
-//            .font(.system(.title, design: .rounded))
-//    }
-//
-//}
-
 struct IHelloWorld_Previews: PreviewProvider {
     static var previews: some View {
         IHelloWorld()
-            .previewDevice("iPhone 12 Pro")
-        
-        IHelloWorld()
-            .previewDevice("iPhone 8")
+            .previewDevice("iPhone 13 Pro Max")
     }
 }

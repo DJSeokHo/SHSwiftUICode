@@ -31,6 +31,10 @@ struct IIStack: View {
              */
             Spacer()
             
+            /*
+             如果垂直尺寸属于compact 那么就显示横向按钮
+             否则就显示竖直按钮
+             */
             if verticalSizeClass == .compact {
                 bottomButtonViewInHorizontal
             }
@@ -60,6 +64,8 @@ struct IIStack: View {
     private var centerImagesView: some View {
         
         HStack(alignment: .bottom, spacing: 10) {
+            // MARK: 此處告訴水平堆疊視圖將所有圖片視圖對齊視底部邊緣，並在視圖之間加入 10 點的間距
+            
             Image("user1")
                 .resizable() // 如欲於 SwiftUI 調整圖片的話，我們可以加上 resizable 修飾器
                 .aspectRatio(contentMode: .fit)
@@ -149,21 +155,24 @@ struct IIStack_Previews: PreviewProvider {
         Group {
          
             IIStack()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
-                .previewDisplayName("iPhone 12 Pro")
+                .previewDevice("iPhone 13 Pro Max")
+                .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
+                .previewDisplayName("iPhone 13 Pro Max")
 
             IIStack()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
-                .previewDisplayName("iPhone 12 Pro")
+                .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
+                .previewDisplayName("iPhone 13 Pro Max")
                 .previewInterfaceOrientation(.landscapeLeft)
             
             IIStack()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
-                .previewDisplayName("iPhone 12 Pro Max")
+                .previewDevice("iPhone 13 mini")
+                .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
+                .previewDisplayName("iPhone 13 mini")
 
             IIStack()
+                .previewDevice("iPad Air (5th generation)")
                 .previewDevice(PreviewDevice(rawValue: "iPad Air (5th generation)"))
-                .previewDisplayName("iPad Air")
+                .previewDisplayName("iPad Air (5th generation)")
                 .previewInterfaceOrientation(.portraitUpsideDown)
              
         }

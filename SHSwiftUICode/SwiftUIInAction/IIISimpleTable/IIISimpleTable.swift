@@ -59,16 +59,19 @@ struct IIISimpleTable_Previews: PreviewProvider {
         Group {
          
             IIISimpleTable()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
-                .previewDisplayName("iPhone 12 Pro")
+                .previewDevice("iPhone 13 Pro Max")
+                .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
+                .previewDisplayName("iPhone 13 Pro Max")
 
             IIISimpleTable()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
-                .previewDisplayName("iPhone 12 Pro Max")
+                .previewDevice("iPhone 13 mini")
+                .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
+                .previewDisplayName("iPhone 13 mini")
 
             IIISimpleTable()
+                .previewDevice("iPad Air (5th generation)")
                 .previewDevice(PreviewDevice(rawValue: "iPad Air (5th generation)"))
-                .previewDisplayName("iPad Air")
+                .previewDisplayName("iPad Air (5th generation)")
              
         }
     }

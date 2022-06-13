@@ -4,6 +4,7 @@
 //
 //  Created by 浩 SHI on 2022/01/28.
 //
+//  参考文档: https://github.com/swiftui-from-zero/SwiftUIViews
 
 //import SwiftUI
 //

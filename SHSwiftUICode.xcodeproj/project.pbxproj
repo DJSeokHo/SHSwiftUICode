@@ -247,7 +247,7 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		5608285927953C6500FF3E54 /* Basic */ = {
+		5608285927953C6500FF3E54 /* BasicTutorial */ = {
 			isa = PBXGroup;
 			children = (
 				C325B2EB27A4FEDE0039AAB2 /* DataStream */,
@@ -257,7 +257,7 @@
 				56C67A8727A3BB7A0058A330 /* Controls */,
 				56C67AB527A3D0030058A330 /* BasicContentView.swift */,
 			);
-			path = Basic;
+			path = BasicTutorial;
 			sourceTree = "<group>";
 		};
 		5608285A27953C7000FF3E54 /* Text */ = {
@@ -753,7 +753,7 @@
 				C36CBCB927FC81F80078A35C /* SwiftUIInAction */,
 				568736E2279E6E5A00DF7772 /* Console */,
 				56AAB21527969B76004E8130 /* Framework */,
-				5608285927953C6500FF3E54 /* Basic */,
+				5608285927953C6500FF3E54 /* BasicTutorial */,
 				C30306E22792C2BB00800B2F /* Demo */,
 				C3DB212927929CA8004A94F3 /* Main */,
 				C3DB211B279295AD004A94F3 /* SHSwiftUICodeApp.swift */,

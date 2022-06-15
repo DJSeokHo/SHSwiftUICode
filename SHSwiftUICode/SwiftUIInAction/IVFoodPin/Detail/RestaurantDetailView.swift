@@ -8,7 +8,6 @@
 import SwiftUI
 import MapKit
 
-@available(iOS 15.0, *)
 struct RestaurantDetailView: View {
     
     @Environment(\.dismiss)
@@ -22,7 +21,7 @@ struct RestaurantDetailView: View {
             
             VStack(alignment: .leading) {
                 
-                image
+                topImageView
                 info
                 addressAndPhone
                 map
@@ -48,7 +47,7 @@ struct RestaurantDetailView: View {
 
     }
     
-    private var image: some View {
+    private var topImageView: some View {
         
         Image(restaurant.image)
             .resizable()
@@ -108,6 +107,7 @@ struct RestaurantDetailView: View {
                 .background(Color.black)
             
         })
+        // MARK: alignment 在frame 用于调整本控件在父控件中的位置
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
         .foregroundColor(.white)
         .padding()
@@ -177,7 +177,6 @@ struct RestaurantDetailView: View {
 }
 
 
-@available(iOS 15.0, *)
 struct RestaurantDetailView_Previews: PreviewProvider {
     static var previews: some View {
         

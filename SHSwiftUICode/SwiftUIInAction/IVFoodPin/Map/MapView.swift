@@ -8,7 +8,6 @@
 import SwiftUI
 import MapKit
 
-@available(iOS 15.0, *)
 struct MapView: View {
     
     var location: String = ""
@@ -67,7 +66,6 @@ struct AnnotatedItem: Identifiable {
     var coordinate: CLLocationCoordinate2D
 }
 
-@available(iOS 15.0, *)
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         

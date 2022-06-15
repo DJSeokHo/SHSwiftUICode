@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 15.0, *)
 struct RestaurantListView: View {
     
     init() {
@@ -37,7 +36,6 @@ struct RestaurantListView: View {
 }
 
 
-@available(iOS 15.0, *)
 private struct ListView: View {
     
     @State
@@ -69,6 +67,7 @@ private struct ListView: View {
                 })
                 // MARK: 向右滑动列表项时，出现2个滑出菜单，这个固然好，但是！！！！！会导致上面左滑删除的onDelete失效，这里不太推荐。
                 // MARK: 或者你也可以把删除加入到这个滑出菜单里，把方向从 .leading 改成 .trailing
+                // ForEach.
     //            .swipeActions(edge: .leading, allowsFullSwipe: false, content: {
     //
     //                Button {
@@ -310,7 +309,6 @@ private struct ListBigItemView: View {
     }
 }
 
-@available(iOS 15.0, *)
 struct RestaurantListView_Previews: PreviewProvider {
     static var previews: some View {
         

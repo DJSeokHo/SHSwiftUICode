@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 15.0, *)
 struct IIStackHomework: View {
     
     @Environment(\.verticalSizeClass)
@@ -131,7 +130,6 @@ struct IIStackHomework: View {
     }
 }
 
-@available(iOS 15.0, *)
 struct IIStackHomework_Previews: PreviewProvider {
     static var previews: some View {
      

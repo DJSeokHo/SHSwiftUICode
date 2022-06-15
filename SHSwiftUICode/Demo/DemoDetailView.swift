@@ -70,25 +70,15 @@ struct DemoDetailImagePartView: View {
     var imageName: String
     
     var body: some View {
-        if #available(iOS 15.0, *) {
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 260, height: 260, alignment: Alignment.center)
-                .clipShape(Circle())
-                .overlay {
-                    Circle().stroke(.gray, lineWidth: 4)
-                }
-                .shadow(radius: 7)
-        }
-        else {
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 150, alignment: Alignment.center)
-                .clipShape(Circle())
-                .shadow(radius: 7)
-        }
+        Image(imageName)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 260, height: 260, alignment: Alignment.center)
+            .clipShape(Circle())
+            .overlay {
+                Circle().stroke(.gray, lineWidth: 4)
+            }
+            .shadow(radius: 7)
     }
 }
 

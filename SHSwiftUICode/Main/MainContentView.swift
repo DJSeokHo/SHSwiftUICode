@@ -67,17 +67,17 @@ struct MainContentView: View {
         
 //        FullScreenModalView()
         
-        if #available(iOS 15.0, *) {
-//            IIStack()
-//            IIStackHomework()
-            
-//            IIISimpleTable()
-            RestaurantListView()
-//            RestaurantMapView()
-//            ReviewView()
-//            MapView()
-            
-        }
+//        IIStack()
+//        IIStackHomework()
+//
+//        IIISimpleTable()
+//        RestaurantListView()
+//        RestaurantMapView()
+//        ReviewView()
+//        MapView()
+        
+        FoundationView()
+       
     }
 }
 

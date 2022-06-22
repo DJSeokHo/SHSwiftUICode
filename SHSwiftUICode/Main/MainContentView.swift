@@ -77,7 +77,6 @@ struct MainContentView: View {
 //        MapView()
         
         FoundationView()
-       
     }
 }
 

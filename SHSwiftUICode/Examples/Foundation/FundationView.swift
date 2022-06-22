@@ -11,7 +11,9 @@ struct FoundationView: View {
     var body: some View {
        
 //        I_PreviewSetting()
-        II_Text()
+//        II_Text()
+//        III_Button()
+        IV_Label()
     }
 }
 

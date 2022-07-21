@@ -13,7 +13,9 @@ struct FoundationView: View {
 //        I_PreviewSetting()
 //        II_Text()
 //        III_Button()
-        IV_Label()
+//        IV_Label()
+//        V_Image()
+//        VI_TextField()
     }
 }
 

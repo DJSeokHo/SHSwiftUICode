@@ -76,7 +76,9 @@ struct MainContentView: View {
 //        ReviewView()
 //        MapView()
         
-        FoundationView()
+//        FoundationView()
+        
+        YoutuberXIAOMAView()
     }
 }
 

@@ -31,12 +31,13 @@ private struct HeartView: View {
             .font(.system(size: 200))
             .foregroundColor(colorChange ? .yellow : .red)
             .scaleEffect(sizeChange ? 1.5 : 1)
-            .animation(.default)
             .onTapGesture {
                 self.colorChange.toggle()
             }
             .onLongPressGesture {
-                self.sizeChange.toggle()
+                withAnimation {
+                    self.sizeChange.toggle()
+                }
             }
         
     }

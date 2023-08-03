@@ -78,7 +78,9 @@ struct MainContentView: View {
         
 //        FoundationView()
         
-        YoutuberXIAOMAView()
+//        YoutuberXIAOMAView()
+        
+        NavigationStackExample()
     }
 }
 

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0402C31C2A5971F7000694C4 /* NavigationStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402C31B2A5971F7000694C4 /* NavigationStackExample.swift */; };
+		0402C3212A597252000694C4 /* NSSubView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402C3202A597252000694C4 /* NSSubView1.swift */; };
+		0402C3252A597499000694C4 /* NSSubView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402C3242A597499000694C4 /* NSSubView2.swift */; };
+		0402C3272A597E9A000694C4 /* PathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402C3262A597E9A000694C4 /* PathManager.swift */; };
+		0473A2B72A7BB0830001F479 /* NavigationStackWithTabViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473A2B62A7BB0830001F479 /* NavigationStackWithTabViewExample.swift */; };
+		0473A2B92A7BB09E0001F479 /* NSWTSubViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473A2B82A7BB09E0001F479 /* NSWTSubViewOne.swift */; };
+		0473A2BB2A7BB0A60001F479 /* NSWTSubViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473A2BA2A7BB0A60001F479 /* NSWTSubViewTwo.swift */; };
+		0473A2BD2A7BB0B00001F479 /* NSWTDetailViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473A2BC2A7BB0B00001F479 /* NSWTDetailViewOne.swift */; };
 		04C921D829BF148600BBD526 /* XMPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C921D729BF148600BBD526 /* XMPropertyWrapper.swift */; };
 		04C921DA29BF169100BBD526 /* YoutuberXIAOMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C921D929BF169100BBD526 /* YoutuberXIAOMAView.swift */; };
 		04C921DD29C06DD600BBD526 /* XMCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C921DC29C06DD600BBD526 /* XMCustomButton.swift */; };
@@ -94,6 +102,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0402C31B2A5971F7000694C4 /* NavigationStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackExample.swift; sourceTree = "<group>"; };
+		0402C3202A597252000694C4 /* NSSubView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSubView1.swift; sourceTree = "<group>"; };
+		0402C3242A597499000694C4 /* NSSubView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSubView2.swift; sourceTree = "<group>"; };
+		0402C3262A597E9A000694C4 /* PathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathManager.swift; sourceTree = "<group>"; };
+		0473A2B62A7BB0830001F479 /* NavigationStackWithTabViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackWithTabViewExample.swift; sourceTree = "<group>"; };
+		0473A2B82A7BB09E0001F479 /* NSWTSubViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWTSubViewOne.swift; sourceTree = "<group>"; };
+		0473A2BA2A7BB0A60001F479 /* NSWTSubViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWTSubViewTwo.swift; sourceTree = "<group>"; };
+		0473A2BC2A7BB0B00001F479 /* NSWTDetailViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWTDetailViewOne.swift; sourceTree = "<group>"; };
 		04C921D729BF148600BBD526 /* XMPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPropertyWrapper.swift; sourceTree = "<group>"; };
 		04C921D929BF169100BBD526 /* YoutuberXIAOMAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutuberXIAOMAView.swift; sourceTree = "<group>"; };
 		04C921DC29C06DD600BBD526 /* XMCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMCustomButton.swift; sourceTree = "<group>"; };
@@ -135,7 +151,6 @@
 		567D9D6C2797F7AA0024F8EE /* TextFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExample.swift; sourceTree = "<group>"; };
 		567D9D6E2798066E0024F8EE /* SecureFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldExample.swift; sourceTree = "<group>"; };
 		567D9D712798090D0024F8EE /* LinkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExample.swift; sourceTree = "<group>"; };
-		568736E4279E6F9200DF7772 /* ConsoleBasic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConsoleBasic.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		568976EA280570D900E82925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		56AAB21727969B92004E8130 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		56AAB2192796A5A8004E8130 /* document.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = document.md; sourceTree = "<group>"; };
@@ -198,6 +213,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0402C31A2A5971E4000694C4 /* NavigationStack */ = {
+			isa = PBXGroup;
+			children = (
+				0402C31B2A5971F7000694C4 /* NavigationStackExample.swift */,
+				0402C3202A597252000694C4 /* NSSubView1.swift */,
+				0402C3242A597499000694C4 /* NSSubView2.swift */,
+				0402C3262A597E9A000694C4 /* PathManager.swift */,
+			);
+			path = NavigationStack;
+			sourceTree = "<group>";
+		};
+		0473A2B22A7BAFFE0001F479 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				0473A2B32A7BB0070001F479 /* NavigationStackWithTabView */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		0473A2B32A7BB0070001F479 /* NavigationStackWithTabView */ = {
+			isa = PBXGroup;
+			children = (
+				0473A2B62A7BB0830001F479 /* NavigationStackWithTabViewExample.swift */,
+				0473A2B82A7BB09E0001F479 /* NSWTSubViewOne.swift */,
+				0473A2BA2A7BB0A60001F479 /* NSWTSubViewTwo.swift */,
+				0473A2BC2A7BB0B00001F479 /* NSWTDetailViewOne.swift */,
+			);
+			path = NavigationStackWithTabView;
+			sourceTree = "<group>";
+		};
 		04C921D529BF144E00BBD526 /* YoutuberXIAOMA */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,22 +569,6 @@
 			path = Link;
 			sourceTree = "<group>";
 		};
-		568736E2279E6E5A00DF7772 /* Console */ = {
-			isa = PBXGroup;
-			children = (
-				568736E3279E6F7100DF7772 /* Basic */,
-			);
-			path = Console;
-			sourceTree = "<group>";
-		};
-		568736E3279E6F7100DF7772 /* Basic */ = {
-			isa = PBXGroup;
-			children = (
-				568736E4279E6F9200DF7772 /* ConsoleBasic.playground */,
-			);
-			path = Basic;
-			sourceTree = "<group>";
-		};
 		56AAB21427969ACA004E8130 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +662,7 @@
 		56C67A8727A3BB7A0058A330 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				0402C31A2A5971E4000694C4 /* NavigationStack */,
 				56C67A8427A3BA860058A330 /* NavigationLink */,
 				56C67A8127A3BA400058A330 /* NavgationView */,
 				56C67A7E27A3B87B0058A330 /* EditButton */,
@@ -850,8 +880,8 @@
 			isa = PBXGroup;
 			children = (
 				568976EA280570D900E82925 /* Info.plist */,
+				0473A2B22A7BAFFE0001F479 /* Examples */,
 				C36CBCB927FC81F80078A35C /* SwiftUIInAction */,
-				568736E2279E6E5A00DF7772 /* Console */,
 				56AAB21527969B76004E8130 /* Framework */,
 				5608285927953C6500FF3E54 /* BasicTutorial */,
 				C30306E22792C2BB00800B2F /* Demo */,
@@ -951,8 +981,10 @@
 			files = (
 				56C67A8627A3BA930058A330 /* NavigationLinkExample.swift in Sources */,
 				04E58A382840B6E800DF270E /* ActivityViewUtility.swift in Sources */,
+				0473A2B92A7BB09E0001F479 /* NSWTSubViewOne.swift in Sources */,
 				561C72B7279A9102001440F5 /* PickerExample.swift in Sources */,
 				C325B2F227A50CA00039AAB2 /* StateExample.swift in Sources */,
+				0473A2BD2A7BB0B00001F479 /* NSWTDetailViewOne.swift in Sources */,
 				56C67AA927A3CDA40058A330 /* DividerExample.swift in Sources */,
 				C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */,
 				56C67AB027A3CF620058A330 /* AngularGradientExample.swift in Sources */,
@@ -973,6 +1005,7 @@
 				56C67AA727A3CD260058A330 /* EmptyViewExample.swift in Sources */,
 				561C72BB279A979F001440F5 /* DatePickerExample.swift in Sources */,
 				56AAB21C2796A819004E8130 /* ButtonExample.swift in Sources */,
+				0402C3272A597E9A000694C4 /* PathManager.swift in Sources */,
 				567D9D6F2798066E0024F8EE /* SecureFieldExample.swift in Sources */,
 				04C921DD29C06DD600BBD526 /* XMCustomButton.swift in Sources */,
 				56C67A9B27A3C9C60058A330 /* LazyHGridExample.swift in Sources */,
@@ -982,6 +1015,7 @@
 				C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */,
 				56C67A9127A3C1B60058A330 /* ZStackExample.swift in Sources */,
 				56AAB21827969B92004E8130 /* Debug.swift in Sources */,
+				0402C31C2A5971F7000694C4 /* NavigationStackExample.swift in Sources */,
 				56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */,
 				C325B2FA27A522E50039AAB2 /* Developer.swift in Sources */,
 				C36CBCBC27FC82590078A35C /* IHelloWorld.swift in Sources */,
@@ -991,17 +1025,20 @@
 				C325B2F727A522610039AAB2 /* ObservedObjectExample.swift in Sources */,
 				567D9D722798090D0024F8EE /* LinkExample.swift in Sources */,
 				56C67A7727A3B3010058A330 /* SectionExample.swift in Sources */,
+				0402C3252A597499000694C4 /* NSSubView2.swift in Sources */,
 				04C921FD29C8335700BBD526 /* XMActionSheetView.swift in Sources */,
 				56C67AB227A3CF870058A330 /* LinearGradientExample.swift in Sources */,
 				04C921DA29BF169100BBD526 /* YoutuberXIAOMAView.swift in Sources */,
 				56C67A9E27A3CB030058A330 /* SpacerExample.swift in Sources */,
 				C325B2FD27A525A10039AAB2 /* EnvironmentObjectExample.swift in Sources */,
+				0402C3212A597252000694C4 /* NSSubView1.swift in Sources */,
 				04C921E729C2EC6200BBD526 /* XMNavigationWithIsActiveView.swift in Sources */,
 				566C77F527FD79F2003DFAFE /* IIISimpleTable.swift in Sources */,
 				5608285C27953C8700FF3E54 /* TextExample.swift in Sources */,
 				56C67A9527A3C69E0058A330 /* LazyVStackExample.swift in Sources */,
 				04C921F729C8308500BBD526 /* XMPopOverView.swift in Sources */,
 				561C72BE279AA00C001440F5 /* GroupBoxExample.swift in Sources */,
+				0473A2B72A7BB0830001F479 /* NavigationStackWithTabViewExample.swift in Sources */,
 				56C67A8B27A3BBB90058A330 /* VStackExample.swift in Sources */,
 				5630E5DD28095758002646B4 /* Restaurant.swift in Sources */,
 				C325B30227A532610039AAB2 /* EnvironmentExample.swift in Sources */,
@@ -1019,6 +1056,7 @@
 				56C67A9927A3C7E80058A330 /* LazyVGridExample.swift in Sources */,
 				561C72C3279AA219001440F5 /* OutlineGroupExample.swift in Sources */,
 				04C921FA29C8311600BBD526 /* XMAlertView.swift in Sources */,
+				0473A2BB2A7BB0A60001F479 /* NSWTSubViewTwo.swift in Sources */,
 				04C9220329C8381600BBD526 /* XMGeometryReaderView.swift in Sources */,
 				04C921ED29C4057500BBD526 /* XMTabView.swift in Sources */,
 				56C67AAD27A3CECD0058A330 /* MenuExample.swift in Sources */,
@@ -1172,6 +1210,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1205,6 +1244,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

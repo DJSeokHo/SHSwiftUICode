@@ -11,6 +11,11 @@
 		0402C3212A597252000694C4 /* NSSubView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402C3202A597252000694C4 /* NSSubView1.swift */; };
 		0402C3252A597499000694C4 /* NSSubView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402C3242A597499000694C4 /* NSSubView2.swift */; };
 		0402C3272A597E9A000694C4 /* PathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402C3262A597E9A000694C4 /* PathManager.swift */; };
+		0422A8D32A8F3C4400E0844E /* RealityKitDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422A8D22A8F3C4400E0844E /* RealityKitDemoView.swift */; };
+		0422A8D62A8F46D200E0844E /* ARKitSceneKitDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422A8D52A8F46D200E0844E /* ARKitSceneKitDemoView.swift */; };
+		0422A8DB2A8F493600E0844E /* ARKitSceneKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422A8DA2A8F493600E0844E /* ARKitSceneKitDemoViewController.swift */; };
+		0422A8E02A8F4ABD00E0844E /* ThreadUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422A8DF2A8F4ABD00E0844E /* ThreadUtility.swift */; };
+		0422A8E32A8F4D0600E0844E /* GLTFSceneKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0422A8E22A8F4D0600E0844E /* GLTFSceneKit */; };
 		0473A2B72A7BB0830001F479 /* NavigationStackWithTabViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473A2B62A7BB0830001F479 /* NavigationStackWithTabViewExample.swift */; };
 		0473A2B92A7BB09E0001F479 /* NSWTSubViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473A2B82A7BB09E0001F479 /* NSWTSubViewOne.swift */; };
 		0473A2BB2A7BB0A60001F479 /* NSWTSubViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473A2BA2A7BB0A60001F479 /* NSWTSubViewTwo.swift */; };
@@ -106,6 +111,10 @@
 		0402C3202A597252000694C4 /* NSSubView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSubView1.swift; sourceTree = "<group>"; };
 		0402C3242A597499000694C4 /* NSSubView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSubView2.swift; sourceTree = "<group>"; };
 		0402C3262A597E9A000694C4 /* PathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathManager.swift; sourceTree = "<group>"; };
+		0422A8D22A8F3C4400E0844E /* RealityKitDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitDemoView.swift; sourceTree = "<group>"; };
+		0422A8D52A8F46D200E0844E /* ARKitSceneKitDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitSceneKitDemoView.swift; sourceTree = "<group>"; };
+		0422A8DA2A8F493600E0844E /* ARKitSceneKitDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitSceneKitDemoViewController.swift; sourceTree = "<group>"; };
+		0422A8DF2A8F4ABD00E0844E /* ThreadUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadUtility.swift; sourceTree = "<group>"; };
 		0473A2B62A7BB0830001F479 /* NavigationStackWithTabViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackWithTabViewExample.swift; sourceTree = "<group>"; };
 		0473A2B82A7BB09E0001F479 /* NSWTSubViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWTSubViewOne.swift; sourceTree = "<group>"; };
 		0473A2BA2A7BB0A60001F479 /* NSWTSubViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWTSubViewTwo.swift; sourceTree = "<group>"; };
@@ -207,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0422A8E32A8F4D0600E0844E /* GLTFSceneKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,9 +234,36 @@
 			path = NavigationStack;
 			sourceTree = "<group>";
 		};
+		0422A8D12A8F3C2C00E0844E /* RealityKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0422A8D22A8F3C4400E0844E /* RealityKitDemoView.swift */,
+			);
+			path = RealityKitDemo;
+			sourceTree = "<group>";
+		};
+		0422A8D42A8F46AF00E0844E /* ARKitSceneKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0422A8D52A8F46D200E0844E /* ARKitSceneKitDemoView.swift */,
+				0422A8DA2A8F493600E0844E /* ARKitSceneKitDemoViewController.swift */,
+			);
+			path = ARKitSceneKitDemo;
+			sourceTree = "<group>";
+		};
+		0422A8DE2A8F4A7800E0844E /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				0422A8DF2A8F4ABD00E0844E /* ThreadUtility.swift */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
 		0473A2B22A7BAFFE0001F479 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				0422A8D42A8F46AF00E0844E /* ARKitSceneKitDemo */,
+				0422A8D12A8F3C2C00E0844E /* RealityKitDemo */,
 				0473A2B32A7BB0070001F479 /* NavigationStackWithTabView */,
 			);
 			path = Examples;
@@ -373,6 +410,7 @@
 		04E58A312840B5A400DF270E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0422A8DE2A8F4A7800E0844E /* Thread */,
 				04E58A302840B57E00DF270E /* Debug */,
 			);
 			path = Common;
@@ -925,6 +963,9 @@
 			dependencies = (
 			);
 			name = SHSwiftUICode;
+			packageProductDependencies = (
+				0422A8E22A8F4D0600E0844E /* GLTFSceneKit */,
+			);
 			productName = SHSwiftUICode;
 			productReference = C3DB2118279295AD004A94F3 /* SHSwiftUICode.app */;
 			productType = "com.apple.product-type.application";
@@ -953,6 +994,9 @@
 				Base,
 			);
 			mainGroup = C3DB210F279295AC004A94F3;
+			packageReferences = (
+				0422A8E12A8F4D0600E0844E /* XCRemoteSwiftPackageReference "GLTFSceneKit" */,
+			);
 			productRefGroup = C3DB2119279295AD004A94F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -987,6 +1031,7 @@
 				0473A2BD2A7BB0B00001F479 /* NSWTDetailViewOne.swift in Sources */,
 				56C67AA927A3CDA40058A330 /* DividerExample.swift in Sources */,
 				C30306E42792C2CC00800B2F /* DemoDetailView.swift in Sources */,
+				0422A8DB2A8F493600E0844E /* ARKitSceneKitDemoViewController.swift in Sources */,
 				56C67AB027A3CF620058A330 /* AngularGradientExample.swift in Sources */,
 				04C921E329C2E54100BBD526 /* XMNavigationView.swift in Sources */,
 				56C67A9727A3C7BC0058A330 /* LazyHStackExample.swift in Sources */,
@@ -995,6 +1040,7 @@
 				56C67A7A27A3B42A0058A330 /* ScrollViewExample.swift in Sources */,
 				C3C60D952805B48D005C55DE /* UIColorExtension.swift in Sources */,
 				04C9220029C836B200BBD526 /* XMDeviceOrientationView.swift in Sources */,
+				0422A8D32A8F3C4400E0844E /* RealityKitDemoView.swift in Sources */,
 				561C72B4279A8BEC001440F5 /* ProgressExample.swift in Sources */,
 				04C921EA29C4008900BBD526 /* XMSliderView.swift in Sources */,
 				5608285827952E2600FF3E54 /* DemoListView.swift in Sources */,
@@ -1017,6 +1063,7 @@
 				56AAB21827969B92004E8130 /* Debug.swift in Sources */,
 				0402C31C2A5971F7000694C4 /* NavigationStackExample.swift in Sources */,
 				56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */,
+				0422A8D62A8F46D200E0844E /* ARKitSceneKitDemoView.swift in Sources */,
 				C325B2FA27A522E50039AAB2 /* Developer.swift in Sources */,
 				C36CBCBC27FC82590078A35C /* IHelloWorld.swift in Sources */,
 				04C921E029C1A2EC00BBD526 /* XMInputLimitedView.swift in Sources */,
@@ -1058,6 +1105,7 @@
 				04C921FA29C8311600BBD526 /* XMAlertView.swift in Sources */,
 				0473A2BB2A7BB0A60001F479 /* NSWTSubViewTwo.swift in Sources */,
 				04C9220329C8381600BBD526 /* XMGeometryReaderView.swift in Sources */,
+				0422A8E02A8F4ABD00E0844E /* ThreadUtility.swift in Sources */,
 				04C921ED29C4057500BBD526 /* XMTabView.swift in Sources */,
 				56C67AAD27A3CECD0058A330 /* MenuExample.swift in Sources */,
 				5608285627951EB400FF3E54 /* DemoModel.swift in Sources */,
@@ -1200,11 +1248,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SHSwiftUICode/Preview Content\"";
-				DEVELOPMENT_TEAM = DU98VK6D82;
+				DEVELOPMENT_TEAM = H2W3JJ2C39;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SHSwiftUICode/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Our app needs access to your camera to enable the augmented reality experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1234,11 +1283,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SHSwiftUICode/Preview Content\"";
-				DEVELOPMENT_TEAM = DU98VK6D82;
+				DEVELOPMENT_TEAM = H2W3JJ2C39;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SHSwiftUICode/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Our app needs access to your camera to enable the augmented reality experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1281,6 +1331,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0422A8E12A8F4D0600E0844E /* XCRemoteSwiftPackageReference "GLTFSceneKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/magicien/GLTFSceneKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0422A8E22A8F4D0600E0844E /* GLTFSceneKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0422A8E12A8F4D0600E0844E /* XCRemoteSwiftPackageReference "GLTFSceneKit" */;
+			productName = GLTFSceneKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3DB2110279295AC004A94F3 /* Project object */;
 }

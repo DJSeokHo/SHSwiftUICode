@@ -80,7 +80,11 @@ struct MainContentView: View {
         
 //        YoutuberXIAOMAView()
         
-        NavigationStackExample()
+//        NavigationStackExample()
+        
+//        RealityKitDemoView()
+        
+        ARKitSceneKitDemoView()
     }
 }
 

@@ -12,6 +12,7 @@ import GLTFSceneKit
 
 class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
 
+    private var catchAble = false
     private var modelReady = false
     
     var arSCNView: ARSCNView {
@@ -120,14 +121,24 @@ class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
         //        let result = arSceneView.hitTest(tapPoint, types: .existingPlaneUsingExtent)
 
 
-        if let query = arSCNView.raycastQuery(from: tapPoint, allowing: ARRaycastQuery.Target.estimatedPlane, alignment: ARRaycastQuery.TargetAlignment.any) {
+        if let query = arSCNView.raycastQuery(from: tapPoint, allowing: ARRaycastQuery.Target.estimatedPlane, alignment: .any) {
 
             // 如果射线与某个平面几何体相交，就会返回该平面，以离摄像头的距离升序排序
             // 如果命中多次，用距离最近的平面
 
             let results = arSCNView.session.raycast(query)
+            
+            ILog.debug(tag: #file, content: "??? results \(results.count)")
+            
             if let hitResult = results.first {
-                ILog.debug(tag: #file, content: "hit at \(hitResult.worldTransform.columns.3.x) \(hitResult.worldTransform.columns.3.y) \(hitResult.worldTransform.columns.3.z)")
+                
+                ILog.debug(tag: #file, content: "hit at \(hitResult.worldTransform.columns.3.x) \(hitResult.worldTransform.columns.3.y) \(hitResult.worldTransform.columns.3.z) \(hitResult.description)")
+                
+                if catchAble {
+                    
+                    ILog.debug(tag: #file, content: "catch!!!!")
+                    catchAble = false
+                }
             }
         }
     }
@@ -275,15 +286,9 @@ extension ARKitSceneKitDemoViewController: ARSCNViewDelegate {
         
         // 自定义绘制平面
         guard anchor is ARPlaneAnchor else {
-            ILog.debug(tag: #file, content: "no plate")
             return
         }
-        
-        // 检测到新平面时创建 SceneKit 平面以实现 3D 视觉化
-//        let plane = Plane(withAnchor: anchor)
-//        planes[anchor.identifier] = plane
-//        node.addChildNode(plane)
-        
+
         if modelReady {
             
             // Get The Path Of The Downloaded File
@@ -305,12 +310,8 @@ extension ARKitSceneKitDemoViewController: ARSCNViewDelegate {
                 
                 node.addChildNode(scene.rootNode)
                 
-                ILog.debug(tag: #file, content: "model at \(node.position)")
-                ILog.debug(tag: #file, content: "model at \(node.worldPosition)")
-                ILog.debug(tag: #file, content: "model at \(node.simdPosition)")
-                ILog.debug(tag: #file, content: "model at \(node.simdWorldPosition)")
-                
                 modelReady = false
+                catchAble = true
                 
                 let fileManager = FileManager.default
 

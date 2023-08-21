@@ -12,10 +12,38 @@ import GLTFSceneKit
 
 class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
 
-    private var catchAble = false
-    private var modelReady = false
+    private var urlString: String = ""
+    private var isReview: Bool = false
     
-    var arSCNView: ARSCNView {
+    private var loadingDelegate: ((_ loading: Bool) -> Void)? = nil
+    
+    private var modelScene: SCNScene? = nil
+    
+    public func initData(urlString: String, isReview: Bool, loadingDelegate: @escaping (_ loading: Bool) -> Void) {
+        self.urlString = urlString
+        self.isReview = isReview
+        self.loadingDelegate = loadingDelegate
+        
+        
+        ThreadUtility.startThread {
+            
+            // clear model file
+            let downloadedScenePath = self.getDocumentsDirectory().appendingPathComponent("temp.glb")
+            let fileManager = FileManager.default
+
+            do {
+                try fileManager.removeItem(at: downloadedScenePath)
+
+                ILog.debug(tag: #file, content: "delete file success")
+            }
+            catch {
+                ILog.debug(tag: #file, content: "delete file error")
+            }
+            
+        }
+    }
+    
+    private var arSCNView: ARSCNView {
         return self.view as! ARSCNView
     }
     
@@ -34,8 +62,6 @@ class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
         
         self.setupARSceneView()
         self.setupRecognizers()
-        
-        self.downloadSceneTask()
     }
     
     /**
@@ -116,46 +142,68 @@ class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
         arSCNView.addGestureRecognizer(tapGestureRecognizer)
     }
     @objc func handleTapFrom(recognizer: UITapGestureRecognizer) {
-        // 获取屏幕空间坐标并传递给 ARSCNView 实例的 hitTest 方法
-        let tapPoint = recognizer.location(in: arSCNView)
-        //        let result = arSceneView.hitTest(tapPoint, types: .existingPlaneUsingExtent)
+ 
+        if isReview {
+         
+            // 获取屏幕空间坐标并传递给 ARSCNView 实例的 hitTest 方法
+            let tapPoint = recognizer.location(in: arSCNView)
+            //        let result = arSceneView.hitTest(tapPoint, types: .existingPlaneUsingExtent)
 
 
-        if let query = arSCNView.raycastQuery(from: tapPoint, allowing: ARRaycastQuery.Target.estimatedPlane, alignment: .any) {
+            if let query = arSCNView.raycastQuery(from: tapPoint, allowing: ARRaycastQuery.Target.estimatedPlane, alignment: .any) {
 
-            // 如果射线与某个平面几何体相交，就会返回该平面，以离摄像头的距离升序排序
-            // 如果命中多次，用距离最近的平面
+                // 如果射线与某个平面几何体相交，就会返回该平面，以离摄像头的距离升序排序
+                // 如果命中多次，用距离最近的平面
 
-            let results = arSCNView.session.raycast(query)
-            
-            ILog.debug(tag: #file, content: "??? results \(results.count)")
-            
-            if let hitResult = results.first {
-                
-                ILog.debug(tag: #file, content: "hit at \(hitResult.worldTransform.columns.3.x) \(hitResult.worldTransform.columns.3.y) \(hitResult.worldTransform.columns.3.z) \(hitResult.description)")
-                
-                if catchAble {
+                let results = arSCNView.session.raycast(query)
+
+                ILog.debug(tag: #file, content: "??? results \(results.count)")
+
+                if let hitResult = results.first {
                     
-                    ILog.debug(tag: #file, content: "catch!!!!")
-                    catchAble = false
+                    ILog.debug(tag: #file, content: "hit at \(hitResult.worldTransform.columns.3.x) \(hitResult.worldTransform.columns.3.y) \(hitResult.worldTransform.columns.3.z) \(hitResult.description)")
+                    
+                    let pointTransform = SCNMatrix4(hitResult.worldTransform)
+                    let pointVector = SCNVector3Make(pointTransform.m41, pointTransform.m42, pointTransform.m43)
+                    
+                    modelScene?.rootNode.removeFromParentNode()
+                    
+                    if modelScene == nil {
+                        self.downloadSceneTask(node: self.arSCNView.scene.rootNode, vector3: pointVector)
+                    }
+                    else {
+                        self.loadModel(node: self.arSCNView.scene.rootNode, vector3: pointVector)
+                    }
                 }
+            }
+        }
+        else {
+            
+            if modelScene != nil {
+                ILog.debug(tag: #file, content: "catch!!!!")
             }
         }
     }
     
-    func downloadSceneTask() {
+    private func downloadSceneTask(node: SCNNode, vector3: SCNVector3? = nil) {
         
         ILog.debug(tag: #file, content: "downloadSceneTask")
+        
+        guard urlString != "" else {
+            return
+        }
             
         guard let url = URL(
-//            string: "https://dl.dropboxusercontent.com/scl/fi/42hd8vvinhzre0tkzuhk5/Gunk_3.glb?rlkey=olecrk6op6y8nbkn9hgb8icvp&dl=0"
-            string: "https://dl.dropboxusercontent.com/scl/fi/626zoh4xdk6ve25u1f1eg/lunaguin_f_ex.glb?rlkey=fh40f4l50oododsbyjfwrywa8&dl=0"
+//            string: "https://dl.dropboxusercontent.com/scl/fi/626zoh4xdk6ve25u1f1eg/lunaguin_f_ex.glb?rlkey=fh40f4l50oododsbyjfwrywa8&dl=0"
+            string: urlString
         )
         else {
             return
             
         }
     
+        loadingDelegate?(true)
+        
         //2. Create The Download Session
         let downloadSession = URLSession(configuration: URLSession.shared.configuration, delegate: self, delegateQueue: nil)
         
@@ -182,9 +230,11 @@ class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
                     ILog.debug(tag: #file, content: "Successfuly Saved File \(myFileUrl)")
                     
                     ThreadUtility.startUIThread {
+                        
+                        self.loadingDelegate?(false)
+                        
                         //3. Load The Model
-//                        self.loadModel()
-                        self.modelReady = true
+                        self.loadModel(node: node, vector3: vector3)
                     }
                    
                     
@@ -195,8 +245,9 @@ class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
                         //3. Load The Model
                         ILog.debug(tag: #file, content: "Error Saving: \(error)")
                         
-//                        self.loadModel()
-                        self.modelReady = true
+                        self.loadingDelegate?(false)
+                        
+                        self.loadModel(node: node, vector3: vector3)
                     }
                 }
             }
@@ -215,34 +266,46 @@ class ARKitSceneKitDemoViewController: UIViewController, URLSessionDelegate {
         
     }
     
-    func loadModel() {
+    private func loadModel(node: SCNNode, vector3: SCNVector3? = nil) {
         
         ILog.debug(tag: #file, content: "loadModel")
         
         // Get The Path Of The Downloaded File
+        // Get The Path Of The Downloaded File
         let downloadedScenePath = getDocumentsDirectory().appendingPathComponent("temp.glb")
-        
+
         do {
+
             let sceneSource = GLTFSceneSource(url: downloadedScenePath)
-            let scene: SCNScene = try sceneSource.scene()
+            let tempScene: SCNScene = try sceneSource.scene()
+
+            modelScene = tempScene
             
-            if !scene.rootNode.childNodes.isEmpty {
-                
-                ILog.debug(tag: #file, content: "scene.rootNode.childNodes.first!.scale ?? \(scene.rootNode.childNodes.first!.scale)")
-                
-                scene.rootNode.childNodes.first!.position = SCNVector3Make(0.0, 0.0, -1.0)
-                scene.rootNode.childNodes.first!.scale = SCNVector3(x: 0.1, y: 0.1, z: 0.1)
-                
-                ILog.debug(tag: #file, content: "scene.rootNode.childNodes.first!.scale ?? \(scene.rootNode.childNodes.first!.scale)")
+            guard modelScene != nil else {
+                return
             }
             
-            self.arSCNView.scene.rootNode.addChildNode(scene.rootNode)
+            if let pointVector = vector3 {
+                modelScene!.rootNode.position = pointVector
+            }
             
+            if !modelScene!.rootNode.childNodes.isEmpty {
+
+                ILog.debug(tag: #file, content: "scene.rootNode.childNodes.first!.scale ?? \(modelScene!.rootNode.childNodes.first!.scale)")
+
+                modelScene!.rootNode.childNodes.first!.position = SCNVector3Make(0.0, 0.0, 0.0)
+//                    scene.rootNode.childNodes.first!.scale = SCNVector3(x: 0.1, y: 0.1, z: 0.1)
+            }
+
+//                self.arSCNView.scene.rootNode.addChildNode(scene.rootNode)
+
+            ThreadUtility.startUIThread {
+                node.addChildNode(self.modelScene!.rootNode)
+            }
         }
         catch {
-            
+
             ILog.debug(tag: #file, content: error.localizedDescription)
-            return
         }
     }
     
@@ -289,48 +352,13 @@ extension ARKitSceneKitDemoViewController: ARSCNViewDelegate {
             return
         }
 
-        if modelReady {
+        if !isReview {
             
-            // Get The Path Of The Downloaded File
-            let downloadedScenePath = getDocumentsDirectory().appendingPathComponent("temp.glb")
-            
-            do {
-                let sceneSource = GLTFSceneSource(url: downloadedScenePath)
-                let scene: SCNScene = try sceneSource.scene()
-                
-                if !scene.rootNode.childNodes.isEmpty {
-                    
-                    ILog.debug(tag: #file, content: "scene.rootNode.childNodes.first!.scale ?? \(scene.rootNode.childNodes.first!.scale)")
-                    
-                    scene.rootNode.childNodes.first!.position = SCNVector3Make(0.0, 0.0, 0.0)
-//                    scene.rootNode.childNodes.first!.scale = SCNVector3(x: 0.1, y: 0.1, z: 0.1)
-                }
-                
-//                self.arSCNView.scene.rootNode.addChildNode(scene.rootNode)
-                
-                node.addChildNode(scene.rootNode)
-                
-                modelReady = false
-                catchAble = true
-                
-                let fileManager = FileManager.default
-
-                do {
-                    try fileManager.removeItem(at: downloadedScenePath)
-
-                    ILog.debug(tag: #file, content: "delete file success")
-                }
-                catch {
-                    ILog.debug(tag: #file, content: "delete file error")
-                }
+            if modelScene == nil {
+                self.downloadSceneTask(node: node)
             }
-            catch {
-                
-                ILog.debug(tag: #file, content: error.localizedDescription)
-                return
-            }
-            
         }
+       
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
@@ -359,12 +387,13 @@ extension ARKitSceneKitDemoViewController: ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         
-        //        ILog.debug(tag: #file, content: "renderer updateAtTime")
+//        ILog.debug(tag: #file, content: "renderer updateAtTime")
         
 //        ThreadUtility.startUIThread {
 //            self.viewModel?.trackingState = self.trackingStatus
 //        }
     }
+    
     
     func sessionWasInterrupted(_ session: ARSession) {
 //        trackingStatus = "AR Session Was Interrupted!"

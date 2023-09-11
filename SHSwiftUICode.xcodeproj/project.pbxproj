@@ -36,6 +36,8 @@
 		04C921FD29C8335700BBD526 /* XMActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C921FC29C8335700BBD526 /* XMActionSheetView.swift */; };
 		04C9220029C836B200BBD526 /* XMDeviceOrientationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C921FF29C836B200BBD526 /* XMDeviceOrientationView.swift */; };
 		04C9220329C8381600BBD526 /* XMGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9220229C8381600BBD526 /* XMGeometryReaderView.swift */; };
+		04D485FC2AAF45FD005C4DE8 /* QRCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D485FB2AAF45FD005C4DE8 /* QRCameraView.swift */; };
+		04D485FE2AAF4606005C4DE8 /* QRCameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D485FD2AAF4606005C4DE8 /* QRCameraViewModel.swift */; };
 		04E58A382840B6E800DF270E /* ActivityViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E58A372840B6E800DF270E /* ActivityViewUtility.swift */; };
 		5608285327951B1300FF3E54 /* DemoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285227951B1300FF3E54 /* DemoListItemView.swift */; };
 		5608285627951EB400FF3E54 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285527951EB400FF3E54 /* DemoModel.swift */; };
@@ -135,6 +137,8 @@
 		04C921FC29C8335700BBD526 /* XMActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMActionSheetView.swift; sourceTree = "<group>"; };
 		04C921FF29C836B200BBD526 /* XMDeviceOrientationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMDeviceOrientationView.swift; sourceTree = "<group>"; };
 		04C9220229C8381600BBD526 /* XMGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMGeometryReaderView.swift; sourceTree = "<group>"; };
+		04D485FB2AAF45FD005C4DE8 /* QRCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCameraView.swift; sourceTree = "<group>"; };
+		04D485FD2AAF4606005C4DE8 /* QRCameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCameraViewModel.swift; sourceTree = "<group>"; };
 		04E58A372840B6E800DF270E /* ActivityViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewUtility.swift; path = SHSwiftUICode/Framework/Utility/Common/ActivityView/ActivityViewUtility.swift; sourceTree = SOURCE_ROOT; };
 		5608285227951B1300FF3E54 /* DemoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListItemView.swift; sourceTree = "<group>"; };
 		5608285527951EB400FF3E54 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 		0473A2B22A7BAFFE0001F479 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				04D485FA2AAF45E6005C4DE8 /* QRCamera */,
 				0422A8D42A8F46AF00E0844E /* ARKitSceneKitDemo */,
 				0422A8D12A8F3C2C00E0844E /* RealityKitDemo */,
 				0473A2B32A7BB0070001F479 /* NavigationStackWithTabView */,
@@ -397,6 +402,15 @@
 				04C9220229C8381600BBD526 /* XMGeometryReaderView.swift */,
 			);
 			path = GeometryReader;
+			sourceTree = "<group>";
+		};
+		04D485FA2AAF45E6005C4DE8 /* QRCamera */ = {
+			isa = PBXGroup;
+			children = (
+				04D485FB2AAF45FD005C4DE8 /* QRCameraView.swift */,
+				04D485FD2AAF4606005C4DE8 /* QRCameraViewModel.swift */,
+			);
+			path = QRCamera;
 			sourceTree = "<group>";
 		};
 		04E58A302840B57E00DF270E /* Debug */ = {
@@ -1065,6 +1079,7 @@
 				56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */,
 				0422A8D62A8F46D200E0844E /* ARKitSceneKitDemoView.swift in Sources */,
 				C325B2FA27A522E50039AAB2 /* Developer.swift in Sources */,
+				04D485FE2AAF4606005C4DE8 /* QRCameraViewModel.swift in Sources */,
 				C36CBCBC27FC82590078A35C /* IHelloWorld.swift in Sources */,
 				04C921E029C1A2EC00BBD526 /* XMInputLimitedView.swift in Sources */,
 				566602A627994AB20023BE4C /* SliderExample.swift in Sources */,
@@ -1072,6 +1087,7 @@
 				C325B2F727A522610039AAB2 /* ObservedObjectExample.swift in Sources */,
 				567D9D722798090D0024F8EE /* LinkExample.swift in Sources */,
 				56C67A7727A3B3010058A330 /* SectionExample.swift in Sources */,
+				04D485FC2AAF45FD005C4DE8 /* QRCameraView.swift in Sources */,
 				0402C3252A597499000694C4 /* NSSubView2.swift in Sources */,
 				04C921FD29C8335700BBD526 /* XMActionSheetView.swift in Sources */,
 				56C67AB227A3CF870058A330 /* LinearGradientExample.swift in Sources */,

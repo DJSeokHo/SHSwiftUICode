@@ -38,6 +38,7 @@
 		04C9220329C8381600BBD526 /* XMGeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9220229C8381600BBD526 /* XMGeometryReaderView.swift */; };
 		04D485FC2AAF45FD005C4DE8 /* QRCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D485FB2AAF45FD005C4DE8 /* QRCameraView.swift */; };
 		04D485FE2AAF4606005C4DE8 /* QRCameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D485FD2AAF4606005C4DE8 /* QRCameraViewModel.swift */; };
+		04D750FE2AB01C1D00130B6B /* SwipleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D750FD2AB01C1D00130B6B /* SwipleGalleryView.swift */; };
 		04E58A382840B6E800DF270E /* ActivityViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E58A372840B6E800DF270E /* ActivityViewUtility.swift */; };
 		5608285327951B1300FF3E54 /* DemoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285227951B1300FF3E54 /* DemoListItemView.swift */; };
 		5608285627951EB400FF3E54 /* DemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5608285527951EB400FF3E54 /* DemoModel.swift */; };
@@ -139,6 +140,7 @@
 		04C9220229C8381600BBD526 /* XMGeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMGeometryReaderView.swift; sourceTree = "<group>"; };
 		04D485FB2AAF45FD005C4DE8 /* QRCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCameraView.swift; sourceTree = "<group>"; };
 		04D485FD2AAF4606005C4DE8 /* QRCameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCameraViewModel.swift; sourceTree = "<group>"; };
+		04D750FD2AB01C1D00130B6B /* SwipleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipleGalleryView.swift; sourceTree = "<group>"; };
 		04E58A372840B6E800DF270E /* ActivityViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewUtility.swift; path = SHSwiftUICode/Framework/Utility/Common/ActivityView/ActivityViewUtility.swift; sourceTree = SOURCE_ROOT; };
 		5608285227951B1300FF3E54 /* DemoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListItemView.swift; sourceTree = "<group>"; };
 		5608285527951EB400FF3E54 /* DemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModel.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		0473A2B22A7BAFFE0001F479 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				04D750FC2AB01C0A00130B6B /* SwipleGallery */,
 				04D485FA2AAF45E6005C4DE8 /* QRCamera */,
 				0422A8D42A8F46AF00E0844E /* ARKitSceneKitDemo */,
 				0422A8D12A8F3C2C00E0844E /* RealityKitDemo */,
@@ -411,6 +414,14 @@
 				04D485FD2AAF4606005C4DE8 /* QRCameraViewModel.swift */,
 			);
 			path = QRCamera;
+			sourceTree = "<group>";
+		};
+		04D750FC2AB01C0A00130B6B /* SwipleGallery */ = {
+			isa = PBXGroup;
+			children = (
+				04D750FD2AB01C1D00130B6B /* SwipleGalleryView.swift */,
+			);
+			path = SwipleGallery;
 			sourceTree = "<group>";
 		};
 		04E58A302840B57E00DF270E /* Debug */ = {
@@ -1074,6 +1085,7 @@
 				04C921F229C8013300BBD526 /* XMPopSheetView.swift in Sources */,
 				C3DB211C279295AD004A94F3 /* SHSwiftUICodeApp.swift in Sources */,
 				56C67A9127A3C1B60058A330 /* ZStackExample.swift in Sources */,
+				04D750FE2AB01C1D00130B6B /* SwipleGalleryView.swift in Sources */,
 				56AAB21827969B92004E8130 /* Debug.swift in Sources */,
 				0402C31C2A5971F7000694C4 /* NavigationStackExample.swift in Sources */,
 				56C67AB627A3D0030058A330 /* BasicContentView.swift in Sources */,

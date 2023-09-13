@@ -86,7 +86,9 @@ struct MainContentView: View {
         
 //        ARKitSceneKitDemoView()
         
-        QRCameraView()
+//        QRCameraView()
+        
+        SwipleGalleryView()
     }
 }
 

@@ -65,7 +65,6 @@ struct SwipleGalleryView: View {
             }
             .frame(height: 500)
             
-            //
             HStack {
                 ForEach(list.indices, id: \.self) { index in
                     Circle().frame(width: 8)

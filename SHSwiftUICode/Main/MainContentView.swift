@@ -84,12 +84,18 @@ struct MainContentView: View {
         
 //        RealityKitDemoView()
         
-        ARKitSceneKitDemoView()
+//        ARKitSceneKitDemoView()
         
 //        QRCameraView()
         
 //        SwipleGalleryView()
         
+//        ScrollViewWithPaging()
+        
+//        ScrollViewWithTransition()
+        
+        
+        ObservableAndBindable()
     }
 }
 

@@ -95,7 +95,9 @@ struct MainContentView: View {
 //        ScrollViewWithTransition()
         
         
-        ObservableAndBindable()
+//        ObservableAndBindable()
+        
+        WebViewExampleView()
     }
 }
 

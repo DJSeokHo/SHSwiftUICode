@@ -112,6 +112,7 @@
 		C3DB2120279295AE004A94F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB211F279295AE004A94F3 /* Assets.xcassets */; };
 		C3DB2123279295AE004A94F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DB2122279295AE004A94F3 /* Preview Assets.xcassets */; };
 		C3DB212B27929CCD004A94F3 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB212A27929CCD004A94F3 /* MainContentView.swift */; };
+		CE81F3212BF2096C003C19D4 /* WebViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81F3202BF2096C003C19D4 /* WebViewExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -225,6 +226,7 @@
 		C3DB211F279295AE004A94F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3DB2122279295AE004A94F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3DB212A27929CCD004A94F3 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		CE81F3202BF2096C003C19D4 /* WebViewExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 		0473A2B22A7BAFFE0001F479 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				CE81F31F2BF2095A003C19D4 /* WebView */,
 				C3BD16F32B8C6D620081B327 /* KeyframesAnimation */,
 				C3BD16F02B8C6BC10081B327 /* ObservableAndBindable */,
 				C3BD16ED2B8C63160081B327 /* CustomTransition */,
@@ -1027,6 +1030,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		CE81F31F2BF2095A003C19D4 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				CE81F3202BF2096C003C19D4 /* WebViewExampleView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1058,7 +1069,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					C3DB2117279295AC004A94F3 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -1174,6 +1185,7 @@
 				561C72BE279AA00C001440F5 /* GroupBoxExample.swift in Sources */,
 				0473A2B72A7BB0830001F479 /* NavigationStackWithTabViewExample.swift in Sources */,
 				56C67A8B27A3BBB90058A330 /* VStackExample.swift in Sources */,
+				CE81F3212BF2096C003C19D4 /* WebViewExampleView.swift in Sources */,
 				5630E5DD28095758002646B4 /* Restaurant.swift in Sources */,
 				C325B30227A532610039AAB2 /* EnvironmentExample.swift in Sources */,
 				C3C69182281AD1E10014C4DD /* NavigationUtility.swift in Sources */,
@@ -1248,6 +1260,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1309,6 +1322,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
